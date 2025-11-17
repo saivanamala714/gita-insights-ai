@@ -1,0 +1,487 @@
+{
+  "report": {
+    "total_questions": 30,
+    "answered_questions": 30,
+    "answer_rate": 100.0,
+    "has_sources": 0,
+    "source_rate": 0.0,
+    "errors": 0,
+    "by_difficulty": {
+      "beginner": {
+        "total": 6,
+        "answered": 6,
+        "success_rate": 100.0
+      },
+      "intermediate": {
+        "total": 21,
+        "answered": 21,
+        "success_rate": 100.0
+      },
+      "advanced": {
+        "total": 3,
+        "answered": 3,
+        "success_rate": 100.0
+      }
+    },
+    "by_category": {
+      "Introduction": {
+        "total": 4,
+        "answered": 4,
+        "success_rate": 100.0
+      },
+      "Karma Yoga": {
+        "total": 2,
+        "answered": 2,
+        "success_rate": 100.0
+      },
+      "Bhakti Yoga": {
+        "total": 1,
+        "answered": 1,
+        "success_rate": 100.0
+      },
+      "Jnana Yoga": {
+        "total": 2,
+        "answered": 2,
+        "success_rate": 100.0
+      },
+      "Dharma & Duty": {
+        "total": 1,
+        "answered": 1,
+        "success_rate": 100.0
+      },
+      "Philosophy & Concepts": {
+        "total": 14,
+        "answered": 14,
+        "success_rate": 100.0
+      },
+      "Characters & Stories": {
+        "total": 1,
+        "answered": 1,
+        "success_rate": 100.0
+      },
+      "Spiritual Practice": {
+        "total": 1,
+        "answered": 1,
+        "success_rate": 100.0
+      },
+      "Meditation & Yoga": {
+        "total": 2,
+        "answered": 2,
+        "success_rate": 100.0
+      },
+      "Teachings & Verses": {
+        "total": 1,
+        "answered": 1,
+        "success_rate": 100.0
+      },
+      "Modern Application": {
+        "total": 1,
+        "answered": 1,
+        "success_rate": 100.0
+      }
+    },
+    "sample_questions": {
+      "answered": [
+        {
+          "question": "What is the main message of the Bhagavad Gita?",
+          "category": "Introduction",
+          "difficulty": "beginner",
+          "response": {
+            "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+            "sources": []
+          },
+          "has_answer": true,
+          "has_sources": false,
+          "error": null
+        },
+        {
+          "question": "Who is the speaker of the Bhagavad Gita?",
+          "category": "Introduction",
+          "difficulty": "beginner",
+          "response": {
+            "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+            "sources": []
+          },
+          "has_answer": true,
+          "has_sources": false,
+          "error": null
+        },
+        {
+          "question": "What is the setting of the Bhagavad Gita?",
+          "category": "Introduction",
+          "difficulty": "beginner",
+          "response": {
+            "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+            "sources": []
+          },
+          "has_answer": true,
+          "has_sources": false,
+          "error": null
+        }
+      ],
+      "unanswered": []
+    }
+  },
+  "results": [
+    {
+      "question": "What is the main message of the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "Who is the speaker of the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is the setting of the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is Karma Yoga according to the Gita?",
+      "category": "Karma Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is Bhakti Yoga in the Gita?",
+      "category": "Bhakti Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is Jnana Yoga according to the Gita?",
+      "category": "Jnana Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is the concept of Dharma in the Gita?",
+      "category": "Dharma & Duty",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What does the Gita say about the soul?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is Maya according to the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What are the three gunas mentioned in the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is the significance of Arjuna's dilemma in the Gita?",
+      "category": "Characters & Stories",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the nature of God?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is the concept of Moksha in the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is the role of a guru according to the Gita?",
+      "category": "Spiritual Practice",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the process of meditation?",
+      "category": "Meditation & Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is the Bhagavad Gita's view on work and action?",
+      "category": "Karma Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is the significance of the battlefield setting in the Gita?",
+      "category": "Teachings & Verses",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the relationship between the body and soul?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is the concept of Yoga in the Bhagavad Gita?",
+      "category": "Meditation & Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "How can the teachings of the Gita be applied in daily life?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is the Bhagavad Gita's view on desire?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the nature of the mind?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is the significance of the Bhagavad Gita in Hinduism?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "How does the Gita address the concept of time?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is the Bhagavad Gita's teaching on non-attachment?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the process of creation?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is the Bhagavad Gita's view on caste and varna?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the nature of knowledge?",
+      "category": "Jnana Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "What is the concept of Ishvara in the Bhagavad Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    },
+    {
+      "question": "How does the Gita address the problem of suffering?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare Krishna! I encountered an error while processing your question: 'tuple' object has no attribute 'lower'",
+        "sources": []
+      },
+      "has_answer": true,
+      "has_sources": false,
+      "error": null
+    }
+  ]
+}
