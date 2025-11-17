@@ -1035,30 +1035,62 @@ class QASystem:
         if not answer or not isinstance(answer, str):
             return answer
             
-        # Common fixes
-        improvements = {
-            # Fix spacing and punctuation
-            r'\s+([.,!?])': r'\1',  # Remove space before punctuation
-            r'\s{2,}': ' ',  # Replace multiple spaces with single space
-            r'\s+$': '',  # Remove trailing whitespace
-            r'^\s+': '',  # Remove leading whitespace
-            
-            # Common grammatical fixes
-            r'\bHare Krishna!\s*Hare Krishna!': 'Hare Krishna!',  # Remove duplicate salutations
-            r'\bwhat is the\s+([A-Za-z]+)\?': lambda m: f"what {m.group(1)} is,",  # Fix question format in answers
-            
-            # Improve sentence structure
-            r'\.\s+([a-z])': lambda m: f". {m.group(1).upper()}",  # Capitalize after period
-            r'^([a-z])': lambda m: m.group(1).upper(),  # Capitalize first letter
-            
-            # Common Gita-specific improvements
-            r'\bBhagavad-gita\b': 'Bhagavad Gita',  # Standardize spelling
-            r'\bKrsna\b': 'Krishna',  # Standardize spelling
-        }
+        # First, fix specific known issues from the PDF text
+        answer = answer.replace('iscontrolled', 'is controlled')
         
-        # Apply all improvements
-        for pattern, replacement in improvements.items():
-            answer = re.sub(pattern, replacement, answer, flags=re.IGNORECASE)
+        # Protect specific phrases from being split
+        protected_phrases = [
+            'Hare Krishna',
+            'Bhagavad Gita',
+            'Sanatana Dharma',
+            'Lord Krishna',
+            'Arjuna said',
+            'Krishna said'
+        ]
+        protected_map = {}
+        for phrase in protected_phrases:
+            placeholder = f'__{hash(phrase)}__'
+            protected_map[placeholder] = phrase
+            answer = answer.replace(phrase, placeholder)
+        
+        # Fix common word joins (only between words, not within words)
+        common_verbs = ['is', 'are', 'was', 'were', 'has', 'have', 'had', 'will', 'would', 'could', 'should']
+        for verb in common_verbs:
+            # Only add space if the verb is preceded by a word character and not already spaced
+            answer = re.sub(rf'(?<=\w){verb}\b', f' {verb}', answer)
+            
+        # Restore protected phrases
+        for placeholder, phrase in protected_map.items():
+            answer = answer.replace(placeholder, phrase)
+            
+        # Fix spacing after periods
+        answer = re.sub(r'\.([A-Za-z])', r'. \1', answer)
+        
+        # Fix spacing and punctuation
+        answer = re.sub(r'\s+([.,!?])', r'\1', answer)  # Remove space before punctuation
+        answer = re.sub(r'\s{2,}', ' ', answer)  # Replace multiple spaces with single space
+        answer = re.sub(r'\s+$', '', answer)  # Remove trailing whitespace
+        answer = re.sub(r'^\s+', '', answer)  # Remove leading whitespace
+        
+        # Fix capitalization after period
+        answer = re.sub(r'\.\s+([a-z])', lambda m: f". {m.group(1).upper()}", answer)
+        
+        # Capitalize first letter if needed
+        if answer and answer[0].islower():
+            answer = answer[0].upper() + answer[1:]
+        
+        # Common Gita-specific improvements
+        answer = answer.replace('Bhagavad-gita', 'Bhagavad Gita')
+        answer = answer.replace('Krsna', 'Krishna')
+        
+        # Ensure proper spacing around punctuation
+        answer = re.sub(r'([a-z])([A-Z])', r'\1 \2', answer)  # Add space between lower and upper case
+        
+        # Handle specific cases where words are joined without spaces
+        answer = re.sub(r'([a-z])([A-Z][a-z])', r'\1 \2', answer)  # Add space between lower and TitleCase
+        
+        # Remove duplicate salutations
+        answer = re.sub(r'\bHare Krishna!\s*Hare Krishna!', 'Hare Krishna!', answer)
             
         # Ensure the answer ends with proper punctuation
         if answer and answer[-1] not in '.!?':
