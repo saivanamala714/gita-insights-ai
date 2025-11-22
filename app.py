@@ -1465,12 +1465,46 @@ async def ask_question(question: QuestionRequest):
     return AnswerResponse(**response)
 
 
+from datetime import datetime
+import os
+import psutil
+import sys
+
 @app.get("/health")
 async def health_check():
-    return {
-        "status": "healthy",
-        "pages_loaded": len(qa_system.documents) if qa_system else 0
-    }
+    """Health check endpoint with detailed status information."""
+    try:
+        # Check if QASystem is initialized
+        qa_status = "initialized" if hasattr(app, 'qa_system') and app.qa_system else "not initialized"
+        
+        # Get memory usage
+        process = psutil.Process(os.getpid())
+        memory_info = process.memory_info()
+        
+        return {
+            "status": "healthy",
+            "service": "Bhagavad Gita Q&A API",
+            "version": "1.0.0",
+            "timestamp": datetime.utcnow().isoformat(),
+            "system": {
+                "python_version": ".".join(map(str, sys.version_info[:3])),
+                "platform": sys.platform,
+                "memory_usage_mb": memory_info.rss / (1024 * 1024)
+            },
+            "dependencies": {
+                "qa_system": qa_status,
+                "port": int(os.getenv("PORT", 8080))
+            }
+        }
+    except Exception as e:
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "status": "unhealthy",
+                "error": str(e),
+                "timestamp": datetime.utcnow().isoformat()
+            }
+        )
 
 if __name__ == "__main__":
     import uvicorn
