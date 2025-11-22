@@ -17,6 +17,7 @@ sentence-transformers>=2.2.2
 language-tool-python>=1.0.0
 nltk>=3.8.1
 psutil>=5.9.0  # For system monitoring in health checks
+jellyfish>=1.0.0  # For string matching and phonetic algorithms
 
 # LangChain (if needed, though we're focusing on direct PDF processing)
 # langchain>=0.1.0
