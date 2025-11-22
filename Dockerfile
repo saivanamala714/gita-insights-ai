@@ -4,10 +4,20 @@ FROM python:3.11-slim
 # Set the working directory
 WORKDIR /app
 
-# Copy the requirements file first to leverage Docker cache
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PORT=8080
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements first to leverage Docker cache
 COPY requirements.txt .
 
-# Install dependencies
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the application code
@@ -17,7 +27,7 @@ COPY . .
 RUN chmod +x start.sh
 
 # Expose the port the app runs on
-EXPOSE 8080
+EXPOSE $PORT
 
-# Command to run the application
-CMD ["gunicorn", "--bind", "0.0.0.0:8080", "app:app"]
+# Command to run the application using gunicorn with multiple workers
+CMD exec gunicorn --bind :$PORT --workers 1 --worker-class uvicorn.workers.UvicornWorker --timeout 120 app:app
