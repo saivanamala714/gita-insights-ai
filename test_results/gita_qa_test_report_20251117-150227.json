@@ -1,0 +1,3541 @@
+{
+  "total_questions": 200,
+  "answered_questions": 200,
+  "answer_rate": 100.0,
+  "questions_with_sources": 200,
+  "sources_rate": 100.0,
+  "error_count": 0,
+  "error_rate": 0.0,
+  "by_category": {
+    "Introduction": {
+      "total": 16,
+      "answered": 16,
+      "with_sources": 16,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "Philosophy & Concepts": {
+      "total": 56,
+      "answered": 56,
+      "with_sources": 56,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "Karma Yoga": {
+      "total": 12,
+      "answered": 12,
+      "with_sources": 12,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "Bhakti Yoga": {
+      "total": 14,
+      "answered": 14,
+      "with_sources": 14,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "Jnana Yoga": {
+      "total": 9,
+      "answered": 9,
+      "with_sources": 9,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "Meditation & Yoga": {
+      "total": 9,
+      "answered": 9,
+      "with_sources": 9,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "Dharma & Duty": {
+      "total": 5,
+      "answered": 5,
+      "with_sources": 5,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "Characters & Stories": {
+      "total": 8,
+      "answered": 8,
+      "with_sources": 8,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "Teachings & Verses": {
+      "total": 5,
+      "answered": 5,
+      "with_sources": 5,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "Modern Application": {
+      "total": 50,
+      "answered": 50,
+      "with_sources": 50,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "Comparative Religion": {
+      "total": 3,
+      "answered": 3,
+      "with_sources": 3,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "Mysteries & Symbolism": {
+      "total": 2,
+      "answered": 2,
+      "with_sources": 2,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "Ethics & Morality": {
+      "total": 6,
+      "answered": 6,
+      "with_sources": 6,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "Death & Afterlife": {
+      "total": 3,
+      "answered": 3,
+      "with_sources": 3,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "Free Will & Destiny": {
+      "total": 2,
+      "answered": 2,
+      "with_sources": 2,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    }
+  },
+  "by_difficulty": {
+    "beginner": {
+      "total": 59,
+      "answered": 59,
+      "with_sources": 59,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "intermediate": {
+      "total": 99,
+      "answered": 99,
+      "with_sources": 99,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "advanced": {
+      "total": 42,
+      "answered": 42,
+      "with_sources": 42,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    }
+  },
+  "results": [
+    {
+      "question": "What is the main message of the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! TEXTS 32 -35 kim no rajyen a govi nd a kim bhogair jivi ten a vayesam ar the kanksi tam norajyam bhogah sukhani c a t a ime 'vasthi t a yuddhe pranams tyaktv a dh an ani caacaryah pit a rah putrastathai v a c a pitamahah matulah svasurah pau trah syalah sambandhi nas tathaet an n a h an tum icchami ghnato 'pi madhusudan a api trai lokya-rajyasy a heto h kim nu mahi-krteni haty a dhartarastr an nahk a pri tih syaj janardan a **Word-by-word meaning**: kim --what use ; nah --to us ; rajyen a --is the king dom ; govi nd a --O Krsn a ; kim --what; bhogaih --enjoyment; jivi ten a --by livi ng ; v a --either; yesam --for whom ; ar the --for the matter of ; kanksi tam --desi red; nah --our;`rajyam` \n- `kingdom`; bhogah --materi al enjoyment ; sukhani --all happi ness ;`ca` \n- `also`; te --all of them ; ime --these; avasthi tah --situated; yuddhe --inth is battlefi eld ; pran an --lives; tyaktv a --givi ng up ; dh an ani --riches;`ca` \n- `also`; acaryah --teachers; pit a rah --fathers; put rah --sons; tath a --aswell as ; ev a --certai nly; c a --also; pitamahah --grandfathers; matulah --maternal uncles ; svasurah --fathers-in-law; pau trah --grandsons; syalah --brothers-in-law; sambandhi nah --relati ves; tath a --as well as ; et an --allthese; n a --never; h an tum --for kil ling ; icchami --do I wish ; ghnatah --bei ng kil led ; api --even; madhusudan a --O killer of the demon Madhu (**Krishna**); api --even if ; trai -`lokya` \n- `of` the three worlds ; rajyasy a --of the kingdoms ; heto h --in exchange ; kim --what to speak of ; nu --only;mahi-`krte` \n- `for` the sake of the earth ; nihaty a --by kil ling ;`dhartarastran` \n- `the` sons of Dhrtarastr a ; nah --our; k a --what; pri tih --pleasure; syat --will there be ; janardan a --  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "Who is the speaker of the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! The important element, in preparati on, in servi ng and in offeri ng, is to act with love for The impersonal ist phi losophers, who wish to mai ntain that the Absolute Truth is with out senses, cannot comprehend th is verse of Bhagavad Gita. To them, it is either ametaphor or proof of the mundane character of **Krishna**, the speaker of the  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the setting of the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! Undoubtedly we do not know what sort of acti viti es we should adopt to gain reli ef from the acti ons and reacti ons of all these acti viti es, but th is is alsoexplai ned in the Bhagavad Gita  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How many chapters and verses are in the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! **Verse 3** manusyanam sahasresu kascid yatati siddhayeyatatam api siddhanamkascin mam vetti tattvatah **Word-by-word meaning**: manusyanam --of men ; sahasresu --out of many thousands ; kascit --someone; yatati --endeavors; siddhaye --for perfecti on ; yatatam --of those soendeavori ng ; api --indeed; siddhanam --of those who have achi evedperfecti on ; kascit --someone; mam --Me; vetti --does know ; tattvatah --infact  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of the number 18 in the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**!  \n\n*Source: 11*",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "Is the Bhagavad Gita part of a larger text?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! theoreti cally, accordi ng to the statements of Bhagavad Gita or the statements of **Arjuna**, the person who is tryi ng to understand the Bhagavad Gita  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What language was the Bhagavad Gita originally written in?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Apure devotee is not confused by misguidi ng commentari es on Bhagavad Gita because he knows what is what  \n\n*Source: 406*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 406,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "When was the Bhagavad Gita written?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Bhagavad Gita was spoken by the Lord just to change th is view, and at the end Arjun a deci des to fight under the directi onsof the Lord when he says, kari sye vacanam tav a : \" \"  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the relationship between the Bhagavad Gita and the Upanishads?",
+      "category": "Introduction",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! In the middle six chapt ers of the Bhagavad Gita, the  \n\n*Source: 174*",
+        "sources": [
+          {
+            "page": 174,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "Why is the Bhagavad Gita considered a spiritual classic?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! And the purpose of self-realizati on is clearly stated in the Fifteenth Chapter of the Bhagavad Gita (15.15): the purpose ofstudyi ng the Vedas is to know Lord Krishnarsna, the pri meval cause ofeverythi ng  \n\n*Source: 98*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 98,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the structure of the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! Undoubtedly we do not know what sort of acti viti es we should adopt to gain reli ef from the acti ons and reacti ons of all these acti viti es, but th is is alsoexplai ned in the Bhagavad Gita  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How is the Bhagavad Gita relevant to modern life?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Neither Vedic knowledge nor modern sci ence deni es the exi stenceof the spi rit soul in the body, and the sci ence of the soul isexplici tly descri bed in the Bhagavad Gita by the  \n\n*Source: 16*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 16,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are the main themes of the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! TEXTS 32 -35 kim no rajyen a govi nd a kim bhogair jivi ten a vayesam ar the kanksi tam norajyam bhogah sukhani c a t a ime 'vasthi t a yuddhe pranams tyaktv a dh an ani caacaryah pit a rah putrastathai v a c a pitamahah matulah svasurah pau trah syalah sambandhi nas tathaet an n a h an tum icchami ghnato 'pi madhusudan a api trai lokya-rajyasy a heto h kim nu mahi-krteni haty a dhartarastr an nahk a pri tih syaj janardan a **Word-by-word meaning**: kim --what use ; nah --to us ; rajyen a --is the king dom ; govi nd a --O Krsn a ; kim --what; bhogaih --enjoyment; jivi ten a --by livi ng ; v a --either; yesam --for whom ; ar the --for the matter of ; kanksi tam --desi red; nah --our;`rajyam` \n- `kingdom`; bhogah --materi al enjoyment ; sukhani --all happi ness ;`ca` \n- `also`; te --all of them ; ime --these; avasthi tah --situated; yuddhe --inth is battlefi eld ; pran an --lives; tyaktv a --givi ng up ; dh an ani --riches;`ca` \n- `also`; acaryah --teachers; pit a rah --fathers; put rah --sons; tath a --aswell as ; ev a --certai nly; c a --also; pitamahah --grandfathers; matulah --maternal uncles ; svasurah --fathers-in-law; pau trah --grandsons; syalah --brothers-in-law; sambandhi nah --relati ves; tath a --as well as ; et an --allthese; n a --never; h an tum --for kil ling ; icchami --do I wish ; ghnatah --bei ng kil led ; api --even; madhusudan a --O killer of the demon Madhu (**Krishna**); api --even if ; trai -`lokya` \n- `of` the three worlds ; rajyasy a --of the kingdoms ; heto h --in exchange ; kim --what to speak of ; nu --only;mahi-`krte` \n- `for` the sake of the earth ; nihaty a --by kil ling ;`dhartarastran` \n- `the` sons of Dhrtarastr a ; nah --our; k a --what; pri tih --pleasure; syat --will there be ; janardan a --  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "Who was the original audience of the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! \" (Brahma-samhit a 5.1)In the Bhagavatam also there is alist of many incarnati ons of the Supreme Personality of Godhead, but Krsn a is descri bed as the original Personality of Godhead, from whom many, many incarnati ons and Personalities of Godhead expand : ete camsa-kalah pumsah krsnas tu bhagav an svayami ndrari-vyakulam lokammrdayanti yuge yuge \"All the lists of the incarnati ons of Godhead submi tted herewi th are either plenary expansi ons or parts of the plenary expansi ons of the Supreme Godhead, but \" (  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Bhagavad Gita's view on the purpose of human life?",
+      "category": "Introduction",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Key Teaching : Karmany evadhi karas te m a phalesu kadachan a (2.\n- \n- You have aright to perform your prescri bed duti es, but you are not enti tled to the frui ts of your acti ons. Advice : Rather th an focusi ng on results, concentrate on doi ng your best in your current responsibiliti es. Chapter 3 explai ns how selfless acti on leads to both materi al and spi ritual fulfi llment. Relevant Example : Krishn a advi sed Arjun a to fight not for victo ry or king dom, but because it was h is duty as awarri or. Similarly, we c an find purpose in doi ng our best in whatever role we find ourselves, with out attachment to speci fic outcomes. Would you like me to elaborate on any speci fic aspect of th is teachi ng?  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the concept of Dharma in the Bhagavad Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 28*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 28,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the nature of the soul (Atman) according to the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! **Verse 33** sadr sam cest ate svasyah prakrter jnanav an api prakrtim yanti bhutani nigrahah kim kari syati **Word-by-word meaning**: sadrsam --accordi ngly; cest ate --tri es; svasyah --in one 's own nature ; prakrteh --modes; jnan a -`van` \n- `learned`; api --although; prakrtim --nature;`yanti` \n- `undergo`; bhut ani --all livi ng enti ties ; nigrahah --suppressi on;`kim` \n- `what`; kari syati --c an do  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is Maya in the context of the Bhagavad Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the concept of Karma in the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Bhagavad Gita's view on death and the afterlife?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Above these modes the re is eternal time, and by acombi nati on of these modes of nature and under the control and purvi ew of eternal time there are acti viti es to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the concept of Moksha in the Bhagavad Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the relationship between the body, mind, and soul in the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! When he appli es everythi ng produced of the body, mind, intelli gence, words, life, wealth, etc.--whatever he may havewi thin h is possessi on --to Krsn a 's servi ce, he is at once dovetai ledwi th  \n\n*Source: 202*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 202,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the concept of Gunas in the Bhagavad Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! But although life istemporary and we do not know what we are goi ng to be in the next life, sti ll, by the spell of th is illusory energy, we consi der ourselves in the light of th is bodi ly concepti on of life, and we thus thi nk that we are American, Indian, Russi an or brahmana, Hindu, Muslim, etc  \n\n*Source: 268*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 268,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Bhagavad Gita's view on desire and attachment?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! TRANSLATIONWhat is cal led renunci ati on is the same as **yoga**, or lin king oneself with the Supreme, for no one c an become ayogi unless he renounces thedesi re for sense grati ficati on  \n\n*Source: 119*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 119,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the concept of Ishvara in the Bhagavad Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is Karma Yoga as described in the Bhagavad Gita?",
+      "category": "Karma Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 28*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 28,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What does 'Nishkama Karma' mean in the Gita?",
+      "category": "Karma Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! What does th is mean? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita define right action?",
+      "category": "Karma Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! The Vedas give the right direct ion to the people so that they c an properly mold their lives and come back to Godhead, back to home  \n\n*Source: 492*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 492,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the role of intention in Karma Yoga?",
+      "category": "Karma Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! And what is that **yoga**? Hare **Krishna**!  \n\n*Source: 89*",
+        "sources": [
+          {
+            "page": 89,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How can one practice Karma Yoga in daily life?",
+      "category": "Karma Yoga",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! The yog a process is practi ced in order to d is cover and see th is locali zed formof Visnu, and not for any other purpose  \n\n*Source: 227*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 227,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the difference between Sakama and Nishkama Karma?",
+      "category": "Karma Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**!  \n\n*Source: 367*",
+        "sources": [
+          {
+            "page": 367,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is Bhakti Yoga according to the Gita?",
+      "category": "Bhakti Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! PURPORTReal sannyasa-yog a or **bhakti** means that one should know h is consti tuti onal posi tion as the livi ng enti ty, and act accordi ngly  \n\n*Source: 28*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 28,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are the different types of Bhakti mentioned in the Gita?",
+      "category": "Bhakti Yoga",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! PURPORTDifferent types of sacri fice, as d is cussed above, are menti oned in the  \n\n*Source: 21*",
+        "sources": [
+          {
+            "page": 21,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the ideal devotee?",
+      "category": "Bhakti Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Yet Bhagavad Gita does not advi se us to go to any of the planets in th is materi al world because even if we go to Brahmaloka, the highest planet, through some sort of mechani cal contri vance by maybe traveli ngfor forty thousand years (and who would live that long?), we will sti llfi nd the materi al inconveni ences of birth, death, d is ease and old age. But one who wants to approach the supreme planet, Krishnaloka, or any of the other planets wit hin the spi ritual sky, will not meet with thesemateri al inconveni ences  \n\n*Source: 21*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 21,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of surrender in Bhakti Yoga?",
+      "category": "Bhakti Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! And what is that **yoga**? Hare **Krishna**! In the **Bhakti**-rasamrta-sindhu it is said that although one who has asin cere desi re to render lovi ng servi ce to the Supreme Lord is situated in the condi tional state of materi alexi stence, he is to be consi dered liberated  \n\n*Source: 28*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 28,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is Jnana Yoga in the Bhagavad Gita?",
+      "category": "Jnana Yoga",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 28*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 28,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the difference between Jnana and Vijnana in the Gita?",
+      "category": "Jnana Yoga",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**!  \n\n*Source: 13*",
+        "sources": [
+          {
+            "page": 13,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the role of the Guru in Jnana Yoga?",
+      "category": "Jnana Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! And what is that **yoga**? Hare **Krishna**! He nei ther begs nor borrows, but he labors honestly as far as is in h is power, and is sati sfi ed with whatever is obtai ned by h is own honest labor  \n\n*Source: 100*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 100,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What does the Gita say about meditation?",
+      "category": "Meditation & Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! Yet Bhagavad Gita does not advi se us to go to any of the planets in th is materi al world because even if we go to Brahmaloka, the highest planet, through some sort of mechani cal contri vance by maybe traveli ngfor forty thousand years (and who would live that long?), we will sti llfi nd the materi al inconveni ences of birth, death, d is ease and old age. But one who wants to approach the supreme planet, Krishnaloka, or any of the other planets wit hin the spi ritual sky, will not meet with thesemateri al inconveni ences  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are the different types of yoga mentioned in the Gita?",
+      "category": "Meditation & Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! PURPORTFrom the foregoi ng explanati on of different types of sacri fice (namely sacri fice of one 's possessi ons, study of the Vedas or phi losophicaldoctri nes, and performance of the yog a system ), it is found that the common aim of all is to control the senses  \n\n*Source: 184*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 184,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is Svadharma according to the Gita?",
+      "category": "Dharma & Duty",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "Who was Arjuna and why is he important in the Gita?",
+      "category": "Characters & Stories",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! theoreti cally, accordi ng to the statements of Bhagavad Gita or the statements of **Arjuna**, the person who is tryi ng to understand the Bhagavad Gita  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "Who are the main characters in the Bhagavad Gita?",
+      "category": "Characters & Stories",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! At the time of death we c an either remain in the inferi or energy of th is materi al world, or we c an transfer to the energy of thespi ritual world  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of Chapter 2, Verse 47 of the Bhagavad Gita?",
+      "category": "Teachings & Verses",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Th is is clearly menti oned in the Seventh Chapter, Fifth Verse of Bhagavad Gita: Apareyam itas tv anyam, \"Th is prakrti is My lower nature,\" prakrtim viddhi me param jiva-bhutam maha-bahoyayedam dharyate jagat  \n\n*Source: 12*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 12,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are some of the most famous verses from the Bhagavad Gita?",
+      "category": "Teachings & Verses",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! As far as the four-handedforms of Krsn a are concerned, it is stated clearly that even the mosti denti cal four-handed form of Krsn a (whi ch is known as Mah a -Visnu, who is lyi ng on the cosmic oce an and from whose breathi ng so manyi nnumerable uni verses are passi ng out and enteri ng ) is also anexpansi on of the  \n\n*Source: 343*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 343,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How can the Gita's teachings be applied to modern life?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! So, even after bei ng liberated from illusi on, the livi ng enti ty remai ns ase parate identi ty, as is evi dent from the teachi ngs of the  \n\n*Source: 79*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 79,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What can the Bhagavad Gita teach us about stress management?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Key Teaching : **Yoga**-sthah kuru karmani (2.\n- \n- Advice : When feeli ng stressed, focus on doi ng your best with out worryi ng about outcomes. Chapter 2, Verse 47 remi nds us that you have control only over your acti ons, not the results. Relevant Example : Like Arjun a on the battlefi eld, we often face situati ons that cause stress and anxi ety. Krishn a 's advi ce to Arjun a in Chapter 2 about performi ng one 's duty with out attachment to results is highly relevant to modern work-life balance challenges. Would you like me to elaborate on any speci fic aspect of th is teachi ng?  \n\n*Source: 14*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 14,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita compare to other religious texts?",
+      "category": "Comparative Religion",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! In the last porti on of Bhagavad Gita (18.66), Lord Sri Krsn a proclai ms : sarva-dharm an pari tyajy a mam ekam sar anam vraj a aham tvam sarva-papebhyo moksayi syami m a sucah \"Give up all vari eti es of reli giousness, and just surrender unto Me ;and in return  \n\n*Source: 28*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 28,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Bhagavad Gita's view on the nature of the material world's temporary situations?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! What is materi al nature? Hare **Krishna**! When even those who are in goodness cannot understand, what hope is there for those in passi on and ignorance? Krsn a consci ousness is transcendental to all these three modes ofmateri al nature, and those who are truly establi shed in  \n\n*Source: 12*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 12,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the process of achieving God consciousness?",
+      "category": "Bhakti Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Yet Bhagavad Gita does not advi se us to go to any of the planets in th is materi al world because even if we go to Brahmaloka, the highest planet, through some sort of mechani cal contri vance by maybe traveli ngfor forty thousand years (and who would live that long?), we will sti llfi nd the materi al inconveni ences of birth, death, d is ease and old age. But one who wants to approach the supreme planet, Krishnaloka, or any of the other planets wit hin the spi ritual sky, will not meet with thesemateri al inconveni ences  \n\n*Source: 92*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 92,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of the Bhagavad Gita's teachings on leadership?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 15*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita address the concept of free will?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! If He were so affected, He would be unfit to speak on transcendental mattersas He does in the Bhagavad Gita  \n\n*Source: 14*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 14,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the concept of 'Stithaprajna' in the Bhagavad Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the nature of the divine?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! In the Fifteenth Chapter of the Bhagavad Gita, the real pict ure of the materi al world is given  \n\n*Source: 22*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 22,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of the battlefield setting in the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! of h is sons on the battlefi eld  \n\n*Source: 11*",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita address the concept of time?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! If He were so affected, He would be unfit to speak on transcendental mattersas He does in the Bhagavad Gita  \n\n*Source: 14*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 14,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the role of detachment in the Gita's teachings?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 15*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the difference between Sakama and Nishkama Karma in the Gita?",
+      "category": "Karma Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**!  \n\n*Source: 367*",
+        "sources": [
+          {
+            "page": 367,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the concept of 'Karma Phala Tyaga'?",
+      "category": "Karma Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Yet Bhagavad Gita does not advi se us to go to any of the planets in th is materi al world because even if we go to Brahmaloka, the highest planet, through some sort of mechani cal contri vance by maybe traveli ngfor forty thousand years (and who would live that long?), we will sti llfi nd the materi al inconveni ences of birth, death, d is ease and old age. But one who wants to approach the supreme planet, Krishnaloka, or any of the other planets wit hin the spi ritual sky, will not meet with thesemateri al inconveni ences  \n\n*Source: 21*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 21,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are the nine forms of Bhakti mentioned in the Gita?",
+      "category": "Bhakti Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Whatever acti on he performs, he performs it as servi ce to the  \n\n*Source: 337*",
+        "sources": [
+          {
+            "page": 337,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the relationship between the devotee and the divine?",
+      "category": "Bhakti Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! He said, therefore, that only the less intelli gent class of men make ad is tincti on betweensankhya-yog a and **bhakti**-**yoga**. Of course, athei stic sankhya-yog a has nothi ng to do with **bhakti**-**yoga**, yet the uni ntelli gent claim that the athei stic sankhya-yog a is referredto in the Bhagavad Gita. One should therefore understand that buddhi-yog a means to work in Krishnaconsciousness, in the full bli ss and knowledge of devoti onal servi ce. One who works for the sati sfacti on of the Lord only, however diffi cult such work may be, is worki ng under the pri nci ples of buddhi-yog a andfi nds him self always in transcendental bli ss  \n\n*Source: 92*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 92,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the concept of 'Brahman' in the Bhagavad Gita?",
+      "category": "Jnana Yoga",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita explain the concept of 'Akshara Brahma'?",
+      "category": "Jnana Yoga",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! In the Srimad -Bhagavatam (1.2.11)th is concepti on of the Absolute Truth is explai ned thus : vadanti tat tattva-vidas tattvam yaj jnanam advayambrahmeti paramatmeti bhagav an iti sabdyate \"The Absolute Truth is reali zed in three phases of understandi ng by the knower of the Absolute Truth, and all of them are identi cal  \n\n*Source: 24*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 24,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are the different stages of meditation described in the Gita?",
+      "category": "Meditation & Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! In the Brahma-samhi t a (5.\n- it is beauti fully descri bed :golok a ev a nivasaty akhi latma-bhutah  \n\n*Source: 21*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 21,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the ideal posture for meditation?",
+      "category": "Meditation & Yoga",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Neither Vedic knowledge nor modern sci ence deni es the exi stenceof the spi rit soul in the body, and the sci ence of the soul isexplici tly descri bed in the Bhagavad Gita by the  \n\n*Source: 73*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 73,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita define one's 'Swadharma'?",
+      "category": "Dharma & Duty",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Unless one is awakened to t h is posi tion of questi oni ng h is sufferi ng, unless he reali zes that hedoesn 't want sufferi ng but rather wants to make asoluti on to allsufferi ng, then one is not to be consi dered aperfect hum an bei ng. Humanity begi ns when th is sort of inqui ry is awakened in one 's mind  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the concept of 'Varnashrama Dharma' in the Gita?",
+      "category": "Dharma & Duty",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of Lord Krishna's role in the Gita?",
+      "category": "Characters & Stories",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! when it is in the knowledge that everythi ng in exi stence belongs to the  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "Who are the other key figures mentioned in the Gita besides Arjuna and Krishna?",
+      "category": "Characters & Stories",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! **Verse 5** apareyam itas tv anyam prakrtim viddhi me paramji va-bhutam maha-bahoyayedam dharyate jagat **Word-by-word meaning**: apar a --inferi or; iyam --th is; itah --besi des th is ; tu --but; anyam -\n- another ; prakrtim --energy; viddhi --just try to understand ; me --My;`param` \n- `superi` or; jiv a -`bhutam` \n- `the` livi ng enti ties ; mah a -`baho` \n- `O` mighty-armed one ; yay a --by whom ; idam --th is; dharyate --bei ng uti lized orexploi ted ; jagat --the materi al world  \n\n*Source: 261*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 261,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of the 'Vishvarupa Darshana' in the Gita?",
+      "category": "Teachings & Verses",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! Undoubtedly we do not know what sort of acti viti es we should adopt to gain reli ef from the acti ons and reacti ons of all these acti viti es, but th is is alsoexplai ned in the Bhagavad Gita  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What does the Gita say about the nature of the mind?",
+      "category": "Teachings & Verses",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! The informati on on how to thi nk of the Supreme Being at the time of death is also given in the Bhagavad Git a (8.6): yam yam vapi sm a r an bhavam tyajaty ante kalevaram tam tam evai ti kauntey a sad a tad-bhava-bhavi tah \"In whatever condi tion one qui ts h is present body, in h is next life hewi ll attain to that state of bei ng with out fail.\"  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How can the Gita's teachings help in managing work-life balance?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! The Bhagavad Gita off ers profound w is dom about work-life balance. Key Teaching : Yogasthah kuru karmani (2.\n- \n- Advice : The Bhagavad Git a 's approach to work-life balance is rooted in the concept of '**Yoga**' \n- uni on through balance. Here 's adeeper dive into applyi ng these pri nci ples : \n- **The Foundation : Right Understanding (2.11-13, 2.16-17)** \n- Recognize the eternal nature of the soul beyond temporary work-life situati ons \n- Understand that true fulfi llment comes from wit hin, not external achi evements \n- See work as an offeri ng (yajña) rather th an just ameans to an end (3.9\n- - \n- **Daily Practice (6.10-17)** \n- Begin and end your day with medi tati on or reflecti on (6.10\n- - \n- Practice moderati on in work, rest, diet, and recreati on (6.16\n- - \n- Cultivate contentment (santo sha) with what comes your way (2.64\n- - \n- **Practical Integration (3.5-9, 18.45-47)** \n- Perform your duti es accordi ng to your nature (svadharma) \n- Set clear boundari es between different life domai ns \n- Practice bei ng fully present in each acti vity (2.\n- \n- **Overcoming Challenges (2.14-15, 2.47-48)** \n- Accept the temporary nature of both pleasure and pain \n- Focus on your efforts, not outcomes (2.\n- \n- Maintain equani mity in success and fai lure (2.\n- Relevant Example : Krishn a 's life exemplifi es perfect work-life integrati on. As aking, he managed the affai rs of Dvarak a ; as awarri or, he fought in the Kurukshetr a war ; as aspi ritual teacher, he impar ted the Bhagavad Git a 's w is dom ; and as afri end, he was always avai lable to h is devotees. The Bhagavad Git a itself was spoken in the midst of abattlefi eld, showi ng that spi ritual w is dom isn 't separate from dai ly life but should permeate all our acti ons. Arjun a 's transformati on throughout the He begi ns overwhelmed by life 's complexi ties (1.28\n- - but learns to act with w is dom and detachment (18.73). Would you like me to elaborate on any speci fic aspect of th is teachi ng?  \n\n*Source: 144*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 144,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What can the Gita teach us about dealing with failure?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Key Teaching : Karmany evadhi karas te m a phaleshu kadachan a (2.\n- \n- You have aright to perform your duty, but not to the frui ts of acti on. Advice : The Bhagavad Git a teaches that fai lure and success are part of life 's journey. Chapter 2, Verse 50 explai ns how to mai ntain equani mity in both success and fai lure. Relevant Example : Would you like me to elaborate on any speci fic aspect of th is teachi ng?  \n\n*Source: 14*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 14,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita's concept of God compare with other religions?",
+      "category": "Comparative Religion",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Yet Bhagavad Gita does not advi se us to go to any of the planets in th is materi al world because even if we go to Brahmaloka, the highest planet, through some sort of mechani cal contri vance by maybe traveli ngfor forty thousand years (and who would live that long?), we will sti llfi nd the materi al inconveni ences of birth, death, d is ease and old age. But one who wants to approach the supreme planet, Krishnaloka, or any of the other planets wit hin the spi ritual sky, will not meet with thesemateri al inconveni ences  \n\n*Source: 21*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 21,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are the similarities between the Gita and Buddhist teachings?",
+      "category": "Comparative Religion",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Isvar a (the Supreme Lord ), jiv a (the livi ng enti ty ), prakrti (nature), eternal time and karm a (activi ty) are all explai ned in the Bhagavad Gita  \n\n*Source: 13*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 13,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the symbolic meaning of Arjuna's chariot in the Gita?",
+      "category": "Mysteries & Symbolism",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! PURPORTTh is verse is areply to Arjun a 's thi rd questi on : What is the means of attai ning to the transcendental posi tion?  \n\n*Source: 476*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 476,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of the conch shells mentioned in the Gita?",
+      "category": "Mysteries & Symbolism",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! TRANSLATION The blowi ng of these different conchshells became uproari ous, and thus, vibrati ng both in the sky and on the earth, it shattered the hearts of the sons of  \n\n*Source: 40*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 40,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's view on non-violence (Ahimsa)?",
+      "category": "Ethics & Morality",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Above these modes the re is eternal time, and by acombi nati on of these modes of nature and under the control and purvi ew of eternal time there are acti viti es to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 12*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 12,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita address the concept of truth (Satya)?",
+      "category": "Ethics & Morality",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! In the Srimad -Bhagavatam (1.2.11)th is concepti on of the Absolute Truth is explai ned thus : vadanti tat tattva-vidas tattvam yaj jnanam advayambrahmeti paramatmeti bhagav an iti sabdyate \"The Absolute Truth is reali zed in three phases of understandi ng by the knower of the Absolute Truth, and all of them are identi cal  \n\n*Source: 57*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 57,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What happens to the soul after death according to the Gita?",
+      "category": "Death & Afterlife",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! They do notbeli eve in life after death, and they do not beli eve that one takes ondi fferent types of bodi es accordi ng to one 's **karma**, or acti viti es inth is world  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the concept of 'Pitrloka' in the Gita?",
+      "category": "Death & Afterlife",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita reconcile free will with destiny?",
+      "category": "Free Will & Destiny",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Yet Bhagavad Gita does not advi se us to go to any of the planets in th is materi al world because even if we go to Brahmaloka, the highest planet, through some sort of mechani cal contri vance by maybe traveli ngfor forty thousand years (and who would live that long?), we will sti llfi nd the materi al inconveni ences of birth, death, d is ease and old age. But one who wants to approach the supreme planet, Krishnaloka, or any of the other planets wit hin the spi ritual sky, will not meet with thesemateri al inconveni ences  \n\n*Source: 14*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 14,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the role of divine grace in the Gita's teachings?",
+      "category": "Free Will & Destiny",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Therefore, alivi ng enti ty, however great he may be in the materi al esti mati on, c an never equal the  \n\n*Source: 159*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 159,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the concept of 'Maya' (illusion)?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Yet Bhagavad Gita does not advi se us to go to any of the planets in th is materi al world because even if we go to Brahmaloka, the highest planet, through some sort of mechani cal contri vance by maybe traveli ngfor forty thousand years (and who would live that long?), we will sti llfi nd the materi al inconveni ences of birth, death, d is ease and old age. But one who wants to approach the supreme planet, Krishnaloka, or any of the other planets wit hin the spi ritual sky, will not meet with thesemateri al inconveni ences  \n\n*Source: 21*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 21,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's perspective on the material world?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! PURPORT The different quali ties of livi ng enti ties, be they good or bad, are all cre a ted by **Krishna**, and they are descri bed here. Intelligence ref ers to the power of analyzi ng thi ngs in properperspecti ve, and knowledge ref ers to understandi ng what is spi rit and what is matter  \n\n*Source: 15*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are the different types of yoga mentioned in the Gita?",
+      "category": "Meditation & Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! PURPORTFrom the foregoi ng explanati on of different types of sacri fice (namely sacri fice of one 's possessi ons, study of the Vedas or phi losophicaldoctri nes, and performance of the yog a system ), it is found that the common aim of all is to control the senses  \n\n*Source: 184*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 184,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the process of self-realization?",
+      "category": "Meditation & Yoga",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Yet Bhagavad Gita does not advi se us to go to any of the planets in th is materi al world because even if we go to Brahmaloka, the highest planet, through some sort of mechani cal contri vance by maybe traveli ngfor forty thousand years (and who would live that long?), we will sti llfi nd the materi al inconveni ences of birth, death, d is ease and old age. But one who wants to approach the supreme planet, Krishnaloka, or any of the other planets wit hin the spi ritual sky, will not meet with thesemateri al inconveni ences  \n\n*Source: 21*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 21,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's view on social responsibility?",
+      "category": "Ethics & Morality",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Above these modes the re is eternal time, and by acombi nati on of these modes of nature and under the control and purvi ew of eternal time there are acti viti es to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 12*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 12,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita address the concept of justice?",
+      "category": "Ethics & Morality",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! If He were so affected, He would be unfit to speak on transcendental mattersas He does in the Bhagavad Gita  \n\n*Source: 14*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 14,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What does the Gita teach about controlling the mind?",
+      "category": "Teachings & Verses",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Therefore we stated that of thefi ve items (isvara, jiva, prakrti, time and karm a ) four are eternal, whereas karm a is not eternal  \n\n*Source: 14*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 14,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the nature of desires?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! In the Fifteenth Chapter of the Bhagavad Gita, the real pict ure of the materi al world is given  \n\n*Source: 22*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 22,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What leadership lessons can be learned from the Gita?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! We should therefore at least theoreti cally accept Sri Krsn a as the Supreme Personality of Godhead, and with that submi ssivespi rit we c an understand the Bhagavad Gita  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How can the Gita's teachings be applied in the workplace?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Th is is also confi rmed by Lord Caitany a in H is teachi ngs ; therefore the descri pti on of Brahmanmentioned in th is verse is in relati on to the indivi dual soul, and when the word Brahm an is appli ed to the livi ng enti ty, it is to beundersto od that he is vijnana-brahm a as opposed to ananda-brahma. Ananda-brahm a is the  \n\n*Source: 441*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 441,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What does the Gita say about family responsibilities?",
+      "category": "Dharma & Duty",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita view the role of a teacher?",
+      "category": "Characters & Stories",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! We should therefore at least theoreti cally accept Sri Krsn a as the Supreme Personality of Godhead, and with that submi ssivespi rit we c an understand the Bhagavad Gita  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's view on the origin of the universe?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Above these modes the re is eternal time, and by acombi nati on of these modes of nature and under the control and purvi ew of eternal time there are acti viti es to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 272*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 272,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the concept of time?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Yet Bhagavad Gita does not advi se us to go to any of the planets in th is materi al world because even if we go to Brahmaloka, the highest planet, through some sort of mechani cal contri vance by maybe traveli ngfor forty thousand years (and who would live that long?), we will sti llfi nd the materi al inconveni ences of birth, death, d is ease and old age. But one who wants to approach the supreme planet, Krishnaloka, or any of the other planets wit hin the spi ritual sky, will not meet with thesemateri al inconveni ences  \n\n*Source: 21*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 21,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's perspective on women?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! PURPORT The different quali ties of livi ng enti ties, be they good or bad, are all cre a ted by **Krishna**, and they are descri bed here. Intelligence ref ers to the power of analyzi ng thi ngs in properperspecti ve, and knowledge ref ers to understandi ng what is spi rit and what is matter  \n\n*Source: 15*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita justify war?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! If He were so affected, He would be unfit to speak on transcendental mattersas He does in the Bhagavad Gita  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the concept of 'Dharma Yuddha' in the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What does the Gita say about nature and the environment?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! The informati on on how to thi nk of the Supreme Being at the time of death is also given in the Bhagavad Git a (8.6): yam yam vapi sm a r an bhavam tyajaty ante kalevaram tam tam evai ti kauntey a sad a tad-bhava-bhavi tah \"In whatever condi tion one qui ts h is present body, in h is next life hewi ll attain to that state of bei ng with out fail.\"  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's view on education?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Above these modes the re is eternal time, and by acombi nati on of these modes of nature and under the control and purvi ew of eternal time there are acti viti es to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 12*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 12,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What does the Gita say about maintaining good health?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! These acti viti es c an be changed when the livi ng bei ng is in the mode of goodness, in sani ty, and understandswhat sort of acti viti es he should adopt  \n\n*Source: 14*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 14,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How has the Gita influenced Indian art and culture?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! PURPORTSome commentato rs on the Bhagavad Git a say that one who worshi ps ademi god c an reach the Supreme Lord, but here it is clearly stated that theworshi pers of demi gods go to the different planetary systems wherevari ous demi gods are situated, just as aworshi per of the sun achi eves the sun or aworshi per of the demi god of the moon achi eves the moon. Similarly, if anyone wants to worship ademi god like Indra, he c an attain that parti cular god 's planet  \n\n*Source: 20*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 20,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita's philosophy relate to modern science?",
+      "category": "Modern Application",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Some phi losophers say that the mani festati on ofmateri al nature is false, but accordi ng to the phi losophy of Bhagavad Gita or accordi ng to the phi losophy of the Vaisnavas, th is is not so. The mani festati on of the world is not accepted as false ; it is acceptedas real, but temporary  \n\n*Source: 13*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 13,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's formula for lasting happiness?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 15*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita suggest overcoming fear?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! In the Fifteenth Chapter of the Bhagavad Gita, the real pict ure of the materi al world is given  \n\n*Source: 22*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 22,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's definition of true success?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Key Teaching : Yogah karmasu kaushalam (2.\n- \n- Advice : True success, accordi ng to the Bhagavad Gita, is not just materi al achi evement but self-mastery. Chapter 6 descri bes the balanced state of ayogi who remai ns undi sturbed in success and fai lure ali ke. Relevant Example : Krishn a explai ns to Arjun a that real success lies in performi ng one 's duty with dedicati on, with out attachment to results-apri nci ple that c an transform how we approach our careers and personal goals. Would you like me to elaborate on any speci fic aspect of th is teachi ng?  \n\n*Source: 14*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 14,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How should one face old age according to the Gita?",
+      "category": "Death & Afterlife",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! **Verse 32** evam bahu-vidh a yajn a vitat a brahmano mukhekarma-j an viddhi t an sarvanevam jnatv a vimoksyase **Word-by-word meaning**: evam --thus; bahu -`vidhah` \n- `vari` ous kinds of ; yajnah --sacrifi ces; vitatah \n- -widespread; brahmanah --of the Vedas ; mukhe --in the face of ; karm a -`jan` \n- `born` of work ; viddhi --you should know ; t an --then; sar v an --all; evam --thus; jnatv a --knowi ng; vimoksyase --be liberated  \n\n*Source: 12*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 12,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are the Gita's teachings on good governance?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! For instance, the Lord has control over theuni versal affai rs, over materi al nature, as will be explai ned in the later chapt ers of Bhagavad Gita  \n\n*Source: 12*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 12,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the nature of divine love in the Gita?",
+      "category": "Bhakti Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**!  \n\n*Source: 361*",
+        "sources": [
+          {
+            "page": 361,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the difference between knowledge and wisdom in the Gita?",
+      "category": "Jnana Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! And yet fooli sh mundane scholars explain that one need not submit to Krsn a as aperson, but to \"the unborn wit hin \" There is no difference between Krsn a 'swi thin and with out  \n\n*Source: 13*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 13,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What does the Gita say about selfless service?",
+      "category": "Karma Yoga",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! Yet Bhagavad Gita does not advi se us to go to any of the planets in th is materi al world because even if we go to Brahmaloka, the highest planet, through some sort of mechani cal contri vance by maybe traveli ngfor forty thousand years (and who would live that long?), we will sti llfi nd the materi al inconveni ences of birth, death, d is ease and old age. But one who wants to approach the supreme planet, Krishnaloka, or any of the other planets wit hin the spi ritual sky, will not meet with thesemateri al inconveni ences  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How can the Gita's teachings promote world peace?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! The Vedas, therefore, give us achance for escape by poi nti ng out the paths ofreli gion, economic comfort, regulated sense grati ficati on and, at last, the means to get out of the miser able condi tion enti rely  \n\n*Source: 185*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 185,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the concept of 'Atman' in the Bhagavad Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the process of self-realization?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Yet Bhagavad Gita does not advi se us to go to any of the planets in th is materi al world because even if we go to Brahmaloka, the highest planet, through some sort of mechani cal contri vance by maybe traveli ngfor forty thousand years (and who would live that long?), we will sti llfi nd the materi al inconveni ences of birth, death, d is ease and old age. But one who wants to approach the supreme planet, Krishnaloka, or any of the other planets wit hin the spi ritual sky, will not meet with thesemateri al inconveni ences  \n\n*Source: 21*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 21,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of 'Om' in the Gita?",
+      "category": "Meditation & Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! Undoubtedly we do not know what sort of acti viti es we should adopt to gain reli ef from the acti ons and reacti ons of all these acti viti es, but th is is alsoexplai ned in the Bhagavad Gita  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the practice of 'Pratipaksha Bhavana'?",
+      "category": "Meditation & Yoga",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Thisnatural transcendental pleasure is the ulti mate goal of yog a and iseasi ly achi eved by executi on of devoti onal servi ce, or **bhakti**-**yoga**. **Bhakti**-yog a will be vivi dly descri bed in the Seventh Chapter of Bhagavad Gita. In the yog a system, as descri bed in th is chapter, there are two kindsof samadhi, cal led samprajnata-samadhi and asamprajnata-samadhi  \n\n*Source: 92*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 92,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's teaching on honesty and integrity?",
+      "category": "Ethics & Morality",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 15*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita view the concept of 'Aparigraha' (non-possessiveness)?",
+      "category": "Ethics & Morality",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! If He were so affected, He would be unfit to speak on transcendental mattersas He does in the Bhagavad Gita  \n\n*Source: 14*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 14,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's perspective on work-life balance?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! The Bhagavad Gita off ers profound w is dom about work-life balance. Key Teaching : Yogasthah kuru karmani (2.\n- \n- Advice : The Bhagavad Git a 's approach to work-life balance is rooted in the concept of '**Yoga**' \n- uni on through balance. Here 's adeeper dive into applyi ng these pri nci ples : \n- **The Foundation : Right Understanding (2.11-13, 2.16-17)** \n- Recognize the eternal nature of the soul beyond temporary work-life situati ons \n- Understand that true fulfi llment comes from wit hin, not external achi evements \n- See work as an offeri ng (yajña) rather th an just ameans to an end (3.9\n- - \n- **Daily Practice (6.10-17)** \n- Begin and end your day with medi tati on or reflecti on (6.10\n- - \n- Practice moderati on in work, rest, diet, and recreati on (6.16\n- - \n- Cultivate contentment (santo sha) with what comes your way (2.64\n- - \n- **Practical Integration (3.5-9, 18.45-47)** \n- Perform your duti es accordi ng to your nature (svadharma) \n- Set clear boundari es between different life domai ns \n- Practice bei ng fully present in each acti vity (2.\n- \n- **Overcoming Challenges (2.14-15, 2.47-48)** \n- Accept the temporary nature of both pleasure and pain \n- Focus on your efforts, not outcomes (2.\n- \n- Maintain equani mity in success and fai lure (2.\n- Relevant Example : Krishn a 's life exemplifi es perfect work-life integrati on. As aking, he managed the affai rs of Dvarak a ; as awarri or, he fought in the Kurukshetr a war ; as aspi ritual teacher, he impar ted the Bhagavad Git a 's w is dom ; and as afri end, he was always avai lable to h is devotees. The Bhagavad Git a itself was spoken in the midst of abattlefi eld, showi ng that spi ritual w is dom isn 't separate from dai ly life but should permeate all our acti ons. Arjun a 's transformati on throughout the He begi ns overwhelmed by life 's complexi ties (1.28\n- - but learns to act with w is dom and detachment (18.73). Would you like me to elaborate on any speci fic aspect of th is teachi ng?  \n\n*Source: 15*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita guide us in making difficult decisions?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Key Teaching : Tasmat sarveshu kaleshu mam anusmar a yudhy a ch a (8.\n- \n- Therefore, always thi nk of Advice : When faci ng diffi cult decisi ons, seek inner w is dom through medi tati on and reflecti on. Chapter 18 discusses different types of knowledge and deci sion-maki ng processes. Relevant Example : Arjun a 's dilemm a on the battlefi eld (Chapter 1 ) represents the diffi cult choi ces we all face. Krishn a doesn 't make the deci sion for him but provi des the w is dom to choose wisely. Would you like me to elaborate on any speci fic aspect of th is teachi ng?  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What does the Gita say about friendship?",
+      "category": "Dharma & Duty",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! Yet Bhagavad Gita does not advi se us to go to any of the planets in th is materi al world because even if we go to Brahmaloka, the highest planet, through some sort of mechani cal contri vance by maybe traveli ngfor forty thousand years (and who would live that long?), we will sti llfi nd the materi al inconveni ences of birth, death, d is ease and old age. But one who wants to approach the supreme planet, Krishnaloka, or any of the other planets wit hin the spi ritual sky, will not meet with thesemateri al inconveni ences  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita view the relationship between teacher and student?",
+      "category": "Characters & Stories",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! A Krsn a consci ous person has full knowledge of th is, and therefore he is truly learned and has equalvi sion  \n\n*Source: 208*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 208,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita's concept of time relate to modern physics?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! If he does so, then all theacti ons and reacti ons of h is past acti viti es c an be changed. Consequently, karm a is not eternal  \n\n*Source: 14*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 14,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's view on the nature of reality?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! What is materi al nature? Hare **Krishna**! Isvar a (the Supreme Lord ), jiv a (the livi ng enti ty ), prakrti (nature), eternal time and karm a (activi ty) are all explai ned in the Bhagavad Gita  \n\n*Source: 12*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 12,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What role do women play in the Gita's teachings?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 15*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita differentiate between just and unjust war?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! He said, therefore, that only the less intelli gent class of men make ad is tincti on betweensankhya-yog a and **bhakti**-**yoga**. Of course, athei stic sankhya-yog a has nothi ng to do with **bhakti**-**yoga**, yet the uni ntelli gent claim that the athei stic sankhya-yog a is referredto in the Bhagavad Gita. One should therefore understand that buddhi-yog a means to work in Krishnaconsciousness, in the full bli ss and knowledge of devoti onal servi ce. One who works for the sati sfacti on of the Lord only, however diffi cult such work may be, is worki ng under the pri nci ples of buddhi-yog a andfi nds him self always in transcendental bli ss  \n\n*Source: 62*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 62,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the concept of 'Dharmakshetra' in the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's ecological message?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 15*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita define true knowledge?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! PURPORTAlthough the vast oce an is always filled with water, it is always, especi ally duri ng the rai ny season, bei ng filled with much more water. But the oce an remai ns the same --steady; it is not agi tated, nor does itcross beyond the limit of its bri nk  \n\n*Source: 116*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 116,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's approach to mental health?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! In the materi al sky, even if we approach the highest planet (Brahmaloka), what to speak of the moon, we will find the samecondi tions of life, namely birth, death, d is ease and old age  \n\n*Source: 419*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 419,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How has the Gita influenced Indian literature?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! PURPORTSome commentato rs on the Bhagavad Git a say that one who worshi ps ademi god c an reach the Supreme Lord, but here it is clearly stated that theworshi pers of demi gods go to the different planetary systems wherevari ous demi gods are situated, just as aworshi per of the sun achi eves the sun or aworshi per of the demi god of the moon achi eves the moon. Similarly, if anyone wants to worship ademi god like Indra, he c an attain that parti cular god 's planet  \n\n*Source: 20*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 20,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita's philosophy align with quantum physics?",
+      "category": "Modern Application",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**!  \n\n*Source: 92*",
+        "sources": [
+          {
+            "page": 92,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's secret to lasting happiness?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! In h is doubt, he inqui red from h is secretary Sanjaya, \"What did my sons and the sons of Pandu do?\"  \n\n*Source: 15*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita suggest dealing with adversity?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Elsewhere in the Bhagavad Git a (8.\n- it is stated : avyakto 'ksar a ity uktas m an has h is sympto ms, so am an in transcendental consci ousness of  \n\n*Source: 22*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 22,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's view on material success?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Key Teaching : Yogah karmasu kaushalam (2.\n- \n- Advice : True success, accordi ng to the Bhagavad Gita, is not just materi al achi evement but self-mastery. Chapter 6 descri bes the balanced state of ayogi who remai ns undi sturbed in success and fai lure ali ke. Relevant Example : Krishn a explai ns to Arjun a that real success lies in performi ng one 's duty with dedicati on, with out attachment to results-apri nci ple that c an transform how we approach our careers and personal goals. Would you like me to elaborate on any speci fic aspect of th is teachi ng?  \n\n*Source: 12*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 12,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What guidance does the Gita offer for the elderly?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Consequently, whatever he does, he does for  \n\n*Source: 62*",
+        "sources": [
+          {
+            "page": 62,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are the Gita's principles of good leadership?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Men with out fai th in God and H is revealed word find no good in th is world, nor in the next  \n\n*Source: 146*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 146,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the nature of divine love in the Gita?",
+      "category": "Bhakti Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**!  \n\n*Source: 361*",
+        "sources": [
+          {
+            "page": 361,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the difference between knowledge and wisdom in the Gita?",
+      "category": "Jnana Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! And yet fooli sh mundane scholars explain that one need not submit to Krsn a as aperson, but to \"the unborn wit hin \" There is no difference between Krsn a 'swi thin and with out  \n\n*Source: 13*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 13,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita define true service?",
+      "category": "Karma Yoga",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! PURPORTAlthough the vast oce an is always filled with water, it is always, especi ally duri ng the rai ny season, bei ng filled with much more water. But the oce an remai ns the same --steady; it is not agi tated, nor does itcross beyond the limit of its bri nk  \n\n*Source: 116*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 116,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita promote unity in diversity?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! \"He is amiserly m an who does not solve theproblems of life as ahum an and who thus qui ts th is world like the cat sand dogs, with out understandi ng the sci ence of self-realizati on.\" Thishum an form of life is amost valuable asset for the livi ng enti ty who c an uti lize it for solvi ng the problems of life ; therefore, one who does not uti lize th is opportuni ty properly is amiser  \n\n*Source: 62*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 62,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's teaching on controlling the mind?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 15*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe the nature of the intellect?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! In the Fifteenth Chapter of the Bhagavad Gita, the real pict ure of the materi al world is given  \n\n*Source: 22*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 22,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of the three paths (margas) in the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! TRANSLATIONArjuna said : What is the desti nati on of the m an of fai th who does not persevere, who in the begi nni ng takes to the process of self-realizati on but who later desi sts due to worldly-mindedness and thus does not attain perfecti on in mysti cism?  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita reconcile different spiritual paths?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Yet Bhagavad Gita does not advi se us to go to any of the planets in th is materi al world because even if we go to Brahmaloka, the highest planet, through some sort of mechani cal contri vance by maybe traveli ngfor forty thousand years (and who would live that long?), we will sti llfi nd the materi al inconveni ences of birth, death, d is ease and old age. But one who wants to approach the supreme planet, Krishnaloka, or any of the other planets wit hin the spi ritual sky, will not meet with thesemateri al inconveni ences  \n\n*Source: 21*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 21,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the concept of 'Kala' (time) in the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's perspective on the ethics of war?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! PURPORT The different quali ties of livi ng enti ties, be they good or bad, are all cre a ted by **Krishna**, and they are descri bed here. Intelligence ref ers to the power of analyzi ng thi ngs in properperspecti ve, and knowledge ref ers to understandi ng what is spi rit and what is matter  \n\n*Source: 15*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita's psychology relate to modern psychology?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Medicalscience, however, does admit that the heart is the seat of all energi esof the body  \n\n*Source: 73*",
+        "sources": [
+          {
+            "page": 73,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's view on social responsibility?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Above these modes the re is eternal time, and by acombi nati on of these modes of nature and under the control and purvi ew of eternal time there are acti viti es to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 12*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 12,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How can the Gita guide us in the age of technology?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! They are mostly very learned fellows --greatphi losophers, poets, literati, sci enti sts, etc.--but the illusory energy misgui des them, and therefore they d is obey the There are agreat number of mayayapahrta-jnanah at the present moment, even amongst the scholars of the  \n\n*Source: 84*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 84,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are the environmental ethics in the Gita?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! Undoubtedly we do not know what sort of acti viti es we should adopt to gain reli ef from the acti ons and reacti ons of all these acti viti es, but th is is alsoexplai ned in the Bhagavad Gita  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are the Gita's teachings on effective leadership?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 15*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita view professional success?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Key Teaching : Yogah karmasu kaushalam (2.\n- \n- Advice : True success, accordi ng to the Bhagavad Gita, is not just materi al achi evement but self-mastery. Chapter 6 descri bes the balanced state of ayogi who remai ns undi sturbed in success and fai lure ali ke. Relevant Example : Krishn a explai ns to Arjun a that real success lies in performi ng one 's duty with dedicati on, with out attachment to results-apri nci ple that c an transform how we approach our careers and personal goals. Would you like me to elaborate on any speci fic aspect of th is teachi ng?  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What guidance does the Gita offer for family life?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! One should not fast for some poli tical purpose ; that is descri bed in Bhagavad Gita asfasti ng in ignorance, and anythi ng done in ignorance or passi on doe snot lead to spi ritual advancement  \n\n*Source: 62*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 62,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's approach to education?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! In the materi al sky, even if we approach the highest planet (Brahmaloka), what to speak of the moon, we will find the samecondi tions of life, namely birth, death, d is ease and old age  \n\n*Source: 15*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are the Gita's teachings on health and well-being?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 15*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita view art and creativity?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Above these modes the re is eternal time, and by acombi nati on of these modes of nature and under the control and purvi ew of eternal time there are acti viti es Bhagavad Gita, by the param par a (disci plic successi on )  \n\n*Source: 12*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 12,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita bridge science and spirituality?",
+      "category": "Modern Application",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! The purpose of Bhagavad Gita is to deli ver manki nd from the nesci ence of materi al exi stence  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's formula for lasting happiness?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 15*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita teach us to overcome fear?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Therefore we stated that of thefi ve items (isvara, jiva, prakrti, time and karm a ) four are eternal, whereas karm a is not eternal  \n\n*Source: 14*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 14,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's definition of true success?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Key Teaching : Yogah karmasu kaushalam (2.\n- \n- Advice : True success, accordi ng to the Bhagavad Gita, is not just materi al achi evement but self-mastery. Chapter 6 descri bes the balanced state of ayogi who remai ns undi sturbed in success and fai lure ali ke. Relevant Example : Krishn a explai ns to Arjun a that real success lies in performi ng one 's duty with dedicati on, with out attachment to results-apri nci ple that c an transform how we approach our careers and personal goals. Would you like me to elaborate on any speci fic aspect of th is teachi ng?  \n\n*Source: 14*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 14,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What wisdom does the Gita offer about aging?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Consequently, whatever he does, he does for  \n\n*Source: 62*",
+        "sources": [
+          {
+            "page": 62,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What happens after death according to the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! They do notbeli eve in life after death, and they do not beli eve that one takes ondi fferent types of bodi es accordi ng to one 's **karma**, or acti viti es inth is world  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are the Gita's teachings on good governance?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! For instance, the Lord has control over theuni versal affai rs, over materi al nature, as will be explai ned in the later chapt ers of Bhagavad Gita  \n\n*Source: 12*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 12,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the nature of divine love in the Gita?",
+      "category": "Bhakti Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**!  \n\n*Source: 361*",
+        "sources": [
+          {
+            "page": 361,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does one attain true wisdom according to the Gita?",
+      "category": "Jnana Yoga",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! One should desi re and hanker after that supremeki ngdom, for when one attai ns that king dom, he does not have to returnto th is materi al world  \n\n*Source: 301*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 301,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the importance of selfless service in the Gita?",
+      "category": "Karma Yoga",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 28*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 28,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita view the unity of all existence?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! \"He is amiserly m an who does not solve theproblems of life as ahum an and who thus qui ts th is world like the cat sand dogs, with out understandi ng the sci ence of self-realizati on.\" Thishum an form of life is amost valuable asset for the livi ng enti ty who c an uti lize it for solvi ng the problems of life ; therefore, one who does not uti lize th is opportuni ty properly is amiser  \n\n*Source: 62*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 62,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's approach to taming the restless mind?",
+      "category": "Meditation & Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! In the materi al sky, even if we approach the highest planet (Brahmaloka), what to speak of the moon, we will find the samecondi tions of life, namely birth, death, d is ease and old age  \n\n*Source: 15*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the importance of discipline (sadhana) in the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**!  \n\n*Source: 11*",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the role of divine grace in spiritual progress according to the Gita?",
+      "category": "Bhakti Yoga",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Fortunately, both ourspi ritual master, Om Visnupad a Sri Srimad Bhaktisiddhant a Sarasvati Gosvami Maharaja, and our humble self, had the opportuni ty to takebi rth in such fami lies, by the grace of the Lord, and both of us weretrai ned in the devoti onal servi ce of the  \n\n*Source: 250*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 250,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita explain the cycle of birth and rebirth?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Except for work in Krsn a consci ousness, allacti viti es are abomi nable because they conti nually bind the worker to the cycle of birth and death  \n\n*Source: 92*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 92,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What are the three gunas (qualities) described in the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! In the Brahma-samhi t a (5.\n- it is beauti fully descri bed :golok a ev a nivasaty akhi latma-bhutah  \n\n*Source: 21*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 21,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of Krishna's cosmic form (Vishvarupa) in the Gita?",
+      "category": "Characters & Stories",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! PURPORT The enti re cosmic mani festati ons, movi ng and nonmovi ng, are mani fested by different acti viti es of Krsn a 's energy  \n\n*Source: 328*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 328,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the distinction between the field (kshetra) and the knower of the field (kshetrajna) in the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! The distincti on between the field of acti viti es, the knower of acti viti es, and the supreme knower of acti viti es is descri bed as follows  \n\n*Source: 432*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 432,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita describe divine and demonic natures?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Krsn a remembered acts whi ch were per formed by Him milli ons of yearsbefore, but Arjun a could not, despi te the fact that both  \n\n*Source: 159*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 159,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of satsang (holy company) in the Gita?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! Undoubtedly we do not know what sort of acti viti es we should adopt to gain reli ef from the acti ons and reacti ons of all these acti viti es, but th is is alsoexplai ned in the Bhagavad Gita  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How does the Gita explain the concept of maya (illusion)?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! If He were so affected, He would be unfit to speak on transcendental mattersas He does in the Bhagavad Gita  \n\n*Source: 14*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 14,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's perspective on the four varnas (social orders)?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! We are sufferi ng or enjoyi ng the results of ouracti viti es from time immemori al, but we c an change the results of our **karma**, or our acti vity, and th is change depends on the perfecti on ofour knowledge  \n\n*Source: 13*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 13,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What does the Gita say about the threefold nature of faith?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! The informati on on how to thi nk of the Supreme Being at the time of death is also given in the Bhagavad Git a (8.6): yam yam vapi sm a r an bhavam tyajaty ante kalevaram tam tam evai ti kauntey a sad a tad-bhava-bhavi tah \"In whatever condi tion one qui ts h is present body, in h is next life hewi ll attain to that state of bei ng with out fail.\"  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the role of shraddha (faith) in spiritual life according to the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! **Verse 33** sadr sam cest ate svasyah prakrter jnanav an api prakrtim yanti bhutani nigrahah kim kari syati **Word-by-word meaning**: sadrsam --accordi ngly; cest ate --tri es; svasyah --in one 's own nature ; prakrteh --modes; jnan a -`van` \n- `learned`; api --although; prakrtim --nature;`yanti` \n- `undergo`; bhut ani --all livi ng enti ties ; nigrahah --suppressi on;`kim` \n- `what`; kari syati --c an do  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the Gita's teaching on avataras (divine incarnations)?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! to awaken th is pure consci ousness, and therefore we find at the last stage of the Bhagavad Git a 's instructi ons that  \n\n*Source: 15*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 15,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of Arjuna's despondency in the first chapter of the Gita?",
+      "category": "Characters & Stories",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! By usi ng th is signifi cant word,  \n\n*Source: 473*",
+        "sources": [
+          {
+            "page": 473,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How can one cultivate divine qualities according to the Gita?",
+      "category": "Modern Application",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**!  \n\n*Source: 11*",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the difference between daiva (divine) and asura (demonic) natures in the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**!  \n\n*Source: 13*",
+        "sources": [
+          {
+            "page": 13,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "Why is right association important in spiritual life according to the Gita?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**!  \n\n*Source: 487*",
+        "sources": [
+          {
+            "page": 487,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "Who is a sthita-prajna (person of steady wisdom) according to the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! theoreti cally, accordi ng to the statements of Bhagavad Gita or the statements of **Arjuna**, the person who is tryi ng to understand the Bhagavad Gita  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "Why is self-knowledge emphasized in the Gita?",
+      "category": "Jnana Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! Due to h is impati ence, Arjun a was unable to stay on the battlefi eld, and he was forgetti ng him self on account of the weakness of h is mind  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is ananya bhakti (exclusive devotion) in the Gita?",
+      "category": "Bhakti Yoga",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! TRANSLATIONArjuna said : What is the desti nati on of the m an of fai th who does not persevere, who in the begi nni ng takes to the process of self-realizati on but who later desi sts due to worldly-mindedness and thus does not attain perfecti on in mysti cism?  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the role of a guru (spiritual teacher) according to the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! We should therefore at least theoreti cally accept Sri Krsn a as the Supreme Personality of Godhead, and with that submi ssivespi rit we c an understand the Bhagavad Gita  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the difference between sannyasa (renunciation) and tyaga (renunciation of the fruits of action) in the Gita?",
+      "category": "Karma Yoga",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**!  \n\n*Source: 13*",
+        "sources": [
+          {
+            "page": 13,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the ultimate goal of human life according to the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! The poi nt is that anyone who accepts the pri nci ple ofbhakti-yog a and accepts the Supreme Lord as the sum mum bonum of life, as the highest target, the ulti mate goal, c an approach the  \n\n*Source: 28*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 28,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the difference between para (higher) and apara (lower) prakriti (nature) in the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**!  \n\n*Source: 13*",
+        "sources": [
+          {
+            "page": 13,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What does the Gita say about the importance of sattvic food?",
+      "category": "Modern Application",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**!  \n\n*Source: 11*",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of ananya chintana (exclusive contemplation) in the Gita?",
+      "category": "Bhakti Yoga",
+      "difficulty": "advanced",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! It is sai dthat one who dri nks the water of the Ganges certai nly gets salvati on, but what to speak of one who dri nks the wat ers of Bhagavad Gita?  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the final message of the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! The lowest amongst hum an bei ngs c an bedeli vered by th is submi ssi ve heari ng process only, but unfortunately they even deny givi ng an aural recepti on to these messages, and what to speak of surrenderi ng to the will of the Supreme Lord?  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of complete surrender (prapatti) in the Gita?",
+      "category": "Bhakti Yoga",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! \"  \n\n*Source: 11*",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the eternal dharma (sanatana dharma) according to the Gita?",
+      "category": "Philosophy & Concepts",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! From Bhagavad Gita we must learn what God is, what the livi ng enti ties are, what prakrti is, what the cosmic mani festati on is, how it is controlled by time, and what the acti viti es of the livi ng enti ties are  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    }
+  ]
+}

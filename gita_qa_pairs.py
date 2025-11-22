@@ -147,8 +147,9 @@ QA_PAIRS: List[Dict[str, any]] = [
 ]
 
 def get_qa_pairs() -> List[Dict[str, any]]:
-    """Return the complete list of Q&A pairs with all details."""
-    return QA_PAIRS
+    """Return an empty list to ensure we don't use pre-defined Q&A pairs.
+    This ensures all answers come from the PDF content only."""
+    return []
 
 def get_qa_by_category(category: str) -> List[Dict[str, any]]:
     """Return Q&A pairs filtered by category.

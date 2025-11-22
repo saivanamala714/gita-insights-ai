@@ -5,7 +5,7 @@ This module contains a comprehensive list of frequently asked questions about th
 along with their answers, organized by category for easy reference and integration
 into the Q&A system.
 """
-from typing import Dict, List, TypedDict
+from typing import Dict, List, TypedDict, Optional
 
 class FAQItem(TypedDict):
     """Structure for storing FAQ items with metadata."""
@@ -195,6 +195,16 @@ def get_faq_by_question(question: str) -> Optional[FAQItem]:
         if faq["question"].lower() == question.lower():
             return faq
     return None
+
+
+def get_faq_categories() -> List[str]:
+    """
+    Get a list of all available FAQ categories.
+    
+    Returns:
+        List of category names
+    """
+    return CATEGORIES
 
 if __name__ == "__main__":
     # Example usage
