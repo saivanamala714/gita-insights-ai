@@ -2,17 +2,24 @@ import os
 import re
 import logging
 import json
-from typing import Dict, List, Any, Optional, Tuple
+from typing import Dict, List, Any, Optional, Tuple, Set
+import random
+from PyPDF2 import PdfReader
+from datetime import datetime
+from pathlib import Path
+from collections import defaultdict, Counter
 
 # Import the name correction module
 from name_corrector import correct_text_names, correct_character_name
-from PyPDF2 import PdfReader
-from fastapi import FastAPI, HTTPException, Request, Response
-from fastapi.responses import JSONResponse
-from pydantic import BaseModel
+from gita_characters import get_character_info, get_character_aliases, get_character_names
+from gita_faqs import get_faqs_by_category, get_faq_by_question, search_faqs, get_faq_categories
 from response_processor import get_processor
 from difflib import SequenceMatcher
 from gita_qa_pairs import get_qa_pairs, get_qa_by_category
+from text_utils import TextProcessor
+from fastapi import FastAPI, HTTPException, Request, Response
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel
 
 
 class Document:
@@ -32,6 +39,16 @@ class QASystem:
         self.pdf_path = pdf_path
         self.documents = []
         self.verse_index = {}  # To store verse references for quick lookup
+        
+        # Initialize text processor and build/load correction map
+        self.text_processor = TextProcessor(pdf_path)
+        correction_map_path = os.path.join(os.path.dirname(pdf_path), 'correction_map.json')
+        if os.path.exists(correction_map_path):
+            logging.info("Loading existing correction map...")
+            self.text_processor.load_correction_map(correction_map_path)
+        else:
+            logging.info("Building new correction map from PDF...")
+            self.text_processor.build_correction_map()
 
     def clean_text(self, text: str) -> str:
         """Clean and preprocess text from the PDF."""
@@ -1021,81 +1038,365 @@ class QASystem:
             "confidence": 0.7  # Medium confidence for PDF-based answers
         }
 
-    def _post_process_answer(self, answer: str) -> str:
+    def _get_time_based_greeting(self) -> str:
+        """Return a time-appropriate greeting."""
+        from datetime import datetime
+        hour = datetime.now().hour
+        if 5 <= hour < 12:
+            return "Good morning! 🌅"
+        elif 12 <= hour < 17:
+            return "Good afternoon! ☀️"
+        elif 17 <= hour < 22:
+            return "Good evening! 🌇"
+        return "Hare Krishna! 🌙"
+
+    def _format_key_concepts(self, text: str) -> str:
+        """Emphasize key concepts with markdown formatting."""
+        concepts = [
+            'Krishna', 'Arjuna', 'Dharma', 'Karma', 'Bhakti', 'Yoga',
+            'Moksha', 'Atman', 'Brahman', 'Samsara', 'Maya', 'Jnana'
+        ]
+        for concept in concepts:
+            text = re.sub(
+                fr'\b({concept})\b', 
+                r'**\1**',  # Make concept bold
+                text, 
+                flags=re.IGNORECASE
+            )
+        return text
+
+    def _add_verse_references(self, text: str, sources: List[Dict[str, Any]]) -> str:
+        """Add formatted verse references if available."""
+        if not sources or not any(s.get('page') for s in sources):
+            return text
+            
+        refs = [f"{s['page']}" for s in sources if s.get('page')]
+        if refs:
+            return f"{text.rstrip('.')}  \n\n*Source: {', '.join(refs)}*"
+        return text
+
+    def _format_as_bullet_points(self, text: str) -> str:
+        """Convert lists into markdown bullet points."""
+        # Look for patterns like "1) First point 2) Second point"
+        text = re.sub(r'(\d+[\)\.])\s+', r'\n- ', text)
+        # Look for patterns like "- First point - Second point"
+        text = re.sub(r'(?<!\n)-\s+', '\n- ', text)
+        return text.strip()
+
+    def _expand_abbreviations(self, text: str) -> str:
+        """Expand common abbreviations in the text."""
+        abbreviations = {
+            'bG': 'Bhagavad Gita',
+            'BG': 'Bhagavad Gita',
+            'Gita': 'Bhagavad Gita',
+            'Lord K': 'Lord Krishna',
+            'Arjuna U': 'Arjuna Uvāca',
+        }
+        for abbr, full in abbreviations.items():
+            text = text.replace(abbr, full)
+        return text
+
+    def _fix_common_issues(self, text: str) -> str:
+        """Fix common formatting issues in the text."""
+        # First, handle specific common issues that need to be fixed before general patterns
+        text = text.replace('theBhagavad', 'the Bhagavad')
+        text = text.replace('BhagavadGita', 'Bhagavad Gita')
+        text = text.replace('LordKrishna', 'Lord Krishna')
+        text = text.replace('Arjunasaid', 'Arjuna said')
+        text = text.replace('Krishnasaid', 'Krishna said')
+        
+        # Common word pairs that should have spaces between them
+        common_pairs = [
+            (r'([a-z])([A-Z][a-z])', r'\1 \2'),  # lower-Upper (e.g., 'theBhagavad' -> 'the Bhagavad')
+            (r'([a-z])([A-Z])', r'\1 \2'),  # lower-UPPER (e.g., 'wordAND' -> 'word AND')
+            (r'([a-zA-Z])([0-9])', r'\1 \2'),  # letter-number
+            (r'([0-9])([a-zA-Z])', r'\1 \2'),  # number-letter
+            (r'([a-zA-Z])([.,!?])', r'\1\2'),   # letter-punctuation (remove space)
+            (r'([.,!?])([a-zA-Z])', r'\1 \2'),  # punctuation-letter (add space)
+            (r'(\w)(the|a|an)(\s|$)', r'\1 \2\3', re.IGNORECASE),  # word-article
+            (r'to(\w+)', r'to \1', re.IGNORECASE),  # to-verb (e.g., 'tounderstand' -> 'to understand')
+            (r'(\w)(is|are|was|were|has|have|had|will|would|could|should)(\s|$)', r'\1 \2\3'),  # word-verb
+            (r'\s+', ' '),  # Multiple spaces to single space
+        ]
+        
+        for fix in common_pairs:
+            if len(fix) == 3:  # Has flags
+                pattern, replacement, flags = fix
+                text = re.sub(pattern, replacement, text, flags=flags)
+            else:
+                pattern, replacement = fix
+                text = re.sub(pattern, replacement, text)
+        
+        # Clean up any remaining double spaces and newlines
+        text = re.sub(r'\s+', ' ', text)  # Replace multiple spaces with single
+        text = re.sub(r'\s+([.,!?])', r'\1', text)  # Remove space before punctuation
+        text = re.sub(r'\n\s*\n+', '\n\n', text)  # Normalize multiple newlines
+        
+        return text.strip()
+
+    def _format_sanskrit_text(self, text: str) -> str:
+        """Format Sanskrit text and translations for better readability."""
+        if not text:
+            return ""
+
+        # 1. First, clean up any control characters and normalize whitespace
+        text = re.sub(r'[\x00-\x08\x0B\x0C\x0E-\x1F\x7F]', ' ', text)
+        text = re.sub(r'\s+', ' ', text).strip()
+
+        # 2. Protect special phrases and terms from being modified
+        protected_phrases = [
+            'Hare Krishna', 'Bhagavad Gita', 'Sanatana Dharma',
+            'Lord Krishna', 'Arjuna said', 'Krishna said',
+            'Bhagavad-gita', 'Bhagavad Gita As It Is',
+            'Sanatana-dharma', 'Supreme Personality of Godhead',
+            'Bhagavan', 'Maharaja', 'Prabhupada'
+        ]
+        
+        # Create protected map and replace phrases with placeholders
+        protected_map = {}
+        for phrase in protected_phrases:
+            placeholder = f'__PROTECTED_{len(protected_map)}__'
+            protected_map[placeholder] = phrase
+            text = text.replace(phrase, placeholder)
+
+        # 3. Fix common word-joining issues
+        word_join_fixes = [
+            # Fix words joined with 'th' (e.g., 'this', 'that')
+            (r'\b([a-zA-Z]{2,})th([a-zA-Z]{2,})\b', r'\1th\2'),
+            
+            # Fix words with missing spaces after punctuation
+            (r'([a-zA-Z])([.,!?;:])([a-zA-Z])', r'\1\2 \3'),
+            
+            # Fix words joined by numbers
+            (r'([a-zA-Z])(\d)', r'\1 \2'),
+            (r'(\d)([a-zA-Z])', r'\1 \2'),
+            
+            # Fix common OCR artifacts
+            (r'([a-z])([A-Z])', r'\1 \2'),
+            (r'([a-z])([A-Z][a-z])', r'\1 \2'),
+            
+            # Fix common Sanskrit terms
+            (r'([a-z])([A-Z][a-z])', r'\1 \2'),
+            (r'([a-z])([A-Z][a-z])', r'\1 \2'),
+        ]
+        
+        for pattern, replacement in word_join_fixes:
+            try:
+                text = re.sub(pattern, replacement, text)
+            except re.error as e:
+                logging.warning(f"Regex error with pattern {pattern}: {e}")
+
+        # 4. Format verses and translations
+        verse_patterns = [
+            # Format verse numbers (e.g., "TEXT 1")
+            (r'(?i)TEXT\s+(\d+)(?:-\d+)?\s*', '\n**Verse \\1**\n\n'),
+            
+            # Format word-by-word meanings
+            (r'(?i)SYNONYMS?\s*', '\n**Word-by-word meaning**:\n'),
+            
+            # Format translation lines
+            (r'([A-Z][A-Za-z\s]+\.)\s*', '\n\\1\n'),
+            
+            # Format word-meaning pairs
+            (r'\b([a-zA-Z]+)--([^\s,;.]+)', r'`\1` - `\2`'),
+        ]
+        
+        for pattern, replacement in verse_patterns:
+            text = re.sub(pattern, replacement, text)
+
+        # 5. Clean up punctuation and spacing
+        cleanup_patterns = [
+            (r'\s+', ' '),  # Normalize whitespace
+            (r'\s+([.,!?;:])', r'\1'),  # Remove space before punctuation
+            (r'([.,!?;:])([A-Za-z])', r'\1 \2'),  # Add space after punctuation
+            (r'\(\s*', '('),  # Remove spaces after (
+            (r'\s*\)', ')'),  # Remove spaces before )
+            (r'\s*,\s*', ', '),  # Standardize comma spacing
+            (r'\s*\;\s*', '; '),  # Standardize semicolon spacing
+        ]
+        
+        for pattern, replacement in cleanup_patterns:
+            text = re.sub(pattern, replacement, text)
+
+        # 6. Restore protected phrases
+        for placeholder, phrase in protected_map.items():
+            text = text.replace(placeholder, phrase)
+
+        # 7. Final cleanup
+        text = re.sub(r'\s+', ' ', text).strip()  # Remove extra spaces
+        text = re.sub(r'\n\s*\n+', '\n\n', text)  # Normalize newlines
+        
+        # Ensure proper sentence capitalization
+        sentences = re.split(r'(?<=[.!?])\s+', text)
+        text = ' '.join(sentence[0].upper() + sentence[1:] if sentence else '' for sentence in sentences)
+
+        return text
+
+    def _format_source_reference(self, sources: List[Dict[str, Any]]) -> str:
+        """Format source references in a consistent way."""
+        if not sources or not isinstance(sources, list):
+            return ""
+            
+        source_texts = []
+        for source in sources:
+            if not isinstance(source, dict):
+                continue
+                
+            page = source.get('page', '')
+            source_name = source.get('source', '')
+            
+            if page and source_name:
+                source_texts.append(f"{source_name}, page {page}")
+            elif page:
+                source_texts.append(f"page {page}")
+            elif source_name:
+                source_texts.append(source_name)
+                
+        if not source_texts:
+            return ""
+            
+        return "\n\n*Source: " + "; ".join(source_texts) + "*"
+
+    def _post_process_answer(self, answer: str, question: str = "", sources: List[Dict[str, Any]] = None) -> str:
         """
-        Improve the quality of the answer by fixing common grammatical issues,
-        improving readability, and ensuring clarity while preserving the original meaning.
+        Improve the quality of the answer with enhanced formatting and engagement.
         
         Args:
             answer: The raw answer text to be processed
+            question: The original question (optional, for context)
+            sources: List of source references (optional)
             
         Returns:
-            str: The improved answer text
+            str: The improved and formatted answer text
         """
         if not answer or not isinstance(answer, str):
             return answer
             
-        # First, fix specific known issues from the PDF text
-        answer = answer.replace('iscontrolled', 'is controlled')
+        # Store original for comparison
+        original_answer = answer
         
-        # Protect specific phrases from being split
+        # 1. First, protect special phrases and terms from being modified
         protected_phrases = [
-            'Hare Krishna',
-            'Bhagavad Gita',
-            'Sanatana Dharma',
-            'Lord Krishna',
-            'Arjuna said',
-            'Krishna said'
+            'Hare Krishna', 'Bhagavad Gita', 'Sanatana Dharma',
+            'Lord Krishna', 'Arjuna said', 'Krishna said',
+            'Bhagavad-gita', 'Bhagavad Gita As It Is',
+            'Sanatana-dharma', 'Supreme Personality of Godhead',
+            'Bhagavan', 'Maharaja', 'Prabhupada', 'Arjuna', 'Dhritarashtra',
+            'Kurukshetra', 'Mahabharata', 'Bhagavad-gita'
         ]
+        
+        # Create protected map and replace phrases with placeholders
         protected_map = {}
         for phrase in protected_phrases:
-            placeholder = f'__{hash(phrase)}__'
+            # Create a unique placeholder that won't conflict with actual text
+            placeholder = f'__PROTECTED_{len(protected_map)}__'
             protected_map[placeholder] = phrase
             answer = answer.replace(phrase, placeholder)
         
-        # Fix common word joins (only between words, not within words)
-        common_verbs = ['is', 'are', 'was', 'were', 'has', 'have', 'had', 'will', 'would', 'could', 'should']
-        for verb in common_verbs:
-            # Only add space if the verb is preceded by a word character and not already spaced
-            answer = re.sub(rf'(?<=\w){verb}\b', f' {verb}', answer)
+        # 2. Apply comprehensive text correction using our TextProcessor
+        answer = self.text_processor.correct_text(answer)
+        
+        # 3. Standardize and clean up the greeting - only keep one at the start
+        answer = re.sub(r'(^|\n)Hare \*\*Krishna\*\!.*?(?=\n|$)', '', answer)
+        
+        # 4. Format Sanskrit text and translations
+        answer = self._format_sanskrit_text(answer)
+        
+        # 5. Fix common word-joining issues
+        word_join_fixes = [
+            # Fix common word joins
+            (r'([a-z])([A-Z])', r'\1 \2'),  # Split camelCase
+            (r'(\w)(\d+)', r'\1 \2'),  # Split word followed by number
+            (r'(\d+)([A-Za-z])', r'\1 \2'),  # Split number followed by word
             
-        # Restore protected phrases
+            # Fix common OCR artifacts
+            (r'([a-z])([A-Z][a-z])', r'\1 \2'),
+            (r'([a-z])([A-Z][a-z])', r'\1 \2'),
+            
+            # Fix common word joins with punctuation
+            (r'([a-zA-Z])([.,!?;:])([a-zA-Z])', r'\1\2 \3'),
+        ]
+        
+        for pattern, replacement in word_join_fixes:
+            try:
+                answer = re.sub(pattern, replacement, answer)
+            except re.error as e:
+                logging.warning(f"Regex error with pattern {pattern}: {e}")
+        
+        # 6. Fix common OCR and formatting issues
+        common_issues = [
+            # Add spaces around common words
+            (r'\b(a|an|the|and|or|but|nor|so|for|yet|at|by|in|of|on|to|up|as|is|are|was|were|be|been|being|have|has|had|do|does|did|shall|should|will|would|may|might|must|can|could)\b', r' \1 '),
+            
+            # Fix spacing around punctuation
+            (r'\s+', ' '),  # Multiple spaces to single
+            (r'\s+([.,!?;:])', r'\1'),  # Remove space before punctuation
+            (r'([.,!?;:])([A-Za-z])', r'\1 \2'),  # Add space after punctuation
+            (r'\((\s*)', '('),  # Remove spaces after (
+            (r'\s*\)', ')'),  # Remove spaces before )
+            (r'\s*,\s*', ', '),  # Standardize comma spacing
+            (r'\s*\;\s*', '; '),  # Standardize semicolon spacing
+            
+            # Fix common OCR artifacts
+            (r'\b([A-Za-z])\s+([A-Za-z])\b', r'\1\2'),  # Fix single letter words
+            (r'\b([a-z])\s+([a-z]{2,})\b', r'\1\2'),  # Fix single letter prefixes
+        ]
+        
+        for pattern, replacement in common_issues:
+            try:
+                answer = re.sub(pattern, replacement, answer)
+            except re.error as e:
+                logging.warning(f"Regex error with pattern {pattern}: {e}")
+        
+        # 7. Restore protected phrases
         for placeholder, phrase in protected_map.items():
             answer = answer.replace(placeholder, phrase)
-            
-        # Fix spacing after periods
-        answer = re.sub(r'\.([A-Za-z])', r'. \1', answer)
         
-        # Fix spacing and punctuation
-        answer = re.sub(r'\s+([.,!?])', r'\1', answer)  # Remove space before punctuation
-        answer = re.sub(r'\s{2,}', ' ', answer)  # Replace multiple spaces with single space
-        answer = re.sub(r'\s+$', '', answer)  # Remove trailing whitespace
-        answer = re.sub(r'^\s+', '', answer)  # Remove leading whitespace
-        
-        # Fix capitalization after period
-        answer = re.sub(r'\.\s+([a-z])', lambda m: f". {m.group(1).upper()}", answer)
-        
-        # Capitalize first letter if needed
-        if answer and answer[0].islower():
+        # 8. Capitalization and formatting
+        answer = answer.strip()
+        if answer:
+            # Capitalize first letter
             answer = answer[0].upper() + answer[1:]
+            # Ensure proper sentence endings
+            if not answer.endswith(('.', '!', '?')):
+                answer += '.'
         
-        # Common Gita-specific improvements
-        answer = answer.replace('Bhagavad-gita', 'Bhagavad Gita')
-        answer = answer.replace('Krsna', 'Krishna')
+        # 9. Standardize terms
+        standard_terms = {
+            'Bhagavad-gita': 'Bhagavad Gita',
+            'Krsna': 'Krishna',
+            'sastra': 'shastra',
+            'varnasrama': 'varnashrama',
+            'yoga-maya': 'yogamaya',
+            'maha-maya': 'mahamaya',
+            'Gita': 'Bhagavad Gita',
+            'BG': 'Bhagavad Gita'
+        }
         
-        # Ensure proper spacing around punctuation
-        answer = re.sub(r'([a-z])([A-Z])', r'\1 \2', answer)  # Add space between lower and upper case
+        for old, new in standard_terms.items():
+            answer = answer.replace(old, new)
         
-        # Handle specific cases where words are joined without spaces
-        answer = re.sub(r'([a-z])([A-Z][a-z])', r'\1 \2', answer)  # Add space between lower and TitleCase
+        # 10. Add greeting if not present
+        if not answer.startswith(('Hare Krishna!', 'Dear', 'Namaste', 'Hello', 'Good')):
+            greeting = self._get_time_based_greeting()
+            answer = f"{greeting} {answer}"
         
-        # Remove duplicate salutations
-        answer = re.sub(r'\bHare Krishna!\s*Hare Krishna!', 'Hare Krishna!', answer)
-            
-        # Ensure the answer ends with proper punctuation
-        if answer and answer[-1] not in '.!?':
-            answer = answer.rstrip() + '.'
-            
+        # 11. Add verse references if available
+        if sources:
+            answer = self._add_verse_references(answer, sources)
+        
+        # 12. Add a thoughtful closing for longer answers
+        if len(answer.split()) > 15 and not answer.strip().endswith(('.', '!', '?')):
+            closings = [
+                "\n\nMay this wisdom guide your path. 🙏",
+                "\n\nWishing you peace and understanding. 🌺",
+                "\n\nMay these teachings illuminate your journey. ✨"
+            ]
+            import random
+            answer += random.choice(closings)
+        
+        # Final cleanup
+        answer = re.sub(r'\s+', ' ', answer).strip()
         return answer
         
     def answer_question(self, question: str) -> Dict[str, Any]:
@@ -1143,9 +1444,14 @@ class QASystem:
             pdf_response = self._get_answer_from_pdf(question)
             if pdf_response and pdf_response.get('confidence', 0) > 0.3:  # Lower threshold for PDF answers
                 print(f"DEBUG: Found PDF response with confidence {pdf_response.get('confidence')}")
-                # Post-process the PDF response
+                # Post-process the PDF response with sources
                 if 'answer' in pdf_response:
-                    pdf_response['answer'] = self._post_process_answer(pdf_response['answer'])
+                    sources = pdf_response.get('sources', [])
+                    pdf_response['answer'] = self._post_process_answer(
+                        answer=pdf_response['answer'],
+                        question=question,
+                        sources=sources
+                    )
                 return pdf_response
                 
             # If we still don't have a good answer, try to find relevant documents

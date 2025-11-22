@@ -1,0 +1,206 @@
+{
+  "total_questions": 10,
+  "answered_questions": 10,
+  "answer_rate": 100.0,
+  "questions_with_sources": 10,
+  "sources_rate": 100.0,
+  "error_count": 0,
+  "error_rate": 0.0,
+  "by_category": {
+    "Introduction": {
+      "total": 10,
+      "answered": 10,
+      "with_sources": 10,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    }
+  },
+  "by_difficulty": {
+    "beginner": {
+      "total": 9,
+      "answered": 9,
+      "with_sources": 9,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    },
+    "intermediate": {
+      "total": 1,
+      "answered": 1,
+      "with_sources": 1,
+      "answer_rate": 100.0,
+      "sources_rate": 100.0
+    }
+  },
+  "results": [
+    {
+      "question": "What is the main message of the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! TEXTS 32-35 kim no rajyen a govind a kim bhogair jiviten a vayesam ar the kanksitam norajyam bhogah sukhani c a t a ime 'vasthit a yuddhe pranams tyaktv a dhanani caacaryah pitarah putrastathaiv a c a pitamahah matulah svasurah pautrah syalah sambandhinas tathaet an n a hantum icchamighnato 'pi madhusudan a api trailokya-rajyasy a heto h kim nu mahi-krtenihaty a dhartarastr an nahk a pritih syaj janardan a SYNONYMSkim--what use; nah--to us; rajyena--is the kingdom; govinda--O **Krishna**; kim--what; bhogaih--enjoyment; jivitena--by living; va--either; yesam--for whom; arthe--for the matter of; kanksitam--desired; nah--our;rajyam--kingdom; bhogah--material enjoyment; sukhani--all happiness;ca--also; te--all of them; ime--these; avasthitah--situated; yuddhe--inth is battlefield; pranan--lives; tyaktva--giving up; dhanani--riches;ca--also; acaryah--teachers; pitarah--fathers; putrah--sons; tatha--aswell as; eva--certainly; ca--also; pitamahah--grandfathers; matulah--maternal uncles; svasurah--fathers-in-law; pautrah--grandsons; syalah--brothers-in-law; sambandhinah--relatives; tatha--as well as; etan--allthese; na--never; hantum--for killing; icchami--do I wish; ghnatah--being killed; api--even; madhusudana--O killer of the demon Madhu(**Krishna**); api--even if; trai-lokya--of the three worlds; rajyasya--of the kingdoms; heto h--in exchange; kim--what to speak of; nu--only;mahi-krte--for the sake of the earth; nihatya--by killing;dhartarastran--the sons of Dhrtarastra; nah--our; ka--what; pritih--pleasure; syat--will there be; janardana--O maintainer of all livingentities  \n\n*Source: 11*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "Who is the speaker of the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! The important element, in preparation, in serving and in offering, is to act with love for **Krishna**. The impersonalist philosophers, who wish to maintain that the Absolute Truth is without senses, cannot comprehend th is verse of Bhagavad Gita. To them, it is either a metaphor or proof of the mundane character of **Krishna**, the speaker of the Bhagavad Gita  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the setting of the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! Undoubtedly we donot know what sort of activities we should adopt to gain relief from the actions and reactions of all these activities, but th is is alsoexplained in the Bhagavad Gita  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "How many chapters and verses are in the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! TEXT 3 manusyanam sahasresu kascid yatati siddhayeyatatam api siddhanamkascin mam vetti tattvatah SYNONYMSmanusyanam--of men; sahasresu--out of many thousands; kascit--someone; yatati--endeavors; siddhaye--for perfection; yatatam--of those soendeavoring; api--indeed; siddhanam--of those who have achievedperfection; kascit--someone; mam--Me; vetti--does know; tattvatah--infact  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the significance of the number 18 in the Bhagavad Gita?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Just what is the Bhagavad Gita? Hare **Krishna**! Nor do I want any number of followers  \n\n*Source: 11*",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "Is the Bhagavad Gita part of a larger text?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! theoretically, according to the statements of Bhagavad Gita or the statements of **Arjuna**, the person who is trying to understand the Bhagavad Gita  \n\n*Source: 11*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What language was the Bhagavad Gita originally written in?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Apure devotee is not confused by misguiding commentaries on Bhagavad Gita because he knows what is what  \n\n*Source: 406*\n\nWishing you peace and understanding. 🌺",
+        "sources": [
+          {
+            "page": 406,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "When was the Bhagavad Gita written?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! Bhagavad Gita was spoken by the Lord just to changeth is view, and at the end Arjun a decides to fight under the directionsof the Lord when he says, karisye vacanam tava: \"I shall act accordingto Thy word.\" In th is world m an is not meant to to il like hogs  \n\n*Source: 11*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 11,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "What is the relationship between the Bhagavad Gita and the Upanishads?",
+      "category": "Introduction",
+      "difficulty": "intermediate",
+      "response": {
+        "answer": "Hare **Krishna**! In the middle six chapters of the Bhagavad Gita, the Supreme Personality of Godhead and the relationship between the individual souland the Supersoul in regard to devotional service are described  \n\n*Source: 174*\n\nMay this wisdom guide your path. 🙏",
+        "sources": [
+          {
+            "page": 174,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    },
+    {
+      "question": "Why is the Bhagavad Gita considered a spiritual classic?",
+      "category": "Introduction",
+      "difficulty": "beginner",
+      "response": {
+        "answer": "Hare **Krishna**! And the purpose of self-realization is clearly stated in the Fifteenth Chapter of the Bhagavad Gita (15.15): the purpose ofstudying the Vedas is to know Lord Krishnarsna, the primeval cause ofeverything  \n\n*Source: 98*\n\nMay these teachings illuminate your journey. ✨",
+        "sources": [
+          {
+            "page": 98,
+            "source": "11-Bhagavad-gita_As_It_Is.pdf"
+          }
+        ]
+      },
+      "has_answer": true,
+      "has_sources": true,
+      "error": null
+    }
+  ]
+}
