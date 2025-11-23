@@ -30,5 +30,5 @@ RUN chmod +x start.sh
 # Expose the port the app runs on
 EXPOSE $PORT
 
-# Command to run the application using gunicorn with uvicorn workers
-CMD exec gunicorn --bind :$PORT --workers 1 --worker-class uvicorn.workers.UvicornH11Worker --timeout 120 main:app
+# Command to run the application using uvicorn directly
+CMD exec uvicorn app:app --host 0.0.0.0 --port $PORT --workers 1 --timeout-keep-alive 120
