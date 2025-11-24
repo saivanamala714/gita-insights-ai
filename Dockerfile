@@ -1,35 +1,20 @@
-# Use the official Python 3.11 image as the base image
-FROM python:3.11-slim
+FROM python:3.12-slim
 
-# Set the working directory
-WORKDIR /app
-
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE=1 \
-    PYTHONUNBUFFERED=1 \
-    PORT=8080 \
-    PYTHONPATH=/app
-
-# Install system dependencies
+# System deps for heavy packages (chromadb, playwright, etc.)
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    openjdk-17-jre-headless \
-    && rm -rf /var/lib/apt/lists/*
+    build-essential gcc libpq-dev && \
+    rm -rf /var/lib/apt/lists/*
 
-# Copy requirements first to leverage Docker cache
+WORKDIR /app
 COPY requirements.txt .
-
-# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the application code
+# If you use playwright/chroma
+# RUN playwright install-deps && playwright install chromium || true
+
 COPY . .
 
-# Set the working directory
-WORKDIR /app
+ENV PORT=8080
 
-# Expose the port the app runs on
-EXPOSE $PORT
-
-# Command to run the application
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080", "--workers", "1"]
+# This line is golden
+CMD exec uvicorn main:app --host 0.0.0.0 --port ${PORT} --workers 1
