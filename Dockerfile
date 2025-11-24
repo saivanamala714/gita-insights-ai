@@ -17,4 +17,4 @@ COPY . .
 ENV PORT=8080
 
 # This line is golden
-CMD exec uvicorn main:app --host 0.0.0.0 --port ${PORT} --workers 1
+CMD exec uvicorn app:app --host 0.0.0.0 --port ${PORT} --workers 1
