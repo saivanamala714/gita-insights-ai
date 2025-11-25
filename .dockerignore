@@ -32,7 +32,9 @@ dist/
 *.egg-info/
 
 # PDF files (if they're large)
+# Exclude all PDFs except the Bhagavad Gita PDF
 *.pdf
+!11-Bhagavad-gita_As_It_Is.pdf
 
 # Test results
 test_results/

@@ -1,20 +1,37 @@
+# Use an official Python runtime as a parent image
 FROM python:3.12-slim
 
-# System deps for heavy packages (chromadb, playwright, etc.)
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential gcc libpq-dev && \
-    rm -rf /var/lib/apt/lists/*
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PORT=8080 \
+    PYTHONPATH=/app
 
+# Set the working directory
 WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# If you use playwright/chroma
-# RUN playwright install-deps && playwright install chromium || true
+# Copy Python source files
+COPY *.py .
 
-COPY . .
+# Copy the Bhagavad Gita PDF
+COPY 11-Bhagavad-gita_As_It_Is.pdf .
 
-ENV PORT=8080
+# Create a non-root user and switch to it
+RUN useradd -m -d /home/appuser appuser && \
+    chown -R appuser:appuser /app
+USER appuser
 
-# This line is golden
-CMD exec uvicorn app:app --host 0.0.0.0 --port ${PORT} --workers 1
+# Expose the port the app runs on
+EXPOSE 8080
+
+# Command to run the application
+CMD exec uvicorn app:app --host 0.0.0.0 --port $PORT --workers 1

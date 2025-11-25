@@ -1,0 +1,82 @@
+[
+  {
+    "question": "What is the Bhagavad Gita?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x10652ef90>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "Who wrote the Bhagavad Gita?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x10651b9d0>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "How many chapters are in the Bhagavad Gita?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x1065fc2d0>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "What is Karma Yoga according to the Gita?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x1065ecb00>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "What is Bhakti Yoga in the Gita?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x1065ed220>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "What is Jnana Yoga in the Gita?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x10650fe30>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "What is the main message of the Bhagavad Gita?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x106562690>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "What does the Gita say about the soul?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x106562e00>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "Who is Arjuna in the Bhagavad Gita?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x106563020>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "Who is Abhimanyu in the Mahabharata?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x106563240>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "Who is Lord Krishna in the Bhagavad Gita?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x106563460>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "How can I apply the Gita's teachings in daily life?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x106563680>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "How is the Bhagavad Gita relevant today?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x106563570>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "What is the concept of Dharma in the Gita?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x106563350>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "What is meditation according to the Gita?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x106563130>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  },
+  {
+    "question": "How does the Gita compare with other spiritual texts?",
+    "status": "exception",
+    "error": "HTTPConnectionPool(host='127.0.0.1', port=8000): Max retries exceeded with url: /ask (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x106562ad0>, 'Connection to 127.0.0.1 timed out. (connect timeout=None)'))"
+  }
+]

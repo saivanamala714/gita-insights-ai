@@ -9,6 +9,7 @@ from name_corrector import correct_text_names, correct_character_name
 from PyPDF2 import PdfReader
 from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import JSONResponse
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from response_processor import get_processor
 from difflib import SequenceMatcher
@@ -977,22 +978,136 @@ class QASystem:
 
     def _get_answer_from_qa_pairs(self, question: str) -> Optional[Dict[str, Any]]:
         """Try to find an answer from the pre-defined Q&A pairs."""
+        # Print debug header
+        print("\n" + "="*80)
+        print("DEBUG: _get_answer_from_qa_pairs")
+        print("="*80)
+        
         question_lower = question.lower().strip()
-        qa_pairs = get_qa_pairs()
-
-        # Simple keyword matching for now - can be enhanced with more sophisticated NLP
+        
+        # Debug: Print the current working directory and list files
+        import os
+        print("\n=== DEBUG: Current working directory ===")
+        print(f"CWD: {os.getcwd()}")
+        print("Files in directory:")
+        for f in sorted(os.listdir('.')):
+            print(f"- {f}")
+        
+        # Debug: Print Python path
+        print("\n=== DEBUG: Python path ===")
+        import sys
+        for path in sys.path:
+            print(f"- {path}")
+        
+        # Debug: Try to import gita_qa_pairs directly
+        print("\n=== DEBUG: Attempting to import gita_qa_pairs ===")
+        try:
+            import gita_qa_pairs
+            print(f"Successfully imported gita_qa_pairs from: {gita_qa_pairs.__file__}")
+            print(f"Available attributes: {dir(gita_qa_pairs)}")
+            
+            # Try to get Q&A pairs directly
+            print("\n=== DEBUG: Getting Q&A pairs directly ===")
+            if hasattr(gita_qa_pairs, 'get_qa_pairs'):
+                qa_pairs = gita_qa_pairs.get_qa_pairs()
+                print(f"Successfully got {len(qa_pairs)} Q&A pairs directly")
+                if qa_pairs:
+                    print(f"First Q&A: {qa_pairs[0]['question'][:100]}...")
+            else:
+                print("ERROR: gita_qa_pairs module doesn't have get_qa_pairs function")
+                print(f"Available functions: {[f for f in dir(gita_qa_pairs) if not f.startswith('__')]}")
+                
+            # Try to access QA_PAIRS directly
+            if hasattr(gita_qa_pairs, 'QA_PAIRS'):
+                print(f"\n=== DEBUG: Found QA_PAIRS with {len(gita_qa_pairs.QA_PAIRS)} items")
+                if gita_qa_pairs.QA_PAIRS:
+                    print(f"First QA_PAIR: {gita_qa_pairs.QA_PAIRS[0]['question'][:100]}...")
+        except Exception as e:
+            print(f"ERROR importing gita_qa_pairs: {str(e)}")
+            import traceback
+            traceback.print_exc()
+        
+        # Try to get Q&A pairs the normal way
+        print("\n=== DEBUG: Getting Q&A pairs via get_qa_pairs() ===")
+        try:
+            from gita_qa_pairs import get_qa_pairs
+            qa_pairs = get_qa_pairs()
+            print(f"Successfully got {len(qa_pairs)} Q&A pairs")
+            if qa_pairs:
+                print(f"First Q&A: {qa_pairs[0]['question'][:100]}...")
+        except Exception as e:
+            print(f"ERROR getting Q&A pairs: {str(e)}")
+            import traceback
+            traceback.print_exc()
+            return None
+        
+        print(f"\n=== DEBUG: Processing question ===")
+        print(f"Question: '{question_lower}'")
+        print(f"Question type: {type(question_lower).__name__}")
+        
+        if not qa_pairs:
+            print("WARNING: No Q&A pairs found!")
+            return None
+            
+        print(f"First 3 Q&A pairs:")
+        for i, qa in enumerate(qa_pairs[:3], 1):
+            print(f"{i}. Q: {qa['question'][:100]}...")
+            print(f"   Category: {qa.get('category', 'N/A')}")
+            print(f"   Answer: {qa['answer'][:100]}...")
+            print()
+        
+        # Check for "who is" questions about key characters
+        if question_lower.startswith('who is'):
+            # Extract the name after "who is"
+            name = question_lower[6:].strip('? ').title()
+            print(f"\nProcessing 'who is' question about: '{name}'")
+            
+            # Find all character Q&As for debugging
+            character_qa = [qa for qa in qa_pairs if qa.get('category') == 'Characters']
+            print(f"Found {len(character_qa)} character Q&As")
+            
+            # Print all character Q&A questions for debugging
+            print("\nAvailable character Q&A questions:")
+            for i, qa in enumerate(character_qa, 1):
+                print(f"{i}. {qa['question']} (Category: {qa.get('category')})")
+            
+            # Check for direct matches first
+            for qa in character_qa:
+                q_lower = qa['question'].lower()
+                print(f"\nChecking if '{name.lower()}' is in: {q_lower}")
+                if name.lower() in q_lower:
+                    print(f"MATCH FOUND: '{name}' in question: {q_lower}")
+                    return {
+                        "answer": f"Hare Krishna! {qa['answer']}",
+                        "sources": [{"page": "QA Database", "source": "Pre-defined Q&A"}],
+                        "confidence": 0.95  # Very high confidence for character questions
+                    }
+            
+            print(f"\nWARNING: No matching character Q&A found for: '{name}'")
+        
+        # Check for exact matches first
         for qa in qa_pairs:
-            # Check if any word from the question matches the QA pair
-            question_words = set(question_lower.split())
-            qa_words = set(qa["question"].lower().split())
-
-            # If there's a significant word overlap, return this answer
-            if len(question_words.intersection(qa_words)) >= 3:  # At least 3 matching words
+            if question_lower == qa['question'].lower():
                 return {
                     "answer": f"Hare Krishna! {qa['answer']}",
                     "sources": [{"page": "QA Database", "source": "Pre-defined Q&A"}],
-                    "confidence": 0.9  # High confidence for exact matches
+                    "confidence": 1.0  # Highest confidence for exact matches
                 }
+        
+        # Check for keyword matches with higher threshold for better precision
+        question_words = set(word for word in question_lower.split() if len(word) > 3)  # Ignore short words
+        for qa in qa_pairs:
+            qa_words = set(word for word in qa["question"].lower().split() if len(word) > 3)
+            common_words = question_words.intersection(qa_words)
+            
+            # Require at least 50% of significant words to match
+            if len(common_words) / max(1, min(len(question_words), len(qa_words))) >= 0.5:
+                return {
+                    "answer": f"Hare Krishna! {qa['answer']}",
+                    "sources": [{"page": "QA Database", "source": "Pre-defined Q&A"}],
+                    "confidence": 0.8 * (len(common_words) / max(1, len(question_words)))
+                }
+                
         return None
 
     def _get_answer_from_pdf(self, question: str) -> Dict[str, Any]:
@@ -1018,245 +1133,6 @@ class QASystem:
             "confidence": 0.7  # Medium confidence for PDF-based answers
         }
 
-    def answer_question(self, question: str) -> Dict[str, Any]:
-        """
-        Main method to answer a question about the Bhagavad Gita.
-        """
-        try:
-            # Preprocess the question
-            question = question.strip()
-            if not question:
-                return {
-                    "answer": "Hare Krishna! Please ask a question about the Bhagavad Gita.",
-                    "sources": [],
-                    "confidence": 0.0
-                }
-            
-            # Correct character names in the question
-            corrected_question, corrections = correct_text_names(question)
-            if corrections:
-                logging.info(f"Corrected names in question: {corrections}")
-                logging.info(f"Original: {question}")
-                logging.info(f"Corrected: {corrected_question}")
-                question = corrected_question
-            
-            # Convert to lowercase for case-insensitive matching
-            question_lower = question.lower()
-            
-            # ====== SPECIFIC QUESTION HANDLERS ======
-            
-            # 1. Handle questions about the main message/purpose
-            if any(term in question_lower for term in ['main message', 'purpose', 'what is the gita about', 'teachings']):
-                return {
-                    "answer": "Hare Krishna! The Bhagavad Gita, often referred to as the Gita, is a 700-verse Hindu scripture that is part of the epic Mahabharata. Its main message revolves around the following key teachings:\n\n"
-                    "1. **The Eternal Nature of the Soul (Atman)**: The Gita teaches that the soul is eternal, indestructible, and distinct from the physical body (BG 2.20).\n\n"
-                    "2. **The Path of Selfless Action (Karma Yoga)**: One should perform one's prescribed duties without attachment to the fruits of actions (BG 2.47).\n\n"
-                    "3. **The Importance of Devotion (Bhakti)**: The highest form of worship is loving devotion to the Supreme Lord, Krishna (BG 9.26, 18.65).\n\n"
-                    "4. **The Three Paths to Liberation**: The Gita describes three main paths to spiritual realization: Karma Yoga (path of selfless action), Jnana Yoga (path of knowledge), and Bhakti Yoga (path of devotion).\n\n"
-                    "5. **The Supreme Personality of Godhead**: Lord Krishna reveals His universal form and explains that He is the source of all creation and the ultimate goal of all spiritual practices (BG 10.8, 10.20).\n\n"
-                    "The Gita's timeless wisdom provides practical guidance for living a meaningful life while progressing spiritually.",
-                    "sources": [
-                        {"page": "BG 2.20, 2.47, 9.26, 10.8, 10.20, 18.65", "source": "Bhagavad Gita As It Is"}
-                    ],
-                    "confidence": 0.98
-                }
-            
-            # 2. Handle questions about the speaker and setting
-            if any(term in question_lower for term in ['who is speaking', 'who is the speaker', 'who is talking']):
-                return {
-                    "answer": "Hare Krishna! The Bhagavad Gita is a conversation between two main figures:\n\n"
-                    "1. **Lord Krishna**: The Supreme Personality of Godhead, who serves as Arjuna's charioteer and spiritual guide. He imparts the divine knowledge of the Gita to Arjuna on the battlefield of Kurukshetra.\n\n"
-                    "2. **Arjuna**: The mighty warrior prince of the Pandavas, who faces a moral dilemma about fighting in the great Kurukshetra war. He represents the questioning human soul seeking divine guidance.\n\n"
-                    "The Gita is part of the Bhishma Parva (Book of Bhishma) in the Mahabharata, where Lord Krishna delivers these teachings to Arjuna just before the start of the great war.",
-                    "sources": [
-                        {"page": "BG 1.24-25, 2.1-10", "source": "Bhagavad Gita As It Is"}
-                    ],
-                    "confidence": 0.99
-                }
-            
-            # 3. Handle questions about the setting
-            if any(term in question_lower for term in ['setting', 'where does it take place', 'battlefield', 'kurukshetra']):
-                return {
-                    "answer": "Hare Krishna! The Bhagavad Gita is set on the sacred battlefield of Kurukshetra, just before the start of the great Kurukshetra war between the Pandavas and Kauravas. Here are the key details about the setting:\n\n"
-                    "1. **Location**: The battlefield of Kurukshetra, a holy pilgrimage site in present-day Haryana, India.\n\n"
-                    "2. **Time**: The dialogue takes place on the first day of the 18-day Kurukshetra war, which is estimated to have occurred around 3000 BCE according to Vedic chronology.\n\n"
-                    "3. **Context**: Arjuna, one of the Pandava princes, is overcome with moral dilemma and grief at the prospect of fighting against his own relatives, teachers, and loved ones who are arrayed on the opposing side.\n\n"
-                    "4. **Symbolism**: The battlefield represents the human body, where the eternal soul (Atman) must fight against the forces of ignorance and material attachment. The dialogue between Krishna and Arjuna symbolizes the conversation between the Supreme Soul (Paramatma) and the individual soul (Jivatma) within each of us.\n\n"
-                    "This dramatic setting serves as the perfect backdrop for the profound spiritual teachings that follow.",
-                    "sources": [
-                        {"page": "BG 1.1-2.10", "source": "Bhagavad Gita As It Is"},
-                        {"page": "Mahabharata, Bhishma Parva", "source": "Srimad Bhagavatam"}
-                    ],
-                    "confidence": 0.97
-                }
-            
-            # 4. Handle questions about Karma Yoga
-            if any(term in question_lower for term in ['karma yoga', 'path of action', 'selfless action']):
-                return {
-                    "answer": "Hare Krishna! Karma Yoga, as explained in the Bhagavad Gita, is the path of selfless action and is one of the main spiritual paths described. Here's a detailed explanation:\n\n"
-                    "1. **Definition**: Karma Yoga is the discipline of selfless action performed as a form of worship, without attachment to the results (BG 2.47).\n\n"
-                    "2. **Key Principles**:\n                       - Perform your prescribed duties without attachment to the fruits of actions (BG 2.47)\n                       - Action is better than inaction; one cannot maintain even one's physical body without work (BG 3.8)\n                       - The wise should act without attachment, for the welfare of the world (BG 3.25)\n\n"
-                    "3. **The Concept of Yajna**: All actions should be performed as a sacrifice (yajna) for the Supreme Lord (BG 3.9-10).\n\n"
-                    "4. **Benefits**: Karma Yoga purifies the heart, destroys the bondage of karma, leads to self-realization, and ultimately to liberation (moksha).\n\n"
-                    "5. **Practical Application**: One can practice Karma Yoga by:\n                       - Performing one's duties with excellence\n                       - Offering the results to the Supreme\n                       - Maintaining equanimity in success and failure\n                       - Seeing work as worship\n\n"
-                    "The Gita teaches that Karma Yoga is especially recommended for those in the initial stages of spiritual life.",
-                    "sources": [
-                        {"page": "BG 2.47-51, 3.1-9, 3.19-24, 5.10-12", "source": "Bhagavad Gita As It Is"}
-                    ],
-                    "confidence": 0.96
-                }
-            
-            # 5. Handle questions about Bhakti Yoga
-            if any(term in question_lower for term in ['bhakti yoga', 'path of devotion', 'devotion to god']):
-                return {
-                    "answer": "Hare Krishna! Bhakti Yoga, the path of loving devotion to the Supreme Lord, is considered the highest form of yoga in the Bhagavad Gita. Here's a comprehensive explanation:\n\n"
-                    "1. **Definition**: Bhakti Yoga is the process of devotional service to the Supreme Personality of Godhead with love and devotion (BG 9.26-27).\n\n"
-                    "2. **Key Teachings**:\n                       - The most confidential knowledge: to become a pure devotee of the Lord (BG 18.64-66)\n                       - The Lord is the enjoyer of all sacrifices and the supreme controller (BG 9.24)\n                       - Even the greatest sinner can cross over the ocean of material existence by the boat of divine knowledge (BG 4.36)\n\n"
-                    "3. **Nine Processes of Devotional Service**:\n                       - Hearing (shravanam) and chanting (kirtanam) the glories of the Lord\n                       - Remembering (smaranam) and serving the Lord's lotus feet (pada-sevanam)\n                       - Worshiping the Deity (arcanam) and offering prayers (vandanam)\n                       - Becoming a servant (dasyam), a friend (sakhyam), and surrendering everything (atma-nivedanam)\n\n"
-                    "4. **The Perfection of Bhakti**: The culmination of Bhakti Yoga is pure love for God (prema), where the devotee develops an intimate, loving relationship with the Supreme.\n\n"
-                    "The Gita declares that those who take shelter in the Lord with faith and devotion are never lost to Him (BG 9.31).",
-                    "sources": [
-                        {"page": "BG 9.1-34, 12.6-20, 18.54-66", "source": "Bhagavad Gita As It Is"}
-                    ],
-                    "confidence": 0.97
-                }
-            
-            # 6. Handle questions about Jnana Yoga
-            if any(term in question_lower for term in ['jnana yoga', 'path of knowledge', 'wisdom']):
-                return {
-                    "answer": "Hare Krishna! Jnana Yoga, the path of knowledge and wisdom, is one of the main spiritual paths described in the Bhagavad Gita. Here's a detailed explanation:\n\n"
-                    "1. **Definition**: Jnana Yoga is the process of acquiring transcendental knowledge about the self, the Supreme, and their eternal relationship (BG 4.38-39).\n\n"
-                    "2. **Key Teachings**:\n                       - The soul is eternal, indestructible, and distinct from the body (BG 2.20, 2.24)\n                       - The soul is never born nor dies; it is unborn, eternal, and primeval (BG 2.20)\n                       - The soul is not slain when the body is slain (BG 2.19)\n                       - The soul is invisible, inconceivable, immutable, and unchangeable (BG 2.25)\n\n"
-                    "3. **Process of Acquiring Knowledge**:\n                       - Approaching a bona fide spiritual master (BG 4.34)\n                       - Inquiring submissively and rendering service (BG 4.34)\n                       - Understanding the difference between matter and spirit (BG 13.1-6)\n                       - Developing detachment and discrimination (BG 13.8-12)\n\n"
-                    "4. **The Goal**: The culmination of Jnana Yoga is self-realization and God realization, understanding one's eternal relationship with the Supreme Lord.\n\n"
-                    "The Gita teaches that true knowledge leads to seeing all beings as equal, free from dualities like pleasure and pain, and ultimately to liberation (moksha).",
-                    "sources": [
-                        {"page": "BG 2.11-30, 4.33-42, 13.1-35", "source": "Bhagavad Gita As It Is"}
-                    ],
-                    "confidence": 0.96
-                }
-            
-            # 7. Handle questions about the material world (already implemented)
-            if any(term in question_lower for term in ['material world', 'material nature', 'prakriti', 'maya']):
-                return {
-                    "answer": "Hare Krishna! In the Bhagavad Gita, the material world is described as the temporary, ever-changing realm of material nature (prakriti) that is distinct from the eternal spiritual reality. Here are the key aspects of the material world according to the Gita:\n\n"
-                    "1. **Nature of the Material World**: The material world is temporary, full of miseries, and subject to birth, death, old age, and disease (BG 8.15, 13.8-12). It is a place where the living entities (jivas) come to fulfill their material desires.\n\n"
-                    "2. **The Three Modes (Gunas)**: The material nature consists of three modes - goodness (sattva), passion (rajas), and ignorance (tamas). All material activities are influenced by these three qualities (BG 14.5-18).\n\n"
-                    "3. **The Cause of Bondage**: The material world binds the soul through attachment, desire, and the results of work (karma). This keeps the soul in the cycle of birth and death (samsara).\n\n"
-                    "4. **The Way Out**: The Gita teaches that one can transcend the material world by understanding the difference between the material body and the eternal soul (atman), performing one's duty without attachment to results, and developing pure devotion to the Supreme Lord (BG 7.14, 9.34).\n\n"
-                    "5. **Ultimate Purpose**: The material world is a place for the conditioned souls to learn the ultimate truth and return back to the spiritual world, which is eternal, full of knowledge, and blissful (BG 8.20-21).",
-                    "sources": [
-                        {"page": "BG 7.4-7, 8.15, 13.8-12, 14.5-18", "source": "Bhagavad Gita As It Is"}
-                    ],
-                    "confidence": 0.95
-                }
-            
-            # 8. Handle questions about Bhishma (already implemented)
-            if any(term in question_lower for term in ['bhishma', 'bheeshma']) and any(term in question_lower for term in ['why', 'marry', 'celibacy', 'vow']):
-                return {
-                    "answer": "Hare Krishna! Bhishma, originally named Devavrata, is one of the most revered characters in the Mahabharata. Here's why he didn't marry and took a vow of celibacy (Brahmacharya):\n\n"
-                    "1. **Father's Happiness**: Bhishma's father, King Shantanu, fell in love with Satyavati, but her father would only agree to the marriage if her future sons would inherit the throne.\n\n"
-                    "2. **The Terrible Vow**: To ensure his father's happiness, the young prince Devavrata took a solemn vow of lifelong celibacy and renounced his claim to the throne, earning him the name 'Bhishma' (the one who took a terrible vow).\n\n"
-                    "3. **Key Aspects of His Vow**:\n                       - Never marry or have children to prevent any future claims to the throne\n                       - Renounce his right to the throne of Hastinapura\n                       - Remain loyal to whoever sits on the throne, regardless of circumstances\n\n"
-                    "4. **Significance**: This selfless act demonstrated Bhishma's extraordinary devotion to his father and his sense of duty (dharma) towards the kingdom. His vow played a crucial role in the events of the Mahabharata.\n\n"
-                    "Bhishma's life teaches us about the power of sacrifice, duty, and keeping one's word, even at great personal cost.",
-                    "sources": [{"page": "Mahabharata, Adi Parva", "source": "Bhagavad Gita As It Is"}],
-                    "confidence": 1.0
-                }
-            
-            # Handle Arjuna questions
-            if any(term in question_lower for term in ['who is arjuna', 'why is arjuna great', 'what makes arjuna special', 'why arjuna is great', 'arjuna and krishna']):
-                return {
-                    "answer": "Hare Krishna! Arjuna, also known as Partha or Dhananjaya, is the central human figure in the Bhagavad Gita and one of the greatest warriors in the Mahabharata. Here's a comprehensive understanding of his significance:\n\n"
-                    "## 1. Divine Selection and Role\n"
-                    "- **Chosen Recipient of the Gita**: \n      > 'This confidential knowledge may not be explained to those who are not austere, or devoted, or engaged in devotional service, nor to one who is envious of Me.' (Bhagavad Gita 18.67)\n      \n      - Arjuna was personally selected by Lord Krishna to receive the supreme spiritual knowledge of the Bhagavad Gita, making him the perfect medium through which this wisdom was delivered to humanity.\n\n"
-                    "## 2. Exemplary Qualities\n"
-                    "- **Divine Nature**: \n      > 'Fearlessness; purification of one's existence; cultivation of spiritual knowledge; charity; self-control; performance of sacrifice; study of the Vedas; austerity; simplicity...' (Bhagavad Gita 16.1-3)\n      \n      - Arjuna embodied all twenty-six qualities of a devotee mentioned in the Gita, making him an ideal student of spiritual knowledge.\n\n"
-                    "## 3. The Perfect Disciple\n"
-                    "- **Humility and Surrender**: \n      > 'Now I am confused about my duty and have lost all composure because of weakness. In this condition I am asking You to tell me clearly what is best for me. Now I am Your disciple, and a soul surrendered unto You. Please instruct me.' (Bhagavad Gita 2.7)\n      \n      - Arjuna's complete surrender to Krishna and his willingness to learn set the standard for the guru-disciple relationship.\n\n"
-                    "## 4. Warrior of Dharma\n"
-                    "- **Duty and Righteousness**: As a kshatriya (warrior prince), Arjuna's duty was to fight for righteousness. His initial reluctance to fight (Bg 1.28-46) and subsequent enlightenment demonstrate the importance of performing one's prescribed duties without attachment to results (karma-yoga).\n\n"
-                    "## 5. Unique Relationship with Krishna\n"
-                    "- **Divine Friendship**: \n      > 'O conqueror of wealth [Arjuna], there is no servant in this world more dear to Me than you, nor will there ever be one more dear.' (Bhagavad Gita 4.3)\n      \n      - Krishna's role as Arjuna's charioteer symbolizes the Lord's willingness to guide His devotees through life's battles when they fully surrender to Him.\n\n"
-                    "## 6. Lessons from Arjuna's Journey\n"
-                    "1. **From Confusion to Clarity**: Arjuna's transformation from doubt to enlightenment (Bg 2.1-72) shows the power of spiritual knowledge.\n                    \n                    2. **Devotion in Action**: His life demonstrates how to be active in the world while remaining spiritually connected (Bg 3.7-9).\n                    \n                    3. **The Perfect Devotee**: Arjuna's relationship with Krishna exemplifies the ideal of loving devotion (bhakti) and service (Bg 11.55).\n\n"
-                    "Arjuna's character teaches us that spiritual advancement comes not from renouncing the world but from performing our duties with the right consciousness and devotion to the Supreme.",
-                    "sources": [
-                        {"page": "BG 1.28-46, 2.7, 3.7-9, 4.3, 11.55, 16.1-3, 18.67-73", "source": "Bhagavad Gita As It Is"},
-                        {"page": "Introduction", "source": "Bhagavad Gita As It Is by A.C. Bhaktivedanta Swami Prabhupada"}
-                    ],
-                    "confidence": 0.99
-                }
-
-            # Handle Krishna's relationship with Arjuna questions
-            if any(term in question_lower for term in ['why krishna close to arjun', 'why krishna favor arjuna', 'krishna and arjuna relationship', 'why krishna only very close to arjun than other pandu brothers', 'krishna arjuna friendship']):
-                return {
-                    "answer": "Hare Krishna! The relationship between Lord Krishna and Arjuna is one of the most profound and celebrated divine friendships in all of Vedic literature. Here's a comprehensive understanding of their unique bond:\n\n"
-                    "## 1. Eternal Spiritual Connection\n"
-                    "> 'Many, many births both you and I have passed. I can remember all of them, but you cannot, O subduer of the enemy!' (Bhagavad Gita 4.5)\n\n"
-                    "- **Nara-Narayana Tattva**: In their previous lives, Arjuna was Nara and Krishna was Narayana, eternal spiritual brothers engaged in divine pastimes. This eternal relationship continued in their incarnations as Krishna and Arjuna.\n\n"
-                    "## 2. The Perfect Devotee-Disciple\n"
-                    "> 'Now I am confused about my duty and have lost all composure because of weakness. In this condition I am asking You to tell me clearly what is best for me. Now I am Your disciple, and a soul surrendered unto You. Please instruct me.' (Bhagavad Gita 2.7)\n\n"
-                    "- Arjuna's complete surrender and willingness to become Krishna's disciple created the perfect circumstance for the Bhagavad-gita's teachings. His questions and doubts (Bg 1.28-46) were not ordinary but divinely arranged to benefit all of humanity.\n\n"
-                    "## 3. Divine Affection and Intimacy\n"
-                    "> 'O conqueror of wealth [Arjuna], there is no servant in this world more dear to Me than you, nor will there ever be one more dear.' (Bhagavad Gita 4.3)\n\n"
-                    "- **Special Position**: Among millions of devotees, Krishna declares Arjuna as uniquely dear to Him. This wasn't mere favoritism but a recognition of Arjuna's pure devotion and selfless service.\n\n"
-                    "## 4. The Charioteer and the Warrior\n"
-                    "- **Symbolic Relationship**: Krishna's role as Arjuna's charioteer in the Kurukshetra war represents how the Lord guides His devotees through life's battles when they fully surrender to Him.\n"
-                    "- **Divine Protection**: Krishna protected Arjuna in battle (Bg 11.32-34) and granted him divine vision to perceive the Universal Form (Bg 11.8-9), demonstrating His personal care for His devotee.\n\n"
-                    "## 5. Beyond Ordinary Friendship\n"
-                    "- **Transcendental Friendship**: While Krishna maintained different relationships with each Pandava, His friendship with Arjuna was unique because Arjuna related to Him most intimately - as friend, devotee, disciple, and relative all combined.\n\n"
-                    "- **Eternal Message**: Their relationship establishes the perfect paradigm of how the Supreme Lord reciprocates with His pure devotees according to their level of surrender and love.\n\n"
-                    "## 6. Lessons for Spiritual Seekers\n"
-                    "1. **Complete Surrender**: Like Arjuna, we should approach the spiritual master with humility and surrender.\n"
-                    "2. **Asking Questions**: Arjuna's sincere inquiries led to the revelation of the Gita's wisdom. We should also approach spiritual knowledge with genuine inquiry.\n"
-                    "3. **Friendship with the Divine**: The Krishna-Arjuna relationship shows that the Supreme Lord can be approached in loving friendship by His pure devotees.\n\n"
-                    "In essence, Krishna's special relationship with Arjuna wasn't mere partiality but a divine arrangement to demonstrate the perfection of the guru-disciple relationship and the intimate bond between the Lord and His pure devotee.",
-                    "sources": [
-                        {"page": "BG 1.28-46, 2.7, 4.3, 4.5, 11.8-9, 11.32-34", "source": "Bhagavad Gita As It Is"},
-                        {"page": "Introduction and Purport to Chapter 1", "source": "Bhagavad Gita As It Is by A.C. Bhaktivedanta Swami Prabhupada"}
-                    ],
-                    "confidence": 0.99
-                }
-
-            # If we reach here, no pre-defined answer was found, so search the PDF
-            pdf_answer = self._get_answer_from_pdf(question)
-
-            # If we have a good answer from the PDF, return it
-            if pdf_answer["confidence"] > 0.5:
-                return pdf_answer
-
-            # If we get here, we couldn't find a good answer
-            return {
-                "answer": "Hare Krishna! I couldn't find a satisfactory answer to your question in the Bhagavad Gita. Please try rephrasing or asking about a different topic.",
-                "sources": [],
-                "confidence": 0.0
-            }
-
-        except Exception as e:
-            logging.error(f"Error answering question: {str(e)}", exc_info=True)
-            return {
-                "answer": f"Hare Krishna! I encountered an error while processing your question: {str(e)}",
-                "sources": [],
-                "confidence": 0.0
-            }
-
-    def get_related_questions(self, question: str, limit: int = 5) -> List[Dict[str, str]]:
-        """Get questions related to the user's query from the Q&A database."""
-        question_lower = question.lower().strip()
-        qa_pairs = get_qa_pairs()
-
-        # Score each question based on word overlap
-        scored_questions = []
-        for qa in qa_pairs:
-            q_words = set(qa["question"].lower().split())
-            u_words = set(question_lower.split())
-            score = len(q_words.intersection(u_words)) / max(1, len(u_words))
-            if score > 0.2:  # Only include questions with some relevance
-                scored_questions.append((score, qa))
-
-        # Sort by score (highest first) and return top N
-        scored_questions.sort(reverse=True, key=lambda x: x[0])
         return [{"question": qa["question"], "category": qa["category"]}
                 for score, qa in scored_questions[:limit]]
 
@@ -1427,8 +1303,64 @@ You can ask me questions like:
                 "confidence": 0.0
             }
 
+    def answer_question(self, question: str) -> Dict[str, Any]:
+        """
+        Public API for answering a user's question.
+        Currently routes to the PDF/Q&A retrieval logic with light name normalization.
+        """
+        try:
+            # Attempt to normalize names/entities in the incoming question
+            normalized = correct_text_names(question)
+            # correct_text_names returns (corrected_text, corrections_dict)
+            if isinstance(normalized, tuple) and len(normalized) >= 1:
+                normalized_question = normalized[0]
+            else:
+                normalized_question = question
+        except Exception:
+            # If name correction fails for any reason, fall back to the raw question
+            normalized_question = question
+
+        return self._get_answer_from_pdf(normalized_question)
+
 # Initialize FastAPI app
 app = FastAPI(title="Bhagavad Gita Q&A System")
+
+# Configure CORS with more specific settings
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "https://mysupernews.web.app",
+        "http://localhost:3000",  # For local development
+        "http://localhost:8000",  # For local development
+    ],
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=[
+        "*",
+        "Content-Type",
+        "Authorization", 
+        "Access-Control-Allow-Origin",
+        "Access-Control-Allow-Headers",
+        "Access-Control-Allow-Methods",
+        "sec-ch-ua",
+        "sec-ch-ua-mobile",
+        "sec-ch-ua-platform",
+        "Referer",
+        "User-Agent"
+    ],
+    expose_headers=["*"],
+    max_age=600,  # Cache preflight response for 10 minutes
+)
+
+# Add OPTIONS handler for preflight requests
+@app.options("/{full_path:path}")
+async def preflight_handler(full_path: str) -> Response:
+    response = Response()
+    response.headers["Access-Control-Allow-Origin"] = "https://mysupernews.web.app"
+    response.headers["Access-Control-Allow-Methods"] = "GET, POST, OPTIONS"
+    response.headers["Access-Control-Allow-Headers"] = "*"
+    response.headers["Access-Control-Allow-Credentials"] = "true"
+    return response
 
 # Initialize the QA system when the app starts
 qa_system = None
