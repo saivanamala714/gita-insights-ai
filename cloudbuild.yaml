@@ -1,0 +1,42 @@
+steps:
+  # Build the Docker image with specific platform and build arguments
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [
+      'build',
+      '--no-cache',
+      '--build-arg', 'PYTHONUNBUFFERED=1',
+      '-t', 'gcr.io/$PROJECT_ID/bhagavad-gita-api:latest',
+      '.'
+    ]
+    id: 'build'
+
+  # Push the Docker image to Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/$PROJECT_ID/bhagavad-gita-api:latest']
+    id: 'push'
+
+  # Deploy the container to Cloud Run with more resources
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'bhagavad-gita-api'
+      - '--image'
+      - 'gcr.io/$PROJECT_ID/bhagavad-gita-api:latest'
+      - '--platform'
+      - 'managed'
+      - '--region'
+      - 'us-central1'
+      - '--port'
+      - '8080'
+      - '--memory=4Gi'
+      - '--cpu=2'
+      - '--timeout=600s'
+      - '--concurrency=1'
+      - '--max-instances=1'
+      - '--set-env-vars=PYTHONUNBUFFERED=1'
+      - '--allow-unauthenticated'
+    id: 'deploy'
+
+images: ['gcr.io/$PROJECT_ID/bhagavad-gita-api:latest']
