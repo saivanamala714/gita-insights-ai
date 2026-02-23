@@ -2,7 +2,13 @@ import os
 import re
 import logging
 import json
+import time
 from typing import Dict, List, Any, Optional, Tuple
+from datetime import datetime
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Import the name correction module
 from name_corrector import correct_text_names, correct_character_name
@@ -14,6 +20,12 @@ from pydantic import BaseModel
 from response_processor import get_processor
 from difflib import SequenceMatcher
 from gita_qa_pairs import get_qa_pairs, get_qa_by_category
+
+# Chat history services - will be loaded in startup
+CHAT_HISTORY_ENABLED = False
+chat_history_manager = None
+chat_router = None
+admin_router = None
 
 
 class Document:
@@ -1368,23 +1380,63 @@ qa_system = None
 
 class QuestionRequest(BaseModel):
     question: str
+    user_id: Optional[str] = "anonymous"
+    conversation_id: Optional[str] = None
+    save_to_history: bool = True
 
 
 class AnswerResponse(BaseModel):
     answer: str
     sources: List[Dict[str, Any]]
+    conversation_id: Optional[str] = None
+    message_id: Optional[str] = None
+    user_id: Optional[str] = None
 
 
 @app.on_event("startup")
 async def startup_event():
-    global qa_system
+    global qa_system, CHAT_HISTORY_ENABLED, chat_history_manager, chat_router, admin_router
+    
+    # Load PDF first
     pdf_path = "11-Bhagavad-gita_As_It_Is.pdf"
     if not os.path.exists(pdf_path):
         raise FileNotFoundError(f"PDF file not found at {pdf_path}")
 
     qa_system = QASystem(pdf_path)
     qa_system.load_and_process_pdf()
-    print("PDF processing complete. Ready to answer questions!")
+    print("✅ PDF processing complete. Ready to answer questions!")
+    
+    # Try to load chat history services
+    print("\n🔄 Attempting to load chat history services...")
+    try:
+        from src.services.chat_history_manager import chat_history_manager as chm
+        print("  ✅ chat_history_manager imported")
+        
+        from src.api.chat_routes import router as cr
+        print("  ✅ chat_routes imported")
+        
+        from src.api.admin_routes import router as ar
+        print("  ✅ admin_routes imported")
+        
+        # Assign to global variables
+        chat_history_manager = chm
+        chat_router = cr
+        admin_router = ar
+        
+        # Include routers
+        app.include_router(chat_router)
+        app.include_router(admin_router)
+        
+        CHAT_HISTORY_ENABLED = True
+        print("✅ Chat history and admin routes enabled successfully!\n")
+        
+    except Exception as e:
+        CHAT_HISTORY_ENABLED = False
+        print(f"⚠️  Chat history services not available: {e}")
+        print("📋 Full error details:")
+        import traceback
+        traceback.print_exc()
+        print("\n⚠️  App will continue without chat history features\n")
 
 
 @app.post("/ask", response_model=AnswerResponse)
@@ -1393,8 +1445,46 @@ async def ask_question(question: QuestionRequest):
         raise HTTPException(status_code=503, detail="Service not initialized")
 
     print(f"Received question: {question.question}")
+    start_time = time.time()
+    
+    # Get answer from QA system
     response = qa_system.answer_question(question.question)
-    return AnswerResponse(**response)
+    response_time_ms = int((time.time() - start_time) * 1000)
+    
+    # Save to chat history if enabled
+    conversation_id = None
+    message_id = None
+    
+    if CHAT_HISTORY_ENABLED and question.save_to_history:
+        try:
+            # Create or get conversation
+            conversation_id = chat_history_manager.create_or_get_conversation(
+                user_id=question.user_id,
+                conversation_id=question.conversation_id
+            )
+            
+            # Save Q&A to conversation
+            message_id = chat_history_manager.add_qa_to_conversation(
+                user_id=question.user_id,
+                conversation_id=conversation_id,
+                question=question.question,
+                answer=response['answer'],
+                sources=response.get('sources', []),
+                response_time_ms=response_time_ms
+            )
+            
+            print(f"Saved to conversation {conversation_id}, message {message_id}")
+        except Exception as e:
+            # Don't fail the request if history save fails
+            print(f"Warning: Failed to save chat history: {e}")
+    
+    return AnswerResponse(
+        answer=response['answer'],
+        sources=response.get('sources', []),
+        conversation_id=conversation_id,
+        message_id=message_id,
+        user_id=question.user_id
+    )
 
 
 import os
