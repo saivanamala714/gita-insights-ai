@@ -982,7 +982,7 @@ class QASystem:
         return None
 
     def extract_best_answer(self, question: str, text: str) -> str:
-        """Extract the most relevant part of the text that answers the question."""
+        """Generate answer from PDF context using Gemini LLM to ensure answers come from the Bhagavad Gita."""
         question_lower = question.lower()
 
         # Check for modern life advice questions first
@@ -995,13 +995,7 @@ class QASystem:
         if any(term in question_lower for term in ['summary of chapters', 'chapter summary', 'summarize chapters', 'list of chapters']):
             return self.get_chapter_summaries()
 
-        # Split into sentences for other types of questions
-        sentences = re.split(r'(?<=[.!?])\s+', text)
-
-        # Look for direct answers first (sentences containing key terms)
-        key_terms = [term for term in question_lower.split() if len(term) > 3]
-
-        # Check for specific question patterns
+        # Check for specific question patterns (keep existing hardcoded answers for consistency)
         if 'who is arjuna' in question_lower or 'why is arjuna great' in question_lower or 'what makes arjuna special' in question_lower:
             return (
                 "Hare Krishna! Arjuna is considered one of the greatest warriors and devotees in the Bhagavad Gita. Here's why he is special:\n\n"
@@ -1013,15 +1007,57 @@ class QASystem:
                 "Arjuna's greatness lies in his perfect combination of devotion, martial skill, and philosophical understanding, making him an eternal example of how to live according to spiritual principles."
             )
 
+        # Try to use Gemini LLM to generate answer from PDF context
+        if GEMINI_RAG_ENABLED:
+            try:
+                # Configure Gemini for answer generation
+                gemini_api_key = os.getenv("GEMINI_API_KEY")
+                if gemini_api_key:
+                    genai.configure(api_key=gemini_api_key)
+                    model = genai.GenerativeModel('gemini-pro')
+                    
+                    # Create prompt that ensures answer comes from provided context
+                    prompt = f"""You are a knowledgeable teacher of the Bhagavad Gita. Answer the following question based ONLY on the provided context from the Bhagavad Gita. 
+
+Context from Bhagavad Gita:
+{text[:3000]}
+
+Question: {question}
+
+Instructions:
+1. Answer based ONLY on the provided context from the Bhagavad Gita
+2. Start your answer with "Hare Krishna!"
+3. Be clear, concise, and accurate
+4. If the context doesn't contain enough information, say so
+5. Include relevant verse references if mentioned in the context
+6. Keep the answer focused and under 300 words
+
+Answer:"""
+                    
+                    response = model.generate_content(prompt)
+                    answer = response.text.strip()
+                    
+                    # Ensure answer starts with "Hare Krishna!"
+                    if not answer.startswith("Hare Krishna"):
+                        answer = f"Hare Krishna! {answer}"
+                    
+                    logging.info("✅ Generated answer using Gemini LLM from PDF context")
+                    return answer
+            except Exception as e:
+                logging.warning(f"Failed to generate answer with Gemini LLM: {e}, falling back to sentence extraction")
+
+        # Fallback: Simple sentence extraction if LLM fails
+        sentences = re.split(r'(?<=[.!?])\s+', text)
+        key_terms = [term for term in question_lower.split() if len(term) > 3]
+
         # Look for verses or teachings
         if any(term in question_lower for term in ['teach', 'teaching', 'lesson', 'what does krishna say']):
-            # Look for verses that contain teachings
             for sentence in sentences:
                 if any(term in sentence.lower() for term in ['teach', 'says', 'explain', 'therefore', 'krishna said']):
-                    if len(sentence) > 50:  # Ensure it's a substantial answer
+                    if len(sentence) > 50:
                         return f"Hare Krishna! {sentence}"
 
-        # Default: find the most relevant sentence
+        # Find the most relevant sentence
         best_sentence = sentences[0] if sentences else ""
         best_score = -1
 
