@@ -21,7 +21,7 @@ class GeminiEmbeddingService:
             raise ValueError("GEMINI_API_KEY environment variable not set")
         
         genai.configure(api_key=api_key)
-        self.model_name = "models/embedding-001"
+        self.model_name = "models/gemini-embedding-001"  # Correct model name for Gemini embeddings
         logger.info(f"Initialized Gemini embedding service with model: {self.model_name}")
     
     def embed_text(self, text: str) -> List[float]:
@@ -68,7 +68,7 @@ class GeminiEmbeddingService:
     
     def get_embedding_dimension(self) -> int:
         """Get the dimension of embeddings"""
-        # Gemini embedding-001 produces 768-dimensional embeddings
+        # Gemini text-embedding-004 produces 768-dimensional embeddings
         return 768
 
 

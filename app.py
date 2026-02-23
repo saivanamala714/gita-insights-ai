@@ -1540,17 +1540,34 @@ async def startup_event():
                     }
                     documents_to_index.append(doc_data)
                 
-                # Generate embeddings (in batches to avoid rate limits)
+                # Generate embeddings (in batches with rate limiting for free tier)
                 print(f"📊 Generating embeddings for {len(documents_to_index)} documents...")
+                print("⏱️  Using rate limiting to comply with Gemini API free tier limits...")
                 embeddings = []
-                batch_size = 10
+                batch_size = 5  # Smaller batches to avoid rate limits
+                
                 for i in range(0, len(documents_to_index), batch_size):
                     batch = documents_to_index[i:i+batch_size]
                     batch_texts = [doc['text'] for doc in batch]
                     
                     for text in batch_texts:
-                        embedding = embeddings_service.embed_text(text)
-                        embeddings.append(embedding)
+                        try:
+                            embedding = embeddings_service.embed_text(text)
+                            embeddings.append(embedding)
+                            # Add small delay to avoid rate limits (free tier: 1500 requests/day)
+                            time.sleep(0.1)  # 100ms delay between requests
+                        except Exception as e:
+                            if "429" in str(e) or "quota" in str(e).lower():
+                                print(f"⚠️  Rate limit hit at document {len(embeddings)}. Saving partial index...")
+                                # Save what we have so far
+                                if embeddings:
+                                    vector_store.add_documents(documents_to_index[:len(embeddings)], embeddings)
+                                    os.makedirs("data", exist_ok=True)
+                                    vector_store.save(vector_index_path)
+                                    print(f"✅ Saved partial index with {len(embeddings)} documents")
+                                raise
+                            else:
+                                raise
                     
                     print(f"  Processed {min(i+batch_size, len(documents_to_index))}/{len(documents_to_index)} documents")
                 
