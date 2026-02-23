@@ -1106,19 +1106,44 @@ class QASystem:
                     "confidence": 1.0  # Highest confidence for exact matches
                 }
         
-        # Check for keyword matches with higher threshold for better precision
-        question_words = set(word for word in question_lower.split() if len(word) > 3)  # Ignore short words
+        # Use fuzzy matching with SequenceMatcher for better accuracy
+        best_match = None
+        best_ratio = 0.0
+        
         for qa in qa_pairs:
-            qa_words = set(word for word in qa["question"].lower().split() if len(word) > 3)
-            common_words = question_words.intersection(qa_words)
+            # Calculate similarity ratio between questions
+            ratio = SequenceMatcher(None, question_lower, qa["question"].lower()).ratio()
             
-            # Require at least 50% of significant words to match
-            if len(common_words) / max(1, min(len(question_words), len(qa_words))) >= 0.5:
-                return {
-                    "answer": f"Hare Krishna! {qa['answer']}",
-                    "sources": [{"page": "QA Database", "source": "Pre-defined Q&A"}],
-                    "confidence": 0.8 * (len(common_words) / max(1, len(question_words)))
-                }
+            # Keep track of best match
+            if ratio > best_ratio:
+                best_ratio = ratio
+                best_match = qa
+        
+        # Only return if similarity is high enough (80% threshold for accuracy)
+        if best_ratio >= 0.8:
+            return {
+                "answer": f"Hare Krishna! {best_match['answer']}",
+                "sources": [{"page": "QA Database", "source": "Pre-defined Q&A"}],
+                "confidence": best_ratio
+            }
+        
+        # If no good match, check for key topic words with stricter matching
+        # Extract key topics from question (excluding common words)
+        stop_words = {'what', 'does', 'the', 'is', 'in', 'about', 'how', 'why', 'when', 'where', 'who', 'teach', 'say', 'tell', 'explain'}
+        question_keywords = set(word for word in question_lower.split() if len(word) > 3 and word not in stop_words)
+        
+        if len(question_keywords) >= 2:  # Need at least 2 meaningful keywords
+            for qa in qa_pairs:
+                qa_keywords = set(word for word in qa["question"].lower().split() if len(word) > 3 and word not in stop_words)
+                common_keywords = question_keywords.intersection(qa_keywords)
+                
+                # Require at least 70% of keywords to match AND at least 2 keywords
+                if len(common_keywords) >= 2 and len(common_keywords) / len(question_keywords) >= 0.7:
+                    return {
+                        "answer": f"Hare Krishna! {qa['answer']}",
+                        "sources": [{"page": "QA Database", "source": "Pre-defined Q&A"}],
+                        "confidence": 0.7 * (len(common_keywords) / len(question_keywords))
+                    }
                 
         return None
 
