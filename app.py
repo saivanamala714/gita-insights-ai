@@ -1007,7 +1007,7 @@ class QASystem:
                 "Arjuna's greatness lies in his perfect combination of devotion, martial skill, and philosophical understanding, making him an eternal example of how to live according to spiritual principles."
             )
 
-        # Try to use Gemini LLM to generate answer from PDF context
+        # ALWAYS use Gemini LLM to generate answer from PDF context (for high-quality answers)
         if GEMINI_RAG_ENABLED:
             try:
                 # Configure Gemini for answer generation
@@ -1028,9 +1028,10 @@ Instructions:
 1. Answer based ONLY on the provided context from the Bhagavad Gita
 2. Start your answer with "Hare Krishna!"
 3. Be clear, concise, and accurate
-4. If the context doesn't contain enough information, say so
+4. If the context doesn't contain enough information to fully answer, provide what you can from the context and mention that more context would be helpful
 5. Include relevant verse references if mentioned in the context
 6. Keep the answer focused and under 300 words
+7. Structure your answer with clear explanations, not just quotes
 
 Answer:"""
                     
@@ -1044,30 +1045,12 @@ Answer:"""
                     logging.info("✅ Generated answer using Gemini LLM from PDF context")
                     return answer
             except Exception as e:
-                logging.warning(f"Failed to generate answer with Gemini LLM: {e}, falling back to sentence extraction")
+                logging.error(f"❌ Failed to generate answer with Gemini LLM: {e}")
+                # If Gemini fails, return a helpful error message instead of poor sentence extraction
+                return f"Hare Krishna! I apologize, but I'm having trouble generating a comprehensive answer right now. Please try asking your question again, or rephrase it for better results."
 
-        # Fallback: Simple sentence extraction if LLM fails
-        sentences = re.split(r'(?<=[.!?])\s+', text)
-        key_terms = [term for term in question_lower.split() if len(term) > 3]
-
-        # Look for verses or teachings
-        if any(term in question_lower for term in ['teach', 'teaching', 'lesson', 'what does krishna say']):
-            for sentence in sentences:
-                if any(term in sentence.lower() for term in ['teach', 'says', 'explain', 'therefore', 'krishna said']):
-                    if len(sentence) > 50:
-                        return f"Hare Krishna! {sentence}"
-
-        # Find the most relevant sentence
-        best_sentence = sentences[0] if sentences else ""
-        best_score = -1
-
-        for sentence in sentences:
-            score = sum(1 for term in key_terms if term in sentence.lower())
-            if score > best_score:
-                best_score = score
-                best_sentence = sentence
-
-        return f"Hare Krishna! {best_sentence}" if best_score > 0 else f"Hare Krishna! {sentences[0]}" if sentences else "Hare Krishna! No answer found"
+        # If Gemini RAG is not enabled, return error message
+        return "Hare Krishna! The advanced answer generation system is currently unavailable. Please contact support."
 
     def _get_answer_from_qa_pairs(self, question: str) -> Optional[Dict[str, Any]]:
         """Try to find an answer from the pre-defined Q&A pairs."""
