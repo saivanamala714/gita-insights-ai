@@ -1014,7 +1014,7 @@ class QASystem:
                 gemini_api_key = os.getenv("GEMINI_API_KEY")
                 if gemini_api_key:
                     genai.configure(api_key=gemini_api_key)
-                    model = genai.GenerativeModel('gemini-2.0-flash')  # Updated to current available model
+                    model = genai.GenerativeModel('gemini-2.5-flash')  # Latest available model
                     
                     # Create prompt that ensures answer comes from provided context
                     prompt = f"""You are a knowledgeable teacher of the Bhagavad Gita. Answer the following question based ONLY on the provided context from the Bhagavad Gita. 
