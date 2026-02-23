@@ -265,3 +265,84 @@ async def export_conversation(
     except Exception as e:
         logger.error(f"Error exporting conversation: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/qa-review")
+async def get_qa_review(
+    limit: int = 100,
+    offset: int = 0,
+    user_id: Optional[str] = None,
+    start_date: Optional[str] = None,
+    end_date: Optional[str] = None,
+    _: bool = Depends(verify_admin_key)
+):
+    """
+    Get all conversations with questions and answers for review (admin only).
+    
+    Returns a list of conversations with their messages including questions and answers.
+    This endpoint is designed for easy review and quality checking of the Q&A system.
+    """
+    try:
+        from src.config.firestore_config import firestore_config
+        
+        # Parse dates if provided
+        start_dt = datetime.fromisoformat(start_date) if start_date else None
+        end_dt = datetime.fromisoformat(end_date) if end_date else None
+        
+        # Get Firestore client
+        db = firestore_config.get_client()
+        
+        # Build query
+        query = db.collection_group('conversations')
+        
+        # Apply filters
+        if user_id:
+            query = query.where('user_id', '==', user_id)
+        if start_dt:
+            query = query.where('created_at', '>=', start_dt)
+        if end_dt:
+            query = query.where('created_at', '<=', end_dt)
+        
+        # Order by created_at descending and apply pagination
+        query = query.order_by('created_at', direction='DESCENDING')
+        query = query.limit(limit).offset(offset)
+        
+        # Execute query
+        conversations = []
+        for conv_doc in query.stream():
+            conv_data = conv_doc.to_dict()
+            
+            # Get messages for this conversation
+            messages_ref = conv_doc.reference.collection('messages')
+            messages_query = messages_ref.order_by('created_at', direction='ASCENDING')
+            
+            messages = []
+            for msg_doc in messages_query.stream():
+                msg_data = msg_doc.to_dict()
+                messages.append({
+                    'message_id': msg_doc.id,
+                    'question': msg_data.get('question', ''),
+                    'answer': msg_data.get('answer', ''),
+                    'sources': msg_data.get('sources', []),
+                    'created_at': msg_data.get('created_at').isoformat() if msg_data.get('created_at') else None
+                })
+            
+            conversations.append({
+                'conversation_id': conv_doc.id,
+                'user_id': conv_data.get('user_id', ''),
+                'created_at': conv_data.get('created_at').isoformat() if conv_data.get('created_at') else None,
+                'updated_at': conv_data.get('updated_at').isoformat() if conv_data.get('updated_at') else None,
+                'message_count': len(messages),
+                'messages': messages
+            })
+        
+        return {
+            'total': len(conversations),
+            'limit': limit,
+            'offset': offset,
+            'conversations': conversations
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting Q&A review data: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
