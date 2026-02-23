@@ -27,6 +27,9 @@ COPY app.py .
 COPY name_corrector.py .
 COPY response_processor.py .
 COPY gita_qa_pairs.py .
+COPY gita_characters.py .
+COPY gita_faqs.py .
+COPY emotion_mappings.py .
 
 # Copy the Bhagavad Gita PDF
 COPY 11-Bhagavad-gita_As_It_Is.pdf .
