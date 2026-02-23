@@ -35,7 +35,7 @@ steps:
       - '--timeout=600s'
       - '--concurrency=1'
       - '--max-instances=1'
-      - '--set-env-vars=PYTHONUNBUFFERED=1'
+      - '--set-env-vars=PYTHONUNBUFFERED=1,GOOGLE_CLOUD_PROJECT=bg-be-service,FIRESTORE_DATABASE_ID=bg-ai-chat-history,FIRESTORE_COLLECTION_PREFIX=prod'
       - '--allow-unauthenticated'
     id: 'deploy'
 
