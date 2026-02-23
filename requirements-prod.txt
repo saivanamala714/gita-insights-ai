@@ -1,0 +1,23 @@
+# Production dependencies - minimal set for Cloud Run deployment
+# Core dependencies
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+python-multipart>=0.0.6
+
+# PDF processing
+PyPDF2>=3.0.0
+
+# Environment and configuration
+python-dotenv>=1.0.0
+
+# Firestore and Firebase for chat history
+google-cloud-firestore>=2.14.0
+
+# Text processing utilities
+jellyfish>=1.0.0
+psutil>=5.9.0
+
+# Additional utilities
+python-dateutil>=2.8.2

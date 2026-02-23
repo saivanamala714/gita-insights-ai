@@ -15,28 +15,24 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Install Python dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
 # Copy requirements first to leverage Docker cache
-COPY requirements.txt .
+COPY requirements-prod.txt .
 
-# Copy Python files one by one (explicitly listed for compatibility)
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements-prod.txt
+
+# Copy source code
+COPY src/ ./src/
 COPY app.py .
-COPY main.py .
-COPY analyze_emotions.py .
-COPY analyze_pdf.py .
-COPY emotion_mappings.py .
-COPY gita_characters.py .
-COPY gita_faqs.py .
-COPY gita_qa_pairs.py .
 COPY name_corrector.py .
 COPY response_processor.py .
-COPY top_bg_questions.py .
+COPY gita_qa_pairs.py .
 
 # Copy the Bhagavad Gita PDF
 COPY 11-Bhagavad-gita_As_It_Is.pdf .
+
+# Create necessary directories
+RUN mkdir -p data logs
 
 # Create a non-root user and switch to it
 RUN useradd -m -d /home/appuser appuser && \
