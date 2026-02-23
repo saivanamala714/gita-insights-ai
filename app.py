@@ -21,6 +21,17 @@ from response_processor import get_processor
 from difflib import SequenceMatcher
 from gita_qa_pairs import get_qa_pairs, get_qa_by_category
 
+# Gemini-based RAG system for vector embeddings
+try:
+    from gemini_embeddings import get_gemini_embeddings
+    from simple_vector_search import get_vector_store
+    import google.generativeai as genai
+    GEMINI_RAG_ENABLED = True
+    logging.info("✅ Gemini RAG system imports successful")
+except Exception as e:
+    GEMINI_RAG_ENABLED = False
+    logging.warning(f"⚠️ Gemini RAG system not available: {e}")
+
 # Chat history services - will be loaded in startup
 CHAT_HISTORY_ENABLED = False
 chat_history_manager = None
@@ -194,12 +205,46 @@ class QASystem:
             print(f"{ref}: {data['text'][:100]}...")
 
     def get_relevant_documents(self, query: str, k: int = 5) -> List[Document]:
-        """Retrieve relevant document chunks for a query using improved text matching."""
+        """Retrieve relevant document chunks using vector embeddings (Gemini) or fallback to keyword matching."""
         if not self.documents:
             raise ValueError(
                 "No documents loaded. Call load_and_process_pdf() first.")
 
-        # Preprocess query
+        # Try vector search first if Gemini RAG is enabled
+        if GEMINI_RAG_ENABLED:
+            try:
+                vector_store = get_vector_store()
+                
+                # Check if vector store is initialized
+                if vector_store.embeddings is not None:
+                    # Generate query embedding
+                    embeddings_service = get_gemini_embeddings()
+                    query_embedding = embeddings_service.embed_query(query)
+                    
+                    # Search for similar documents
+                    results = vector_store.search(query_embedding, top_k=k)
+                    
+                    if results:
+                        # Convert results to Document objects
+                        relevant_docs = []
+                        for idx, score, doc_data in results:
+                            doc = Document(
+                                page_content=doc_data['text'],
+                                metadata=doc_data.get('metadata', {})
+                            )
+                            relevant_docs.append(doc)
+                        
+                        logging.info(f"✅ Vector search found {len(relevant_docs)} relevant documents")
+                        return relevant_docs[:k]
+                    else:
+                        logging.warning("Vector search returned no results, falling back to keyword matching")
+                else:
+                    logging.warning("Vector store not initialized, falling back to keyword matching")
+            except Exception as e:
+                logging.error(f"Error in vector search: {e}, falling back to keyword matching")
+        
+        # Fallback to keyword matching if vector search fails or is disabled
+        logging.info("Using keyword-based document retrieval")
         query = query.lower()
         query_terms = set(term for term in query.split()
                           if len(term) > 2)  # Ignore very short words
@@ -1430,6 +1475,61 @@ async def startup_event():
     qa_system = QASystem(pdf_path)
     qa_system.load_and_process_pdf()
     print("✅ PDF processing complete. Ready to answer questions!")
+    
+    # Initialize Gemini RAG vector index
+    if GEMINI_RAG_ENABLED:
+        print("\n🔄 Initializing Gemini RAG vector index...")
+        try:
+            vector_store = get_vector_store()
+            
+            # Try to load existing vector index
+            vector_index_path = "data/gemini_vector_index.pkl"
+            if os.path.exists(vector_index_path):
+                if vector_store.load(vector_index_path):
+                    print(f"✅ Loaded existing vector index with {len(vector_store.documents)} documents")
+                else:
+                    print("⚠️ Failed to load vector index, will create new one")
+            
+            # If no index exists or loading failed, create new index
+            if vector_store.embeddings is None:
+                print("🔄 Creating new vector index from PDF documents...")
+                embeddings_service = get_gemini_embeddings()
+                
+                # Prepare documents for indexing
+                documents_to_index = []
+                for doc in qa_system.documents:
+                    doc_data = {
+                        'text': doc.page_content,
+                        'metadata': doc.metadata
+                    }
+                    documents_to_index.append(doc_data)
+                
+                # Generate embeddings (in batches to avoid rate limits)
+                print(f"📊 Generating embeddings for {len(documents_to_index)} documents...")
+                embeddings = []
+                batch_size = 10
+                for i in range(0, len(documents_to_index), batch_size):
+                    batch = documents_to_index[i:i+batch_size]
+                    batch_texts = [doc['text'] for doc in batch]
+                    
+                    for text in batch_texts:
+                        embedding = embeddings_service.embed_text(text)
+                        embeddings.append(embedding)
+                    
+                    print(f"  Processed {min(i+batch_size, len(documents_to_index))}/{len(documents_to_index)} documents")
+                
+                # Add to vector store
+                vector_store.add_documents(documents_to_index, embeddings)
+                
+                # Save vector index
+                os.makedirs("data", exist_ok=True)
+                vector_store.save(vector_index_path)
+                print(f"✅ Vector index created and saved to {vector_index_path}")
+            
+            print("✅ Gemini RAG system ready!\n")
+        except Exception as e:
+            print(f"⚠️ Failed to initialize Gemini RAG: {e}")
+            print("📋 App will continue with keyword-based search\n")
     
     # Try to load chat history services
     print("\n🔄 Attempting to load chat history services...")

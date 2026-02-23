@@ -30,6 +30,8 @@ COPY gita_qa_pairs.py .
 COPY gita_characters.py .
 COPY gita_faqs.py .
 COPY emotion_mappings.py .
+COPY gemini_embeddings.py .
+COPY simple_vector_search.py .
 
 # Copy the Bhagavad Gita PDF
 COPY 11-Bhagavad-gita_As_It_Is.pdf .
