@@ -346,3 +346,130 @@ async def get_qa_review(
     except Exception as e:
         logger.error(f"Error getting Q&A review data: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/users-qa")
+async def get_all_users_qa(
+    limit: int = 100,
+    offset: int = 0,
+    user_id: Optional[str] = None,
+    start_date: Optional[str] = None,
+    end_date: Optional[str] = None,
+    _: bool = Depends(verify_admin_key)
+):
+    """
+    Get all users with their questions and answers from prod_users collection (admin only).
+    
+    This endpoint retrieves all user Q&A interactions in a format optimized for website display.
+    Returns users with their conversations and all Q&A pairs.
+    
+    Query Parameters:
+    - limit: Maximum number of users to return (default: 100)
+    - offset: Pagination offset (default: 0)
+    - user_id: Filter by specific user ID (optional)
+    - start_date: Filter by start date ISO format (optional)
+    - end_date: Filter by end date ISO format (optional)
+    """
+    try:
+        from src.config.firestore_config import firestore_config
+        
+        # Parse dates if provided
+        start_dt = datetime.fromisoformat(start_date) if start_date else None
+        end_dt = datetime.fromisoformat(end_date) if end_date else None
+        
+        # Get Firestore client
+        db = firestore_config.client
+        
+        # Build query for users collection
+        users_collection = firestore_config.get_collection_name('users')
+        
+        if user_id:
+            # Get specific user
+            user_doc = db.collection(users_collection).document(user_id).get()
+            if not user_doc.exists:
+                raise HTTPException(status_code=404, detail="User not found")
+            users_to_process = [(user_doc.id, user_doc)]
+        else:
+            # Get all users with pagination
+            query = db.collection(users_collection).limit(limit).offset(offset)
+            users_to_process = [(doc.id, doc) for doc in query.stream()]
+        
+        # Collect all user Q&A data
+        users_qa_data = []
+        
+        for user_id, user_doc in users_to_process:
+            user_data = user_doc.to_dict() if user_doc.exists else {}
+            
+            # Get all conversations for this user
+            conversations_ref = user_doc.reference.collection('conversations')
+            conv_query = conversations_ref.order_by('created_at', direction='DESCENDING')
+            
+            # Apply date filters if provided
+            if start_dt:
+                conv_query = conv_query.where('created_at', '>=', start_dt)
+            if end_dt:
+                conv_query = conv_query.where('created_at', '<=', end_dt)
+            
+            conversations = []
+            total_questions = 0
+            
+            for conv_doc in conv_query.stream():
+                conv_data = conv_doc.to_dict()
+                
+                # Get all messages (Q&A pairs) for this conversation
+                messages_ref = conv_doc.reference.collection('messages')
+                messages_query = messages_ref.order_by('created_at', direction='ASCENDING')
+                
+                messages = []
+                for msg_doc in messages_query.stream():
+                    msg_data = msg_doc.to_dict()
+                    messages.append({
+                        'message_id': msg_doc.id,
+                        'question': msg_data.get('user_query', ''),
+                        'answer': msg_data.get('ai_response', ''),
+                        'sources': msg_data.get('sources', []),
+                        'metadata': msg_data.get('metadata', {}),
+                        'response_time_ms': msg_data.get('response_time_ms'),
+                        'created_at': msg_data.get('created_at').isoformat() if msg_data.get('created_at') else None
+                    })
+                
+                total_questions += len(messages)
+                
+                conversations.append({
+                    'conversation_id': conv_doc.id,
+                    'title': conv_data.get('title', 'Untitled Conversation'),
+                    'created_at': conv_data.get('created_at').isoformat() if conv_data.get('created_at') else None,
+                    'updated_at': conv_data.get('updated_at').isoformat() if conv_data.get('updated_at') else None,
+                    'message_count': len(messages),
+                    'topics': conv_data.get('topics', []),
+                    'chapters_referenced': conv_data.get('chapters_referenced', []),
+                    'messages': messages
+                })
+            
+            users_qa_data.append({
+                'user_id': user_id,
+                'user_profile': {
+                    'created_at': user_data.get('created_at').isoformat() if user_data.get('created_at') else None,
+                    'last_active': user_data.get('last_active').isoformat() if user_data.get('last_active') else None,
+                    'total_conversations': user_data.get('total_conversations', 0),
+                    'total_messages': user_data.get('total_messages', 0)
+                },
+                'conversations': conversations,
+                'total_questions': total_questions,
+                'conversation_count': len(conversations)
+            })
+        
+        return {
+            'total_users': len(users_qa_data),
+            'limit': limit,
+            'offset': offset,
+            'users': users_qa_data
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error getting users Q&A data: {e}")
+        import traceback
+        traceback.print_exc()
+        raise HTTPException(status_code=500, detail=str(e))
