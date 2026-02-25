@@ -1019,7 +1019,7 @@ class QASystem:
                 gemini_api_key = os.getenv("GEMINI_API_KEY")
                 if gemini_api_key:
                     genai.configure(api_key=gemini_api_key)
-                    model = genai.GenerativeModel('gemini-1.5-flash')  # Fast and efficient model
+                    model = genai.GenerativeModel('gemini-1.5-flash-latest')  # Fast and efficient model
                     
                     # Create prompt that ensures answer comes from provided context
                     prompt = f"""You are a knowledgeable teacher of the Bhagavad Gita. Answer the following question based ONLY on the provided context from the Bhagavad Gita. 
@@ -1050,7 +1050,12 @@ Answer:"""
                     logging.info("✅ Generated answer using Gemini LLM from PDF context")
                     return answer
             except Exception as e:
+                import traceback
+                error_details = traceback.format_exc()
                 logging.error(f"❌ Failed to generate answer with Gemini LLM: {e}")
+                logging.error(f"Full error traceback:\n{error_details}")
+                print(f"\n🔴 GEMINI API ERROR: {e}")
+                print(f"Full traceback:\n{error_details}")
                 # If Gemini fails, return a helpful error message instead of poor sentence extraction
                 return f"Hare Krishna! I apologize, but I'm having trouble generating a comprehensive answer right now. Please try asking your question again, or rephrase it for better results."
 
