@@ -290,7 +290,7 @@ async def get_qa_review(
         end_dt = datetime.fromisoformat(end_date) if end_date else None
         
         # Get Firestore client
-        db = firestore_config.get_client()
+        db = firestore_config.client
         
         # Build query
         query = db.collection_group('conversations')
