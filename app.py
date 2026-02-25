@@ -38,6 +38,11 @@ chat_history_manager = None
 chat_router = None
 admin_router = None
 
+# Feedback services - will be loaded in startup
+FEEDBACK_ENABLED = False
+feedback_service = None
+feedback_router = None
+
 
 class Document:
     def __init__(self, page_content: str, metadata: Dict[str, Any]):
@@ -1485,6 +1490,7 @@ class AnswerResponse(BaseModel):
 @app.on_event("startup")
 async def startup_event():
     global qa_system, CHAT_HISTORY_ENABLED, chat_history_manager, chat_router, admin_router
+    global FEEDBACK_ENABLED, feedback_service, feedback_router
     
     # Load PDF first
     pdf_path = "11-Bhagavad-gita_As_It_Is.pdf"
@@ -1598,6 +1604,35 @@ async def startup_event():
         import traceback
         traceback.print_exc()
         print("\n⚠️  App will continue without chat history features\n")
+    
+    # Try to load feedback services
+    print("\n🔄 Attempting to load feedback services...")
+    try:
+        from src.feedback_service import FeedbackService
+        print("  ✅ FeedbackService imported")
+        
+        from src.feedback_routes import create_feedback_router
+        print("  ✅ feedback_routes imported")
+        
+        # Initialize feedback service
+        database_id = os.getenv("FIRESTORE_DATABASE_ID", "(default)")
+        collection_prefix = os.getenv("FIRESTORE_COLLECTION_PREFIX", "prod")
+        feedback_service = FeedbackService(database_id=database_id, collection_prefix=collection_prefix)
+        
+        # Create and include feedback router
+        feedback_router = create_feedback_router(feedback_service)
+        app.include_router(feedback_router)
+        
+        FEEDBACK_ENABLED = True
+        print("✅ Feedback service and routes enabled successfully!\n")
+        
+    except Exception as e:
+        FEEDBACK_ENABLED = False
+        print(f"⚠️  Feedback services not available: {e}")
+        print("📋 Full error details:")
+        import traceback
+        traceback.print_exc()
+        print("\n⚠️  App will continue without feedback features\n")
 
 
 @app.post("/ask", response_model=AnswerResponse)

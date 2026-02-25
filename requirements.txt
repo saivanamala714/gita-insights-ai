@@ -3,16 +3,20 @@ fastapi>=0.109.0
 uvicorn[standard]>=0.27.0
 gunicorn>=21.2.0
 pydantic>=2.0.0
+pydantic-settings>=2.0.0
 python-multipart>=0.0.6
 
-# PDF processing
-pypdf2>=3.0.1
+# PDF processing - Modern replacement for pypdf2
+pymupdf>=1.24.0  # PyMuPDF (fitz) - best text/layout preservation
 
 # Environment and configuration
 python-dotenv>=1.0.0
 
+# Vector Database
+faiss-cpu>=1.8.0  # Fast similarity search and clustering
+
 # NLP and text processing
-numpy>=1.24.0,<2.0.0  # Keep numpy < 2.0.0 for compatibility with other packages
+numpy>=1.24.0  # Removed upper bound for compatibility with latest packages
 language-tool-python>=1.0.0
 nltk>=3.8.1
 psutil>=5.9.0  # For system monitoring in health checks
@@ -20,7 +24,7 @@ jellyfish>=1.0.0  # For string matching and phonetic algorithms
 
 # Machine Learning and Embeddings
 torch>=2.0.0  # PyTorch for deep learning
-sentence-transformers>=2.2.2  # For generating embeddings
+sentence-transformers>=3.0.0  # Updated for modern embeddings
 transformers>=4.30.0  # For NLP tasks
 tokenizers>=0.13.0  # Required by transformers
 
@@ -29,14 +33,33 @@ huggingface-hub>=0.16.0  # For downloading models
 requests>=2.28.0  # Required by huggingface-hub
 tqdm>=4.64.0  # For progress bars
 
-# LangChain (if needed, though we're focusing on direct PDF processing)
-# langchain>=0.1.0
-# langchain-community>=0.0.20
+# LangChain for text splitting and utilities
+langchain>=0.1.0
+langchain-community>=0.0.20
+langchain-text-splitters>=0.0.1
+
+# LLM Integration
+openai>=1.0.0  # OpenAI API client
+# ollama>=0.1.0  # Uncomment for local Ollama support
 
 # Development and testing
 pytest>=7.4.0
 pytest-cov>=4.1.0
+pytest-asyncio>=0.21.0
 black>=23.7.0
 isort>=5.12.0
+
+# Firestore and Firebase for chat history
+google-cloud-firestore>=2.14.0
+firebase-admin>=6.4.0
+
+# Authentication and security
+pyjwt>=2.8.0
+passlib>=1.7.4
+python-jose[cryptography]>=3.3.0
+bcrypt>=4.0.1
+
+# Additional utilities
+python-dateutil>=2.8.2
 flake8>=6.1.0
 mypy>=1.5.1
