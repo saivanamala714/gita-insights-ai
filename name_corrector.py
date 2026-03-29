@@ -53,6 +53,9 @@ class NameCorrector:
             # Bhishma
             'bhishma': ['bheeshma', 'bheeshm', 'bhishm', 'bheesma', 'bheeshmaa'],
             
+            # Bhima
+            'bhima': ['bheema', 'bhim', 'bhimsen'],
+            
             # Duryodhana
             'duryodhana': ['duryodhan', 'duryodhna', 'duryodhan', 'duryodhanna'],
             
