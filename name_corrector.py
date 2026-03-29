@@ -16,6 +16,13 @@ import jellyfish
 # Import the character database
 from gita_characters import CHARACTERS, get_character_info
 
+# Philosophical concepts that should never be corrected to character names
+PHILOSOPHICAL_CONCEPTS = {
+    'karma', 'dharma', 'yoga', 'moksha', 'samsara', 'atman', 'brahman', 
+    'maya', 'gunas', 'prakriti', 'purusha', 'ahimsa', 'dhyana', 'sadhana',
+    'bhakti', 'jnana', 'vedanta', 'upanishad', 'veda', 'mantra', 'om'
+}
+
 class NameCorrector:
     """Class to handle name correction for Bhagavad Gita characters."""
     
@@ -56,7 +63,7 @@ class NameCorrector:
             'draupadi': ['dropadi', 'draupadi', 'draupadi', 'panchali', 'krishnaa'],
             
             # Karna
-            'karna': ['karn', 'karan', 'karana', 'radheya'],
+            'karna': ['karn', 'karan', 'radheya'],
             
             # Dronacharya
             'dronacharya': ['drona', 'dron', 'dronacarya'],
@@ -219,6 +226,10 @@ class NameCorrector:
         for i, word in enumerate(words):
             # Skip very short words (they're unlikely to be names)
             if len(word) < 3:
+                continue
+            
+            # Skip philosophical concepts - never correct these
+            if word.lower() in PHILOSOPHICAL_CONCEPTS:
                 continue
                 
             # Check if the word is a known name or close to one
