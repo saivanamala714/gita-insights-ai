@@ -48,6 +48,17 @@ test_results_*.json
 logs/
 *.log
 
+# RAG v2 specific
+data/
+.vector_store/
+*.faiss
+*.pkl
+.cache/
+models/
+
+# Sentence transformers cache
+sentence_transformers/
+
 # Local development
 local_settings.py
 db.sqlite3

@@ -1,4 +1,4 @@
-# Python
+
 __pycache__/
 *.py[cod]
 *$py.class
@@ -31,9 +31,8 @@ build/
 dist/
 *.egg-info/
 
-# PDF files - only include the Bhagavad Gita PDF
-!11-Bhagavad-gita_As_It_Is.pdf
-*.pdf
+# Note: data/vector_store/ is included for pre-generated embeddings
+# If you have other data files to exclude, add them individually here
 
 # Test results
 test_results/

@@ -1,0 +1,2020 @@
+[
+  {
+    "insertId": "699e6e7100043836d6cc778a",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:21.532343221Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "INFO:     Finished server process [1]",
+    "timestamp": "2026-02-25T03:37:21.276534Z"
+  },
+  {
+    "insertId": "699e6e71000437f8d04cd4c4",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:21.532343221Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "INFO:     Application shutdown complete.",
+    "timestamp": "2026-02-25T03:37:21.276472Z"
+  },
+  {
+    "insertId": "699e6e710004376c5bef1528",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:21.532343221Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "INFO:     Waiting for application shutdown.",
+    "timestamp": "2026-02-25T03:37:21.276332Z"
+  },
+  {
+    "insertId": "699e6e710002ad501d7b8e28",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:21.199119384Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "INFO:     Shutting down",
+    "timestamp": "2026-02-25T03:37:21.175440Z"
+  },
+  {
+    "insertId": "699e6e71000121b927cfbb4d",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:21.391574075Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "INFO:     169.254.169.126:46922 - \"GET /api/admin/conversations?limit=50 HTTP/1.1\" 200 OK",
+    "timestamp": "2026-02-25T03:37:21.074169Z"
+  },
+  {
+    "insertId": "699e6e70000bd17cf74e1e17",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2026-02-25T03:37:21.061319800Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "textPayload": "Default STARTUP TCP probe succeeded after 1 attempt for container \"bhagavad-gita-api-1\" on port 8080.",
+    "timestamp": "2026-02-25T03:37:20.774524Z"
+  },
+  {
+    "insertId": "699e6e70000bcf06aaa3ea76",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:20.867141260Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)",
+    "timestamp": "2026-02-25T03:37:20.773894Z"
+  },
+  {
+    "insertId": "699e6e70000bc3b403f8d06c",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:20.867141260Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "INFO:     Application startup complete.",
+    "timestamp": "2026-02-25T03:37:20.770996Z"
+  },
+  {
+    "insertId": "699e6e70000bc2cf07d621b7",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:21.058837058Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "✅ Chat history and admin routes enabled successfully!",
+    "timestamp": "2026-02-25T03:37:20.770767Z"
+  },
+  {
+    "insertId": "699e6e70000b7d10ca103350",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:21.058837058Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "  ✅ admin_routes imported",
+    "timestamp": "2026-02-25T03:37:20.752912Z"
+  },
+  {
+    "insertId": "699e6e700009525114ff01a9",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:20.726244795Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "  ✅ chat_routes imported",
+    "timestamp": "2026-02-25T03:37:20.610897Z"
+  },
+  {
+    "insertId": "699e6e700008a1fbe2e9af60",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:20.726244795Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "  ✅ chat_history_manager imported",
+    "timestamp": "2026-02-25T03:37:20.565755Z"
+  },
+  {
+    "insertId": "699e6e6f000d6585239f0766",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:20.064161274Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "🔄 Attempting to load chat history services...",
+    "timestamp": "2026-02-25T03:37:19.877957Z"
+  },
+  {
+    "insertId": "699e6e6f000d656129ddfd21",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:20.064161274Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "📋 App will continue with keyword-based search",
+    "timestamp": "2026-02-25T03:37:19.877921Z"
+  },
+  {
+    "insertId": "699e6e6f000d655eced46bef",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:20.064161274Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "⚠️ Failed to initialize Gemini RAG: GEMINI_API_KEY environment variable not set",
+    "timestamp": "2026-02-25T03:37:19.877918Z"
+  },
+  {
+    "insertId": "699e6e6f000d6527fb49649e",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:20.064161274Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "🔄 Creating new vector index from PDF documents...",
+    "timestamp": "2026-02-25T03:37:19.877863Z"
+  },
+  {
+    "insertId": "699e6e6f000d64b161696ad0",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:20.064161274Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "🔄 Initializing Gemini RAG vector index...",
+    "timestamp": "2026-02-25T03:37:19.877745Z"
+  },
+  {
+    "insertId": "699e6e6f000d64aceea06430",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:20.064161274Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "✅ PDF processing complete. Ready to answer questions!",
+    "timestamp": "2026-02-25T03:37:19.877740Z"
+  },
+  {
+    "insertId": "699e6e6f000d64a852009cc7",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:20.064161274Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "7.17: In Bhagavad-gita five principal subject matters have been discussed: the Supreme Personality of Godh...",
+    "timestamp": "2026-02-25T03:37:19.877736Z"
+  },
+  {
+    "insertId": "699e6e6f000d649cc90799c4",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:20.064161274Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "99.9: sadhunam hrdayam tv aham mad-anyat te na janantinaham tebhyo manag api \"The devotees are always in M...",
+    "timestamp": "2026-02-25T03:37:19.877724Z"
+  },
+  {
+    "insertId": "699e6e6f000d6372927503cf",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:20.064161274Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Sample of indexed verses:",
+    "timestamp": "2026-02-25T03:37:19.877426Z"
+  },
+  {
+    "insertId": "699e6e6f000d6365417b64ce",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:20.064161274Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Processed 573 pages and indexed 2 verses from the PDF",
+    "timestamp": "2026-02-25T03:37:19.877413Z"
+  },
+  {
+    "insertId": "699e6e6e0007568662e5638e",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Processing all pages...",
+    "timestamp": "2026-02-25T03:37:18.480902Z"
+  },
+  {
+    "insertId": "699e6e6e00075680c0d663d1",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Lord is the supreme enjoyer, and we living entities are His servitors.We are created for His enjoyment, and if we participate in that eternalenjoyment with the Supreme Personality of Godhead, we become happy. Wecannot become happy otherwise. It is not possible to be...",
+    "timestamp": "2026-02-25T03:37:18.480896Z"
+  },
+  {
+    "insertId": "699e6e6e0007567b6ccdf089",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Factually we are related to the Supreme Lord in service. The Supreme",
+    "timestamp": "2026-02-25T03:37:18.480891Z"
+  },
+  {
+    "insertId": "699e6e6e00075676da4eec96",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "of sect is not to profess one's sanatana-dharma. The rendering ofservice is sanatana-dharma.",
+    "timestamp": "2026-02-25T03:37:18.480886Z"
+  },
+  {
+    "insertId": "699e6e6e0007567212363e9f",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "circumstances is servant of someone. Thus, to profess a particular type",
+    "timestamp": "2026-02-25T03:37:18.480882Z"
+  },
+  {
+    "insertId": "699e6e6e0007566a7ab01afc",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "--- Page 20 ---",
+    "timestamp": "2026-02-25T03:37:18.480874Z"
+  },
+  {
+    "insertId": "699e6e6e00074e92a03a49bd",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Non-sanatana religious faith may have some beginning in the anna...",
+    "timestamp": "2026-02-25T03:37:18.478866Z"
+  },
+  {
+    "insertId": "699e6e6e00074e8eac4a2a7c",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "cannot be limited by any boundaries. Those belonging to some sectarianfaith will wrongly consider that sanatana-dharma is also sectarian, butif we go deeply into the matter and consider it in the light of modernscience, it is possible for us to see that sanatana-dharma is thebusiness of all the people of the world--nay, of all the livingentities of the universe.",
+    "timestamp": "2026-02-25T03:37:18.478862Z"
+  },
+  {
+    "insertId": "699e6e6e00074e88298548ca",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "That which has neither end nor beginning must not be sectarian, for it",
+    "timestamp": "2026-02-25T03:37:18.478856Z"
+  },
+  {
+    "insertId": "699e6e6e00074e802d122d02",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "--- Page 19 ---",
+    "timestamp": "2026-02-25T03:37:18.478848Z"
+  },
+  {
+    "insertId": "699e6e6e0007453062e3d15d",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "In this material world we find that everything is temporary. It comesinto being, stays for ...",
+    "timestamp": "2026-02-25T03:37:18.476464Z"
+  },
+  {
+    "insertId": "699e6e6e0007452e971c8774",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "That destination is called the sanatana sky, the eternal spiritual sky.",
+    "timestamp": "2026-02-25T03:37:18.476462Z"
+  },
+  {
+    "insertId": "699e6e6e0007452a254a62b6",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "eatables in goodness, passion and ignorance. All of this is clearlydescribed, and if we properly utilize the instructions of Bhagavad-gita, then our whole life will become purified, and ultimately we willbe able to reach the destination which is beyond this material sky.",
+    "timestamp": "2026-02-25T03:37:18.476458Z"
+  },
+  {
+    "insertId": "699e6e6e000745265086f74e",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "of ignorance. Similarly, there are three kinds of eatables also:",
+    "timestamp": "2026-02-25T03:37:18.476454Z"
+  },
+  {
+    "insertId": "699e6e6e000745214d54febe",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "--- Page 18 ---",
+    "timestamp": "2026-02-25T03:37:18.476449Z"
+  },
+  {
+    "insertId": "699e6e6e00073b9cb3ec4553",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "receive knowledge from the proper source in disciplic successionbeginning with the supreme spiritual master, the Lord Himself, andhanded down to a succession of spiritual masters. Arjuna, the studentwho took lessons from Lord Sri Krsna, accepts everything that He sayswithout contradicting Him. One is not allowed to accept one portion ofBhagavad-gita and not another. No. We must accept Bhagavad-gita withoutinterpretation, without ...",
+    "timestamp": "2026-02-25T03:37:18.474012Z"
+  },
+  {
+    "insertId": "699e6e6e00073b9796f4a422",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Bhagavad-gita, by the parampara (disciplic succession). We have to",
+    "timestamp": "2026-02-25T03:37:18.474007Z"
+  },
+  {
+    "insertId": "699e6e6e00073b8f42266bc4",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "--- Page 17 ---",
+    "timestamp": "2026-02-25T03:37:18.473999Z"
+  },
+  {
+    "insertId": "699e6e6e000732785b5ac628",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Twelfth Chapter. There it shall be seen that the Supreme Personality ofGodhead, Purusottama, is above both impersonal Brahman and the partialrealization of Paramatma. The Supreme Personality of Godhead is calledsac-cid-ananda-vigraha. The Brahma-samhita begins in this way: isvarahparamah krsnah sac-cid-ananda-vigrahah. anadir adir govindah sarva-karana-karanam. \"Krsna, is the cause of all causes. He is the primalcause, and He ...",
+    "timestamp": "2026-02-25T03:37:18.471672Z"
+  },
+  {
+    "insertId": "699e6e6e0007327155d8cc88",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "the absolute whole, and so also is the conception of Paramatma in the",
+    "timestamp": "2026-02-25T03:37:18.471665Z"
+  },
+  {
+    "insertId": "699e6e6e00073267e3e660e9",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "--- Page 16 ---",
+    "timestamp": "2026-02-25T03:37:18.471655Z"
+  },
+  {
+    "insertId": "699e6e6e000729525637632f",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "stage of the Gita's instructions that Krsna is asking Arjuna whether heis now in purified consciousness. Purified consciousness means actingin accordance with the instructions of the Lord. This is the whole sumand substance of purified consciousness. Consciousness is already therebecause we are part and parcel of the Lord, but for us there is theaffinity of being affected by the inferior modes. But the Lord, beingthe Supreme, i...",
+    "timestamp": "2026-02-25T03:37:18.469330Z"
+  },
+  {
+    "insertId": "699e6e6e0007294b3c741f85",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "to awaken this pure consciousness, and therefore we find at the last",
+    "timestamp": "2026-02-25T03:37:18.469323Z"
+  },
+  {
+    "insertId": "699e6e6e00072945e7406f12",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "--- Page 15 ---",
+    "timestamp": "2026-02-25T03:37:18.469317Z"
+  },
+  {
+    "insertId": "699e6e6e00071f47aaafde62",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "desires. The living entity forgets what to do. First of all he makes adetermination to act in a certain way, and then he is entangled in theactions and reactions of his own karma. After giving up one type ofbody, he enters another type of body, as we put on and take off oldclothes. As the soul thus migrates, he suffers the actions andreactions of his past activities. These activities can be changed whenthe living being is in the...",
+    "timestamp": "2026-02-25T03:37:18.466759Z"
+  },
+  {
+    "insertId": "699e6e6e00071f41d13f57ab",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "and that He is giving directions for the living entity to act as he",
+    "timestamp": "2026-02-25T03:37:18.466753Z"
+  },
+  {
+    "insertId": "699e6e6e00071f3ad2a7d40c",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "--- Page 14 ---",
+    "timestamp": "2026-02-25T03:37:18.466746Z"
+  },
+  {
+    "insertId": "699e6e6e000714b90ccd2cb8",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Isvara (the Supreme Lo...",
+    "timestamp": "2026-02-25T03:37:18.464057Z"
+  },
+  {
+    "insertId": "699e6e6e000714b51bda4195",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "time immemorial, and we are suffering or enjoying the fruits of ouractivities. For instance, suppose I am a businessman and have workedvery hard with intelligence and have amassed a great bank balance. ThenI am an enjoyer. But then say I have lost all my money in business;then I am a sufferer. Similarly, in every field of life we enjoy theresults of our work, or we suffer the results. This is called karma.",
+    "timestamp": "2026-02-25T03:37:18.464053Z"
+  },
+  {
+    "insertId": "699e6e6e000714b038a7b2b9",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "which are called karma. These activities are being carried out from",
+    "timestamp": "2026-02-25T03:37:18.464048Z"
+  },
+  {
+    "insertId": "699e6e6e000714a7b2e2a132",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "--- Page 13 ---",
+    "timestamp": "2026-02-25T03:37:18.464039Z"
+  },
+  {
+    "insertId": "699e6e6e00070a927eb4ae74",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Out of these five basic...",
+    "timestamp": "2026-02-25T03:37:18.461458Z"
+  },
+  {
+    "insertId": "699e6e6e00070a8ecadc7ad4",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "universe or the manifestation of material nature) and karma (activity)are also discussed. The cosmic manifestation is full of differentactivities. All living entities are engaged in different activities.From Bhagavad-gita we must learn what God is, what the living entitiesare, what prakrti is, what the cosmic manifestation is, how it iscontrolled by time, and what the activities of the living entities are.",
+    "timestamp": "2026-02-25T03:37:18.461454Z"
+  },
+  {
+    "insertId": "699e6e6e00070a8988b96692",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "(material nature) and time (the duration of existence of the whole",
+    "timestamp": "2026-02-25T03:37:18.461449Z"
+  },
+  {
+    "insertId": "699e6e6e00070a819e7b2386",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "--- Page 12 ---",
+    "timestamp": "2026-02-25T03:37:18.461441Z"
+  },
+  {
+    "insertId": "699e6e6e0007007321004364",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Just what is the Bhagavad-gita? The purpose of Bhag...",
+    "timestamp": "2026-02-25T03:37:18.458867Z"
+  },
+  {
+    "insertId": "699e6e6e0007006fb62b1bf6",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "statements of Arjuna, the person who is trying to understand theBhagavad-gita. We should therefore at least theoretically accept SriKrsna as the Supreme Personality of Godhead, and with that submissivespirit we can understand the Bhagavad-gita. Unless one reads theBhagavad-gita in a submissive spirit, it is very difficult tounderstand Bhagavad-gita because it is a great mystery.",
+    "timestamp": "2026-02-25T03:37:18.458863Z"
+  },
+  {
+    "insertId": "699e6e6e0007006aeb669c1e",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "theoretically, according to the statements of Bhagavad-gita or the",
+    "timestamp": "2026-02-25T03:37:18.458858Z"
+  },
+  {
+    "insertId": "699e6e6e0007005d5c334b47",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "--- Page 11 ---",
+    "timestamp": "2026-02-25T03:37:18.458845Z"
+  },
+  {
+    "insertId": "699e6e6e0006564b266739bb",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.727545032Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Examining PDF structure...",
+    "timestamp": "2026-02-25T03:37:18.415307Z"
+  },
+  {
+    "insertId": "699e6e6e0005ef885276cf94",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:37:18.394495106Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Loading PDF from 11-Bhagavad-gita_As_It_Is.pdf...",
+    "timestamp": "2026-02-25T03:37:18.389Z"
+  },
+  {
+    "insertId": "699e6e6e0005ed6def33de02",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:18.535837437Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "INFO:     Waiting for application startup.",
+    "timestamp": "2026-02-25T03:37:18.388461Z"
+  },
+  {
+    "insertId": "699e6e6e0005ed2d67e39435",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:18.535837437Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "INFO:     Started server process [1]",
+    "timestamp": "2026-02-25T03:37:18.388397Z"
+  },
+  {
+    "insertId": "699e6e6d0008968350b0c429",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:17.867933480Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "  import google.generativeai as genai",
+    "timestamp": "2026-02-25T03:37:17.562819Z"
+  },
+  {
+    "insertId": "699e6e6d0008967e5b60b539",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:17.867933480Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "https://github.com/google-gemini/deprecated-generative-ai-python/blob/main/README.md",
+    "timestamp": "2026-02-25T03:37:17.562814Z"
+  },
+  {
+    "insertId": "699e6e6d0008967a7948d589",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:17.867933480Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "See README for more details:",
+    "timestamp": "2026-02-25T03:37:17.562810Z"
+  },
+  {
+    "insertId": "699e6e6d00089676e8abbfae",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:17.867933480Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "updates or bug fixes. Please switch to the `google.genai` package as soon as possible.",
+    "timestamp": "2026-02-25T03:37:17.562806Z"
+  },
+  {
+    "insertId": "699e6e6d00089671ad219006",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:17.867933480Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "All support for the `google.generativeai` package has ended. It will no longer be receiving ",
+    "timestamp": "2026-02-25T03:37:17.562801Z"
+  },
+  {
+    "insertId": "699e6e6d0008965b3fcb4c20",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:17.867933480Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "/app/gemini_embeddings.py:9: FutureWarning: ",
+    "timestamp": "2026-02-25T03:37:17.562779Z"
+  },
+  {
+    "insertId": "699e6e69000d2f0988fb2a79",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:37:13.873322348Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "WARNING:root:LanguageTool not available: No module named 'language_tool_python'",
+    "timestamp": "2026-02-25T03:37:13.864009Z"
+  },
+  {
+    "insertId": "699e6e6600060208c9b8a086",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca",
+      "scaling_reason": "AUTOSCALING"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fvarlog%2Fsystem",
+    "receiveTimestamp": "2026-02-25T03:37:10.400417528Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "textPayload": "Starting new instance. Reason: AUTOSCALING - Instance started due to configured scaling factors (e.g. CPU utilization, request throughput, etc.) or no existing capacity for current traffic.",
+    "timestamp": "2026-02-25T03:37:10.393736Z"
+  },
+  {
+    "httpRequest": {
+      "latency": "10.290560542s",
+      "protocol": "HTTP/1.1",
+      "remoteIp": "98.180.206.203",
+      "requestMethod": "GET",
+      "requestSize": "453",
+      "requestUrl": "https://bhagavad-gita-api-rbihcaaz5a-uc.a.run.app/api/admin/conversations?limit=50",
+      "responseSize": "10448",
+      "serverIp": "34.143.76.2",
+      "status": 200,
+      "userAgent": "PostmanRuntime/7.37.3"
+    },
+    "insertId": "699e6e7100013ef8700c128f",
+    "labels": {
+      "instanceId": "00da6cd2c4b65b1c81e21ab4a4a8423ecb27633cbefc7606c87daf3111b8802370a0914ab077eb2a2604fc2ce07dee62f44f8d260b30a7fd24bb2f92b5b544c3e9d705e82cdfb99c2628a555ca"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Frequests",
+    "receiveTimestamp": "2026-02-25T03:37:21.091141035Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "severity": "INFO",
+    "spanId": "a13df093b9292db2",
+    "timestamp": "2026-02-25T03:37:10.368659Z",
+    "trace": "projects/bg-be-service/traces/c158ef93b502413cd6f8aaf457c1f959",
+    "traceSampled": true
+  },
+  {
+    "insertId": "699e6e1c0009245dfc88e727",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.785113273Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "INFO:     169.254.169.126:58712 - \"POST /ask HTTP/1.1\" 200 OK",
+    "timestamp": "2026-02-25T03:35:56.599133Z"
+  },
+  {
+    "insertId": "699e6e1c00091d628f0f6f37",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.785113273Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Saved to conversation bjWca5yjr85b0iSW124f, message flDUcvdQFCJK7Pu72qUx",
+    "timestamp": "2026-02-25T03:35:56.597346Z"
+  },
+  {
+    "insertId": "699e6e1c000172895d4e2f64",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:35:56.175468389Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "WARNING:src.services.chat_history_manager:Conversation 1IGGr8YUBo8ZxduTRqeX not found, creating new one",
+    "timestamp": "2026-02-25T03:35:56.094857Z"
+  },
+  {
+    "insertId": "699e6e1b000e2b6fb4a122c8",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstderr",
+    "receiveTimestamp": "2026-02-25T03:35:56.175468389Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "WARNING:root:Vector store not initialized, falling back to keyword matching",
+    "timestamp": "2026-02-25T03:35:55.928623Z"
+  },
+  {
+    "insertId": "699e6e1b000e26303935ed47",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "   Answer: The Bhagavad Gita consists of 18 chapters, with a total of 700 verses. These chapters cover various ...",
+    "timestamp": "2026-02-25T03:35:55.927280Z"
+  },
+  {
+    "insertId": "699e6e1b000e261c47a0e999",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "   Category: Basic Information",
+    "timestamp": "2026-02-25T03:35:55.927260Z"
+  },
+  {
+    "insertId": "699e6e1b000e2607af47555e",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "3. Q: How many chapters are in the Bhagavad Gita?...",
+    "timestamp": "2026-02-25T03:35:55.927239Z"
+  },
+  {
+    "insertId": "699e6e1b000e25ea6b238da3",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "   Answer: The Bhagavad Gita is part of the Mahabharata, which was written by the sage Vyasa. According to trad...",
+    "timestamp": "2026-02-25T03:35:55.927210Z"
+  },
+  {
+    "insertId": "699e6e1b000e25d66243fb35",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "   Category: Basic Information",
+    "timestamp": "2026-02-25T03:35:55.927190Z"
+  },
+  {
+    "insertId": "699e6e1b000e25bc7cc033d4",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "2. Q: Who wrote the Bhagavad Gita?...",
+    "timestamp": "2026-02-25T03:35:55.927164Z"
+  },
+  {
+    "insertId": "699e6e1b000e259f59231a78",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "   Answer: The Bhagavad Gita, often referred to as the Gita, is a 700-verse Hindu scripture that is part of the...",
+    "timestamp": "2026-02-25T03:35:55.927135Z"
+  },
+  {
+    "insertId": "699e6e1b000e2580809aa601",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "   Category: Basic Information",
+    "timestamp": "2026-02-25T03:35:55.927104Z"
+  },
+  {
+    "insertId": "699e6e1b000e2567386ed5a5",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "1. Q: What is the Bhagavad Gita?...",
+    "timestamp": "2026-02-25T03:35:55.927079Z"
+  },
+  {
+    "insertId": "699e6e1b000e25531d855c59",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "First 3 Q&A pairs:",
+    "timestamp": "2026-02-25T03:35:55.927059Z"
+  },
+  {
+    "insertId": "699e6e1b000e25370b313b94",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Question type: str",
+    "timestamp": "2026-02-25T03:35:55.927031Z"
+  },
+  {
+    "insertId": "699e6e1b000e25173f68450a",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Question: 'hi'",
+    "timestamp": "2026-02-25T03:35:55.926999Z"
+  },
+  {
+    "insertId": "699e6e1b000e25138ea8c261",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "=== DEBUG: Processing question ===",
+    "timestamp": "2026-02-25T03:35:55.926995Z"
+  },
+  {
+    "insertId": "699e6e1b000e24c60b46cc57",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "First Q&A: What is the Bhagavad Gita?...",
+    "timestamp": "2026-02-25T03:35:55.926918Z"
+  },
+  {
+    "insertId": "699e6e1b000e24b0225f5c40",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Successfully got 15 Q&A pairs",
+    "timestamp": "2026-02-25T03:35:55.926896Z"
+  },
+  {
+    "insertId": "699e6e1b000e24994b5eac4d",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "=== DEBUG: Getting Q&A pairs via get_qa_pairs() ===",
+    "timestamp": "2026-02-25T03:35:55.926873Z"
+  },
+  {
+    "insertId": "699e6e1b000e248629ede01b",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "First QA_PAIR: What is the Bhagavad Gita?...",
+    "timestamp": "2026-02-25T03:35:55.926854Z"
+  },
+  {
+    "insertId": "699e6e1b000e2482708a38c4",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "=== DEBUG: Found QA_PAIRS with 15 items",
+    "timestamp": "2026-02-25T03:35:55.926850Z"
+  },
+  {
+    "insertId": "699e6e1b000e247d7d2097de",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "First Q&A: What is the Bhagavad Gita?...",
+    "timestamp": "2026-02-25T03:35:55.926845Z"
+  },
+  {
+    "insertId": "699e6e1b000e2288e6c825db",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Successfully got 15 Q&A pairs directly",
+    "timestamp": "2026-02-25T03:35:55.926344Z"
+  },
+  {
+    "insertId": "699e6e1b000e226ee48f5c39",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "=== DEBUG: Getting Q&A pairs directly ===",
+    "timestamp": "2026-02-25T03:35:55.926318Z"
+  },
+  {
+    "insertId": "699e6e1b000e2269d674cde4",
+    "labels": {
+      "instanceId": "00da6cd2c4b6cb3fd227954a368478da09a71c31f4d7a3444f9b609a3d380bdd21f7ae2d7b1da23782e68a05e8fd818d2fc4adb86790a368a0f9d74c242f87807382e89121390b02ce683e7a12"
+    },
+    "logName": "projects/bg-be-service/logs/run.googleapis.com%2Fstdout",
+    "receiveTimestamp": "2026-02-25T03:35:56.121567462Z",
+    "resource": {
+      "labels": {
+        "configuration_name": "bhagavad-gita-api",
+        "location": "us-central1",
+        "project_id": "bg-be-service",
+        "revision_name": "bhagavad-gita-api-00021-6cg",
+        "service_name": "bhagavad-gita-api"
+      },
+      "type": "cloud_run_revision"
+    },
+    "textPayload": "Available attributes: ['CATEGORIES', 'Dict', 'List', 'QA_PAIRS', 'Tuple', '__annotations__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'get_qa_by_category', 'get_qa_pairs', 'get_random_qa_pairs', 'search_qa']",
+    "timestamp": "2026-02-25T03:35:55.926313Z"
+  }
+]

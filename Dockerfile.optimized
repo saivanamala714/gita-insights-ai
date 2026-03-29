@@ -1,0 +1,69 @@
+# Optimized Dockerfile for fast builds and smaller image size
+FROM python:3.11-slim
+
+# Set environment variables for optimization
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PORT=8080 \
+    PYTHONPATH=/app \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+# Set working directory
+WORKDIR /app
+
+# Install system dependencies only
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    curl \
+    && rm -rf /var/lib/apt/lists/* \
+    && apt-get clean
+
+# Copy optimized requirements first (for better layer caching)
+COPY requirements-optimized.txt .
+
+# Install Python dependencies with optimizations
+RUN pip install --upgrade pip setuptools wheel && \
+    pip install --no-cache-dir -r requirements-optimized.txt && \
+    rm -rf /root/.cache/pip
+
+# Copy application code in optimal order
+COPY gemini_embeddings.py \
+     hybrid_search.py \
+     name_corrector.py \
+     response_processor.py \
+     gita_qa_pairs.py \
+     gita_characters.py \
+     emotion_mappings.py \
+     simple_vector_search.py \
+     ./
+
+# Copy main application
+COPY app_optimized.py app.py ./
+
+# Copy data files
+COPY 11-Bhagavad-gita_As_It_Is.pdf \
+     bhagavad_gita_summaries.json \
+     ./
+
+# Create necessary directories with proper permissions
+RUN mkdir -p data logs && \
+    touch data/vector_store.pkl data/fuzzy_index.pkl
+
+# Create non-root user for security
+RUN useradd -m -d /home/appuser appuser && \
+    chown -R appuser:appuser /app && \
+    chmod -R 755 /app
+
+# Switch to non-root user
+USER appuser
+
+# Health check with optimized timing
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
+    CMD curl -f http://localhost:8080/health || exit 1
+
+# Expose port
+EXPOSE 8080
+
+# Optimized startup command with pre-warming
+CMD ["sh", "-c", "echo '🚀 Starting optimized Bhagavad Gita QA System...' && exec uvicorn app:app --host 0.0.0.0 --port $PORT --workers 1 --preload"]
