@@ -22,6 +22,10 @@ nltk>=3.8.1
 psutil>=5.9.0  # For system monitoring in health checks
 jellyfish>=1.0.0  # For string matching and phonetic algorithms
 
+# Fuzzy matching and string similarity
+fuzzywuzzy>=0.18.0
+python-levenshtein>=0.21.0  # C acceleration for fuzzy matching
+
 # Machine Learning and Embeddings
 torch>=2.0.0  # PyTorch for deep learning
 sentence-transformers>=3.0.0  # Updated for modern embeddings
