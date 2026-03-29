@@ -5,6 +5,7 @@ import json
 import time
 from typing import Dict, List, Any, Optional, Tuple
 from datetime import datetime
+from functools import lru_cache
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -1414,6 +1415,11 @@ You can ask me questions like:
                 "confidence": 0.0
             }
 
+    @lru_cache(maxsize=1000)
+    def _cached_answer_question(self, question: str) -> Dict[str, Any]:
+        """Cached version of answer_question for performance"""
+        return self._get_answer_from_pdf(question)
+
     def answer_question(self, question: str) -> Dict[str, Any]:
         """
         Public API for answering a user's question.
@@ -1431,7 +1437,7 @@ You can ask me questions like:
             # If name correction fails for any reason, fall back to the raw question
             normalized_question = question
 
-        return self._get_answer_from_pdf(normalized_question)
+        return self._cached_answer_question(normalized_question)
 
 # Initialize FastAPI app
 app = FastAPI(title="Bhagavad Gita Q&A System")
