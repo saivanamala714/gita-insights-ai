@@ -3,6 +3,7 @@ import re
 import logging
 import json
 import time
+import uuid
 from typing import Dict, List, Any, Optional, Tuple
 from datetime import datetime
 from functools import lru_cache
@@ -13,6 +14,14 @@ load_dotenv()
 
 # Import the name correction module
 from name_corrector import correct_text_names, correct_character_name
+
+# Import ADK agent (optional - will be available if installed)
+try:
+    from adk_agent import ask_gita_agent
+    ADK_AVAILABLE = True
+except ImportError:
+    ADK_AVAILABLE = False
+    ask_gita_agent = None
 from PyPDF2 import PdfReader
 from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import JSONResponse
@@ -1692,6 +1701,86 @@ async def ask_question(question: QuestionRequest):
         message_id=message_id,
         user_id=question.user_id
     )
+
+# Pydantic model for agent response
+class AgentResponse(BaseModel):
+    answer: str
+    sources: List[Dict[str, Any]]
+    agent_name: str = "gita_insights_agent"
+    model: str = "gemini-2.0-flash-latest"
+    tool_calls: List[Dict[str, Any]] = []
+    response_time: float
+    error: Optional[str] = None
+
+@app.post("/ask-agent", response_model=AgentResponse)
+async def ask_gita_agent_endpoint(question: str, user_id: str = "anonymous"):
+    """
+    Enhanced Q&A endpoint using Google ADK agent with tools.
+    Provides intelligent tool usage, validation, and context management.
+    
+    This is an experimental endpoint alongside the stable /ask endpoint.
+    """
+    start_time = time.time()
+    
+    if not ADK_AVAILABLE or not ask_gita_agent:
+        return AgentResponse(
+            answer="Hare Krishna! I apologize, but the enhanced agent is not available right now. Please use the regular /ask endpoint.",
+            sources=[],
+            response_time=time.time() - start_time,
+            error="ADK agent not available. Install google-adk package."
+        )
+    
+    try:
+        # Call the ADK agent
+        response = await ask_gita_agent(question)
+        
+        # Calculate response time
+        response_time = time.time() - start_time
+        
+        # Log to chat history (same as /ask)
+        conversation_id = None
+        message_id = None
+        try:
+            if CHAT_HISTORY_ENABLED:
+                conversation_id = str(uuid.uuid4())
+                message_id = str(uuid.uuid4())
+                
+                chat_log = {
+                    "question": question,
+                    "answer": response.get('answer', ''),
+                    "sources": response.get('sources', []),
+                    "conversation_id": conversation_id,
+                    "message_id": message_id,
+                    "user_id": user_id,
+                    "timestamp": datetime.utcnow().isoformat(),
+                    "endpoint": "/ask-agent",
+                    "agent_name": response.get('agent_name', 'gita_insights_agent'),
+                    "tool_calls": response.get('tool_calls', [])
+                }
+                
+                chat_history_manager.log_chat_message(chat_log)
+                print(f"Saved agent conversation {conversation_id}, message {message_id}")
+        except Exception as e:
+            print(f"Warning: Failed to save agent chat history: {e}")
+        
+        return AgentResponse(
+            answer=response.get('answer', 'No answer generated'),
+            sources=response.get('sources', []),
+            agent_name=response.get('agent_name', 'gita_insights_agent'),
+            model=response.get('model', 'gemini-2.0-flash-latest'),
+            tool_calls=response.get('tool_calls', []),
+            response_time=response_time,
+            error=response.get('error')
+        )
+        
+    except Exception as e:
+        print(f"Error in /ask-agent endpoint: {e}")
+        return AgentResponse(
+            answer="Hare Krishna! I encountered an error while processing your question. Please try again or use the /ask endpoint.",
+            sources=[],
+            response_time=time.time() - start_time,
+            error=str(e)
+        )
 
 
 import os
