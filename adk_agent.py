@@ -165,46 +165,9 @@ def validate_gita_answer(question: str, draft_answer: str) -> str:
 # ==================== MAIN GITA AGENT ====================
 def create_gita_agent():
     """Create and return the Gita ADK agent if available."""
-    if not ADK_AVAILABLE:
-        logger.warning("ADK not available, returning None")
-        return None
-    
-    try:
-        # Create function tools from our existing functions
-        search_tool = FunctionTool(search_gita)
-        fuzzy_tool = FunctionTool(fuzzy_word_fix)
-        emotion_tool = FunctionTool(analyze_emotion_nlp)
-        validation_tool = FunctionTool(validate_gita_answer)
-        
-        tools = [search_tool, fuzzy_tool, emotion_tool, validation_tool, google_search]
-        
-        gita_agent = Agent(
-            name="gita_insights_agent",
-            model="gemini-2.0-flash-latest",
-            description="Humble and accurate spiritual guide based on Bhagavad Gita As It Is by Srila Prabhupada",
-            instruction="""You are a respectful, humble, and precise spiritual guide. 
-            Base all answers strictly on 'Bhagavad Gita As It Is'. 
-            Always try to cite relevant verses. 
-            Use tools when necessary. 
-            Maintain a devotional and clear tone. 
-            If unsure, use validation tool before final answer.
-            
-            Process:
-            1. First, use fuzzy_word_fix to correct any misspelled names
-            2. Use search_gita to find relevant verses and context
-            3. Analyze the emotion/devotional mood if helpful
-            4. Generate answer based on Gita teachings
-            5. Use validate_gita_answer to check your answer
-            6. If validation fails, improve your answer and validate again""",
-            tools=tools,
-        )
-        
-        logger.info("Gita ADK agent created successfully")
-        return gita_agent
-        
-    except Exception as e:
-        logger.error(f"Error creating Gita agent: {e}")
-        return None
+    # For now, we'll always return True to enable the enhanced tools
+    # even if the full ADK framework isn't available
+    return True
 
 # Create global agent instance
 gita_agent = create_gita_agent()
@@ -219,16 +182,8 @@ async def ask_gita_agent(question: str) -> Dict[str, Any]:
     Returns:
         Dictionary with answer, sources, and metadata
     """
-    if not gita_agent:
-        return {
-            "error": "ADK agent not available. Install google-adk package.",
-            "answer": "Hare Krishna! I apologize, but the enhanced agent is not available right now. Please use the regular /ask endpoint.",
-            "sources": []
-        }
-    
     try:
-        # For now, let's use the tools directly instead of the full ADK runner
-        # This gives us the enhanced functionality without the complex ADK setup
+        # Use the enhanced tools pipeline even without full ADK framework
         
         # Step 1: Apply fuzzy name correction
         corrected_result = fuzzy_word_fix(question)
