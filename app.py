@@ -1712,14 +1712,21 @@ class AgentResponse(BaseModel):
     response_time: float
     error: Optional[str] = None
 
+# Pydantic model for agent request
+class AgentRequest(BaseModel):
+    question: str
+    user_id: str = "anonymous"
+
 @app.post("/ask-agent", response_model=AgentResponse)
-async def ask_gita_agent_endpoint(question: str, user_id: str = "anonymous"):
+async def ask_gita_agent_endpoint(request: AgentRequest):
     """
     Enhanced Q&A endpoint using Google ADK agent with tools.
     Provides intelligent tool usage, validation, and context management.
     
     This is an experimental endpoint alongside the stable /ask endpoint.
     """
+    question = request.question
+    user_id = request.user_id
     start_time = time.time()
     
     if not ADK_AVAILABLE or not ask_gita_agent:
