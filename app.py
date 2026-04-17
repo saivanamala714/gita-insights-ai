@@ -42,11 +42,11 @@ async def ask_gita_agent_fallback(question: str) -> Dict[str, Any]:
         if vector_store and vector_store.embeddings is not None:
             # Generate query embedding
             embedding_service = get_gemini_embeddings()
-            query_embedding = embedding_service.embed([question])
+            query_embedding = embedding_service.embed_query(question)
             
-            if query_embedding and len(query_embedding) > 0:
+            if query_embedding:
                 # Search the PDF for relevant content
-                search_results = vector_store.search(query_embedding[0], top_k=5)
+                search_results = vector_store.search(query_embedding, top_k=5)
                 
                 if search_results:
                     # Generate answer from PDF content
