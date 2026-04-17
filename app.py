@@ -19,10 +19,15 @@ from name_corrector import correct_text_names, correct_character_name
 try:
     from adk_agent import ask_gita_agent
     ADK_AVAILABLE = True
+    print("✅ ADK agent imported successfully")
 except ImportError as e:
     ADK_AVAILABLE = False
     ask_gita_agent = None
-    print(f"ADK import warning: {e}")
+    print(f"⚠️ ADK import warning: {e}")
+except Exception as e:
+    ADK_AVAILABLE = False
+    ask_gita_agent = None
+    print(f"⚠️ ADK setup error: {e}")
 from PyPDF2 import PdfReader
 from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import JSONResponse
