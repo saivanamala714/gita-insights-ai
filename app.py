@@ -29,6 +29,20 @@ except Exception as e:
     ask_gita_agent = None
     print(f"⚠️ ADK setup error: {e}")
 
+# Import Real ADK agent (optional - will be available if installed)
+try:
+    from real_adk_agent import ask_gita_adk_agent
+    REAL_ADK_AVAILABLE = True
+    print("✅ Real ADK agent imported successfully")
+except ImportError as e:
+    REAL_ADK_AVAILABLE = False
+    ask_gita_adk_agent = None
+    print(f"⚠️ Real ADK import warning: {e}")
+except Exception as e:
+    REAL_ADK_AVAILABLE = False
+    ask_gita_adk_agent = None
+    print(f"⚠️ Real ADK setup error: {e}")
+
 # Fallback enhanced agent implementation
 async def ask_gita_agent_fallback(question: str) -> Dict[str, Any]:
     """Fallback enhanced agent using PDF search only."""
@@ -1784,6 +1798,7 @@ class AgentResponse(BaseModel):
     tool_calls: List[Dict[str, Any]] = []
     response_time: float
     error: Optional[str] = None
+    trace_id: Optional[str] = None
 
 # Pydantic model for agent request
 class AgentRequest(BaseModel):
@@ -1849,6 +1864,72 @@ async def ask_gita_agent_endpoint(request: AgentRequest):
         tool_calls=response.get('tool_calls', []),
         response_time=response_time,
         error=response.get('error')
+    )
+
+
+@app.post("/ask-adk", response_model=AgentResponse)
+async def ask_adk_endpoint(request: QuestionRequest):
+    """
+    REAL Google ADK Q&A endpoint with dynamic tool calling and tracing.
+    Uses actual Google ADK LlmAgent with intelligent tool execution.
+    
+    This is the experimental endpoint with true ADK capabilities.
+    """
+    question = request.question
+    user_id = request.user_id
+    start_time = time.time()
+    
+    # Use the real ADK agent if available, otherwise fallback to enhanced agent
+    if ask_gita_adk_agent:
+        try:
+            response = await ask_gita_adk_agent(question)
+        except Exception as e:
+            print(f"Real ADK agent failed, using fallback: {e}")
+            response = await ask_gita_agent_fallback(question)
+    else:
+        response = await ask_gita_agent_fallback(question)
+        response['adk_version'] = 'fallback'
+    
+    # Calculate response time
+    response_time = time.time() - start_time
+    
+    # Log to chat history
+    conversation_id = None
+    message_id = None
+    try:
+        if CHAT_HISTORY_ENABLED:
+            conversation_id = str(uuid.uuid4())
+            message_id = str(uuid.uuid4())
+            
+            chat_log = {
+                "question": question,
+                "answer": response.get('answer', ''),
+                "sources": response.get('sources', []),
+                "conversation_id": conversation_id,
+                "message_id": message_id,
+                "user_id": user_id,
+                "timestamp": datetime.utcnow().isoformat(),
+                "endpoint": "/ask-adk",
+                "agent_name": response.get('agent_name', 'gita_insights_agent'),
+                "tool_calls": response.get('tool_calls', []),
+                "trace_id": response.get('trace_id'),
+                "adk_version": response.get('adk_version', 'unknown')
+            }
+            
+            chat_history_manager.save_chat_message(chat_log)
+            print(f"Saved ADK conversation {conversation_id}, message {message_id}")
+    except Exception as e:
+        print(f"Warning: Failed to save ADK chat history: {e}")
+    
+    return AgentResponse(
+        answer=response.get('answer', 'No answer generated'),
+        sources=response.get('sources', []),
+        agent_name=response.get('agent_name', 'gita_insights_agent'),
+        model=response.get('model', 'gemini-2.0-flash-latest'),
+        tool_calls=response.get('tool_calls', []),
+        response_time=response_time,
+        error=response.get('error'),
+        trace_id=response.get('trace_id')
     )
 
 
