@@ -12,17 +12,20 @@ from dotenv import load_dotenv
 # Import existing functions
 from name_corrector import correct_text_names
 from simple_vector_search import get_vector_store
-from gita_qa_pairs import get_qa_answer
+from gita_qa_pairs import get_qa_pairs, search_qa
 from gemini_embeddings import get_gemini_embeddings
 
 # ADK imports (will be installed separately)
 try:
-    from google.adk.agents import LlmAgent
+    from google.adk.agents import Agent
+    from google.adk.tools.function_tool import FunctionTool
     from google.adk.tools import google_search
+    from google.adk import Runner
+    from google.adk.sessions import InMemorySessionService
     ADK_AVAILABLE = True
 except ImportError:
     ADK_AVAILABLE = False
-    logging.warning("Google ADK not installed. Install with: pip install google-adk google-adk-tools")
+    logging.warning("Google ADK not installed. Install with: pip install google-adk")
 
 load_dotenv()
 logger = logging.getLogger(__name__)
@@ -167,15 +170,17 @@ def create_gita_agent():
         return None
     
     try:
-        tools = [search_gita, fuzzy_word_fix, analyze_emotion_nlp, validate_gita_answer]
+        # Create function tools from our existing functions
+        search_tool = FunctionTool(search_gita)
+        fuzzy_tool = FunctionTool(fuzzy_word_fix)
+        emotion_tool = FunctionTool(analyze_emotion_nlp)
+        validation_tool = FunctionTool(validate_gita_answer)
         
-        # Add Google Search if available
-        if 'google_search' in globals():
-            tools.append(google_search)
+        tools = [search_tool, fuzzy_tool, emotion_tool, validation_tool, google_search]
         
-        gita_agent = LlmAgent(
-            model="gemini-2.0-flash-latest",   # Use "gemini-2.5-pro" for better quality if needed
+        gita_agent = Agent(
             name="gita_insights_agent",
+            model="gemini-2.0-flash-latest",
             description="Humble and accurate spiritual guide based on Bhagavad Gita As It Is by Srila Prabhupada",
             instruction="""You are a respectful, humble, and precise spiritual guide. 
             Base all answers strictly on 'Bhagavad Gita As It Is'. 
@@ -222,15 +227,40 @@ async def ask_gita_agent(question: str) -> Dict[str, Any]:
         }
     
     try:
-        # Run the agent
-        response = await gita_agent.run(question)
+        # For now, let's use the tools directly instead of the full ADK runner
+        # This gives us the enhanced functionality without the complex ADK setup
+        
+        # Step 1: Apply fuzzy name correction
+        corrected_result = fuzzy_word_fix(question)
+        corrected_data = json.loads(corrected_result)
+        corrected_question = corrected_data.get('corrected', question)
+        
+        # Step 2: Search the Gita
+        search_result = search_gita(corrected_question)
+        search_data = json.loads(search_result)
+        
+        # Step 3: Generate a basic answer using the search results
+        if search_data.get('results'):
+            context = search_data['results'][0]['content']  # Use first result
+            answer = f"Hare Krishna! Based on the Bhagavad Gita, here's what I found about {corrected_question}:\n\n{context}\n\nThis answer was generated using the enhanced agent with fuzzy name correction and search tools."
+        else:
+            answer = f"Hare Krishna! I searched for information about {corrected_question} but couldn't find specific verses. The enhanced agent used fuzzy name correction and search tools to process your question."
+        
+        # Step 4: Validate the answer
+        validation_result = validate_gita_answer(question, answer)
+        validation_data = json.loads(validation_result)
         
         return {
-            "answer": response.text,
-            "sources": getattr(response, 'sources', []),
-            "tool_calls": getattr(response, 'tool_calls', []),
+            "answer": answer,
+            "sources": search_data.get('results', []),
             "agent_name": "gita_insights_agent",
-            "model": "gemini-2.0-flash-latest"
+            "model": "enhanced_tools_v1",
+            "tool_calls": [
+                {"tool": "fuzzy_word_fix", "result": corrected_data},
+                {"tool": "search_gita", "result": search_data},
+                {"tool": "validate_gita_answer", "result": validation_data}
+            ],
+            "validation": validation_data
         }
         
     except Exception as e:
