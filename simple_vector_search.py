@@ -133,4 +133,6 @@ def get_vector_store():
     global vector_store
     if vector_store is None:
         vector_store = SimpleVectorStore()
+        # Try to load the saved index
+        vector_store.load('data/gemini_vector_index.pkl')
     return vector_store
