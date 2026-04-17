@@ -35,33 +35,44 @@ async def ask_gita_agent_fallback(question: str) -> Dict[str, Any]:
     try:
         # Use PDF vector search for answers
         from simple_vector_search import get_vector_store
+        from gemini_embeddings import get_gemini_embeddings
+        
         vector_store = get_vector_store()
         
-        if vector_store and vector_store.index:
-            # Search the PDF for relevant content
-            search_results = vector_store.search(question, top_k=5)
+        if vector_store and vector_store.embeddings is not None:
+            # Generate query embedding
+            query_embedding = get_gemini_embeddings(question)
             
-            if search_results:
-                # Generate answer from PDF content
-                context_parts = []
-                sources = []
+            if query_embedding:
+                # Search the PDF for relevant content
+                search_results = vector_store.search(query_embedding, top_k=5)
                 
-                for i, result in enumerate(search_results):
-                    content = result.get('content', '')
-                    page = result.get('page', 0)
-                    chapter = result.get('chapter', '')
+                if search_results:
+                    # Generate answer from PDF content
+                    context_parts = []
+                    sources = []
                     
-                    context_parts.append(f"From Chapter {chapter}, Page {page}:\n{content}")
-                    sources.append({
-                        "chapter": chapter,
-                        "page": page,
-                        "content": content[:200] + "..." if len(content) > 200 else content
-                    })
-                
-                context = "\n\n".join(context_parts)
-                answer = f"Hare Krishna! Based on the Bhagavad Gita PDF, here's what I found about {question}:\n\n{context}\n\nThis answer was generated using the enhanced agent with PDF search tools."
+                    for idx, score, doc in search_results:
+                        content = doc.get('text', '')
+                        metadata = doc.get('metadata', {})
+                        page = metadata.get('page', 0)
+                        chapter = metadata.get('chapter', '')
+                        
+                        context_parts.append(f"From Chapter {chapter}, Page {page} (Score: {score:.3f}):\n{content}")
+                        sources.append({
+                            "chapter": chapter,
+                            "page": page,
+                            "score": round(score, 3),
+                            "content": content[:200] + "..." if len(content) > 200 else content
+                        })
+                    
+                    context = "\n\n".join(context_parts)
+                    answer = f"Hare Krishna! Based on the Bhagavad Gita PDF, here's what I found about {question}:\n\n{context}\n\nThis answer was generated using the enhanced agent with PDF search tools."
+                else:
+                    answer = f"Hare Krishna! I searched the Bhagavad Gita PDF for information about {question} but couldn't find specific verses. The enhanced agent used PDF search tools to process your question."
+                    sources = []
             else:
-                answer = f"Hare Krishna! I searched the Bhagavad Gita PDF for information about {question} but couldn't find specific verses. The enhanced agent used PDF search tools to process your question."
+                answer = "Hare Krishna! Unable to generate search query. Please try again."
                 sources = []
         else:
             answer = "Hare Krishna! The PDF search system is currently initializing. Please try again in a moment."
