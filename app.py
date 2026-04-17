@@ -19,9 +19,10 @@ from name_corrector import correct_text_names, correct_character_name
 try:
     from adk_agent import ask_gita_agent
     ADK_AVAILABLE = True
-except ImportError:
+except ImportError as e:
     ADK_AVAILABLE = False
     ask_gita_agent = None
+    print(f"ADK import warning: {e}")
 from PyPDF2 import PdfReader
 from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import JSONResponse
@@ -1729,12 +1730,12 @@ async def ask_gita_agent_endpoint(request: AgentRequest):
     user_id = request.user_id
     start_time = time.time()
     
-    if not ADK_AVAILABLE or not ask_gita_agent:
+    if not ask_gita_agent:
         return AgentResponse(
             answer="Hare Krishna! I apologize, but the enhanced agent is not available right now. Please use the regular /ask endpoint.",
             sources=[],
             response_time=time.time() - start_time,
-            error="ADK agent not available. Install google-adk package."
+            error="ADK agent function not available."
         )
     
     try:
