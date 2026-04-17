@@ -33,19 +33,15 @@ except Exception as e:
 async def ask_gita_agent_fallback(question: str) -> Dict[str, Any]:
     """Fallback enhanced agent using existing system functions."""
     try:
-        # Use existing name correction
-        from name_corrector import correct_text_names
-        corrected_question = correct_text_names(question)
-        
         # Use existing QA system for search
         from gita_qa_pairs import search_qa
-        qa_results = search_qa(corrected_question, threshold=0.3)
+        qa_results = search_qa(question, threshold=0.3)
         
         # Generate answer based on results
         if qa_results:
-            answer = f"Hare Krishna! Based on the Bhagavad Gita, here's what I found about {corrected_question}:\n\n{qa_results[0]['answer']}\n\nThis answer was generated using the enhanced agent with name correction and search tools."
+            answer = f"Hare Krishna! Based on the Bhagavad Gita, here's what I found about {question}:\n\n{qa_results[0]['answer']}\n\nThis answer was generated using the enhanced agent with search tools."
         else:
-            answer = f"Hare Krishna! I searched for information about {corrected_question} but couldn't find specific verses. The enhanced agent used name correction and search tools to process your question."
+            answer = f"Hare Krishna! I searched for information about {question} but couldn't find specific verses. The enhanced agent used search tools to process your question."
         
         return {
             "answer": answer,
@@ -53,11 +49,11 @@ async def ask_gita_agent_fallback(question: str) -> Dict[str, Any]:
             "agent_name": "gita_insights_agent",
             "model": "enhanced_tools_v1",
             "tool_calls": [
-                {"tool": "name_correction", "result": {"original": question, "corrected": corrected_question}},
-                {"tool": "qa_search", "result": {"results_found": len(qa_results), "query": corrected_question}}
+                {"tool": "qa_search", "result": {"results_found": len(qa_results), "query": question}}
             ]
         }
     except Exception as e:
+        print(f"Error in fallback agent: {e}")
         return {
             "answer": "Hare Krishna! I encountered an error while processing your question. Please try again.",
             "sources": [],
@@ -1804,7 +1800,7 @@ async def ask_gita_agent_endpoint(request: AgentRequest):
                 "tool_calls": response.get('tool_calls', [])
             }
             
-            chat_history_manager.log_chat_message(chat_log)
+            chat_history_manager.save_chat_message(chat_log)
             print(f"Saved agent conversation {conversation_id}, message {message_id}")
     except Exception as e:
         print(f"Warning: Failed to save agent chat history: {e}")
