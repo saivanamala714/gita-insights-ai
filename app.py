@@ -31,31 +31,55 @@ except Exception as e:
 
 # Fallback enhanced agent implementation
 async def ask_gita_agent_fallback(question: str) -> Dict[str, Any]:
-    """Fallback enhanced agent using existing system functions."""
+    """Fallback enhanced agent using PDF search only."""
     try:
-        # Use existing QA system for search
-        from gita_qa_pairs import search_qa
-        qa_results = search_qa(question, threshold=0.3)
+        # Use PDF vector search for answers
+        from simple_vector_search import get_vector_store
+        vector_store = get_vector_store()
         
-        # Generate answer based on results
-        if qa_results:
-            answer = f"Hare Krishna! Based on the Bhagavad Gita, here's what I found about {question}:\n\n{qa_results[0]['answer']}\n\nThis answer was generated using the enhanced agent with search tools."
+        if vector_store and vector_store.index:
+            # Search the PDF for relevant content
+            search_results = vector_store.search(question, top_k=5)
+            
+            if search_results:
+                # Generate answer from PDF content
+                context_parts = []
+                sources = []
+                
+                for i, result in enumerate(search_results):
+                    content = result.get('content', '')
+                    page = result.get('page', 0)
+                    chapter = result.get('chapter', '')
+                    
+                    context_parts.append(f"From Chapter {chapter}, Page {page}:\n{content}")
+                    sources.append({
+                        "chapter": chapter,
+                        "page": page,
+                        "content": content[:200] + "..." if len(content) > 200 else content
+                    })
+                
+                context = "\n\n".join(context_parts)
+                answer = f"Hare Krishna! Based on the Bhagavad Gita PDF, here's what I found about {question}:\n\n{context}\n\nThis answer was generated using the enhanced agent with PDF search tools."
+            else:
+                answer = f"Hare Krishna! I searched the Bhagavad Gita PDF for information about {question} but couldn't find specific verses. The enhanced agent used PDF search tools to process your question."
+                sources = []
         else:
-            answer = f"Hare Krishna! I searched for information about {question} but couldn't find specific verses. The enhanced agent used search tools to process your question."
+            answer = "Hare Krishna! The PDF search system is currently initializing. Please try again in a moment."
+            sources = []
         
         return {
             "answer": answer,
-            "sources": [{"question": qa.get("question", ""), "answer": qa.get("answer", "")} for qa in qa_results[:3]],
+            "sources": sources,
             "agent_name": "gita_insights_agent",
-            "model": "enhanced_tools_v1",
+            "model": "enhanced_pdf_search_v1",
             "tool_calls": [
-                {"tool": "qa_search", "result": {"results_found": len(qa_results), "query": question}}
+                {"tool": "pdf_search", "result": {"query": question, "sources_found": len(sources)}}
             ]
         }
     except Exception as e:
-        print(f"Error in fallback agent: {e}")
+        print(f"Error in PDF search fallback: {e}")
         return {
-            "answer": "Hare Krishna! I encountered an error while processing your question. Please try again.",
+            "answer": "Hare Krishna! I encountered an error while searching the PDF. Please try again.",
             "sources": [],
             "error": str(e)
         }
@@ -1809,7 +1833,7 @@ async def ask_gita_agent_endpoint(request: AgentRequest):
         answer=response.get('answer', 'No answer generated'),
         sources=response.get('sources', []),
         agent_name=response.get('agent_name', 'gita_insights_agent'),
-        model=response.get('model', 'enhanced_tools_v1'),
+        model=response.get('model', 'enhanced_pdf_search_v1'),
         tool_calls=response.get('tool_calls', []),
         response_time=response_time,
         error=response.get('error')
