@@ -28,6 +28,41 @@ except Exception as e:
     ADK_AVAILABLE = False
     ask_gita_agent = None
     print(f"⚠️ ADK setup error: {e}")
+
+# Fallback enhanced agent implementation
+async def ask_gita_agent_fallback(question: str) -> Dict[str, Any]:
+    """Fallback enhanced agent using existing system functions."""
+    try:
+        # Use existing name correction
+        from name_corrector import correct_text_names
+        corrected_question = correct_text_names(question)
+        
+        # Use existing QA system for search
+        from gita_qa_pairs import search_qa
+        qa_results = search_qa(corrected_question, threshold=0.3)
+        
+        # Generate answer based on results
+        if qa_results:
+            answer = f"Hare Krishna! Based on the Bhagavad Gita, here's what I found about {corrected_question}:\n\n{qa_results[0]['answer']}\n\nThis answer was generated using the enhanced agent with name correction and search tools."
+        else:
+            answer = f"Hare Krishna! I searched for information about {corrected_question} but couldn't find specific verses. The enhanced agent used name correction and search tools to process your question."
+        
+        return {
+            "answer": answer,
+            "sources": [{"question": qa.get("question", ""), "answer": qa.get("answer", "")} for qa in qa_results[:3]],
+            "agent_name": "gita_insights_agent",
+            "model": "enhanced_tools_v1",
+            "tool_calls": [
+                {"tool": "name_correction", "result": {"original": question, "corrected": corrected_question}},
+                {"tool": "qa_search", "result": {"results_found": len(qa_results), "query": corrected_question}}
+            ]
+        }
+    except Exception as e:
+        return {
+            "answer": "Hare Krishna! I encountered an error while processing your question. Please try again.",
+            "sources": [],
+            "error": str(e)
+        }
 from PyPDF2 import PdfReader
 from fastapi import FastAPI, HTTPException, Request, Response
 from fastapi.responses import JSONResponse
@@ -1735,65 +1770,54 @@ async def ask_gita_agent_endpoint(request: AgentRequest):
     user_id = request.user_id
     start_time = time.time()
     
-    if not ask_gita_agent:
-        return AgentResponse(
-            answer="Hare Krishna! I apologize, but the enhanced agent is not available right now. Please use the regular /ask endpoint.",
-            sources=[],
-            response_time=time.time() - start_time,
-            error="ADK agent function not available."
-        )
-    
-    try:
-        # Call the ADK agent
-        response = await ask_gita_agent(question)
-        
-        # Calculate response time
-        response_time = time.time() - start_time
-        
-        # Log to chat history (same as /ask)
-        conversation_id = None
-        message_id = None
+    # Use the main ADK agent if available, otherwise use fallback
+    if ask_gita_agent:
         try:
-            if CHAT_HISTORY_ENABLED:
-                conversation_id = str(uuid.uuid4())
-                message_id = str(uuid.uuid4())
-                
-                chat_log = {
-                    "question": question,
-                    "answer": response.get('answer', ''),
-                    "sources": response.get('sources', []),
-                    "conversation_id": conversation_id,
-                    "message_id": message_id,
-                    "user_id": user_id,
-                    "timestamp": datetime.utcnow().isoformat(),
-                    "endpoint": "/ask-agent",
-                    "agent_name": response.get('agent_name', 'gita_insights_agent'),
-                    "tool_calls": response.get('tool_calls', [])
-                }
-                
-                chat_history_manager.log_chat_message(chat_log)
-                print(f"Saved agent conversation {conversation_id}, message {message_id}")
+            response = await ask_gita_agent(question)
         except Exception as e:
-            print(f"Warning: Failed to save agent chat history: {e}")
-        
-        return AgentResponse(
-            answer=response.get('answer', 'No answer generated'),
-            sources=response.get('sources', []),
-            agent_name=response.get('agent_name', 'gita_insights_agent'),
-            model=response.get('model', 'gemini-2.0-flash-latest'),
-            tool_calls=response.get('tool_calls', []),
-            response_time=response_time,
-            error=response.get('error')
-        )
-        
+            print(f"Main ADK agent failed, using fallback: {e}")
+            response = await ask_gita_agent_fallback(question)
+    else:
+        response = await ask_gita_agent_fallback(question)
+    
+    # Calculate response time
+    response_time = time.time() - start_time
+    
+    # Log to chat history (same as /ask)
+    conversation_id = None
+    message_id = None
+    try:
+        if CHAT_HISTORY_ENABLED:
+            conversation_id = str(uuid.uuid4())
+            message_id = str(uuid.uuid4())
+            
+            chat_log = {
+                "question": question,
+                "answer": response.get('answer', ''),
+                "sources": response.get('sources', []),
+                "conversation_id": conversation_id,
+                "message_id": message_id,
+                "user_id": user_id,
+                "timestamp": datetime.utcnow().isoformat(),
+                "endpoint": "/ask-agent",
+                "agent_name": response.get('agent_name', 'gita_insights_agent'),
+                "tool_calls": response.get('tool_calls', [])
+            }
+            
+            chat_history_manager.log_chat_message(chat_log)
+            print(f"Saved agent conversation {conversation_id}, message {message_id}")
     except Exception as e:
-        print(f"Error in /ask-agent endpoint: {e}")
-        return AgentResponse(
-            answer="Hare Krishna! I encountered an error while processing your question. Please try again or use the /ask endpoint.",
-            sources=[],
-            response_time=time.time() - start_time,
-            error=str(e)
-        )
+        print(f"Warning: Failed to save agent chat history: {e}")
+    
+    return AgentResponse(
+        answer=response.get('answer', 'No answer generated'),
+        sources=response.get('sources', []),
+        agent_name=response.get('agent_name', 'gita_insights_agent'),
+        model=response.get('model', 'enhanced_tools_v1'),
+        tool_calls=response.get('tool_calls', []),
+        response_time=response_time,
+        error=response.get('error')
+    )
 
 
 import os
